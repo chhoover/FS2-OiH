@@ -1,0 +1,32 @@
+// GTCv Phantom: Captain's Cabin //
+// 2100 hours - July 16, 2367   //
+
+
+[$b Joseph $b raps $b once $b on $b the $b hatch $b door.]
+"You wanted to see me, Sir."
+
+"Yes, come in."
+
+[$b Joseph $b steps $b inside $b the $b door, $b standing $b at $b attention. $b Daniels $b takes $b off $b his $b reading $b glasses $b and $b motions $b for $b Joseph $b to $b sit $b across $b from $b him $b at $b the $b desk.]
+"At ease, Commander. Please, sit down. How are you adjusting to your new command, Joseph?"
+
+"We're working together well, Captain. I know how Alpha will behave in combat now. I know where there's room for improvement and how far to push my pilots. I'm impressed with each of them. Of course, going behind enemy lines and flying a tighter mission schedule is wearing on all of us."
+
+"I see. I can tell Alpha is performing well from reading your mission reports. What I can't get from the reports is how you're fairing as a commander. To be frank, I want to know how you're dealing with the loss of your previous wing."
+
+"I don't know if I can express all of what I'm feeling, but I've been journaling some in my log to help figure things out. I guess... I... it's been different. As a commander, I know that I need to maintain a level of emotional separation to remain objective, but I also need my wing to trust me and trust each other. I'm... more distant than I would like to be right now. It's hard to make friends again."
+
+[$b Daniels $b folds $b his $b hands $b on $b the $b desk.]
+"Thank you for being honest with me, Joseph. The past is a part of every good officer. But it can be dangerous if we can't live with what's happened. And if you didn't have doubts about your ability to command, you would be unfit for command."
+
+"Thank you, sir. Your perspective is much appreciated."
+
+"You were already on the right track yourself, Joseph. Keep getting to know your pilots. I'm sure they've lost people too. Time will make it easier."
+
+"I look forward to getting to know you as well, sir."
+
+[$b Daniels $b smiles, $b stands $b up $b from $b his $b desk, $b and $b shakes $b hands $b with $b Joseph.]
+"Take care, Commander."
+
+[$b Joseph $b exits $b the $b captain's $b cabin. $b Daniels $b settles $b back $b into $b his $b chair, $b sighing $b deeply. $b He $b slowly $b pulls $b open $b a $b drawer $b in $b the $b desk $b and $b grasps $b a $b picture $b in $b a $b wooden $b frame. $b Resting $b his $b hand $b on $b the $b desk, $b he $b examines $b the $b picture $b at $b a $b distance.]
+"Time makes it easier..."

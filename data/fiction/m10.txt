@@ -1,0 +1,98 @@
+// Exis Station bar              //
+// 0130 hours - August 3, 2367 //
+
+ 
+[$b Jess $b sits $b at $b one $b of $b the $b tables $b along $b the $b wall, $b nursing $b a $b near $b empty $b drink. $b Joseph $b enters $b and $b walks $b to $b her.]
+"Jess? Where is everyone?"
+
+"Sim room, Commander. There's a bet being settled. Nick shot his mouth off again and Grizzly challenged him to prove it."
+
+"Don't tell me - Nick made a crack about his age..."
+
+"Of course he did. Grizzly challenged him to the Heron scenario to prove that, I quote, 'I can still wipe the floor with snot nosed rookies like you, Nick.'"
+
+[$b Joseph $b chuckles.]
+ "Sounds like Nick may have gotten more than he bargained for here.  Why aren't you watching the sims with everyone else?"
+
+[$b Jess $b holds $b up $b two $b beverage $b chits.]
+"Someone's got to keep track of the stakes...."
+
+"You could do that from the sim room. You should go. Have some fun."
+
+"I didn't sign up for 'fun'. 'Fun' will be bringing this war to a quick end."
+
+"You have to let down sometime, Jess."
+
+"Hmh, look who's talking...."
+
+"What?"
+
+[$b Joseph $b pauses, $b a $b pained $b expression $b on $b his $b face.]
+"What do you mean?"
+
+"Nothing. It's late. I should turn in."
+
+"No, I want to hear it."
+
+[$b Jess $b grimaces.]
+"You're not the best at letting go, Joseph. Trust me -- it shows. So don't make it sound like you're giving advice from experience you don't have."
+
+[$b Joseph $b looks $b down $b and $b closes $b his $b eyes $b briefly.]
+"I'm trying, Jess. I owe it to the three of you... and myself."
+
+"You don't owe us, Joseph -- not yet. You're the best thing that's happened to this wing in months."
+
+"You mean me replacing Harrison. He really hurt you, didn't he?"
+
+"You know what it's like to take orders from someone you can't trust?  We were less than 'just pilots' to him. He hated everyone, himself included."
+
+[$b Voices $b rise $b in $b the $b distance. $b Jess $b gets $b up.]
+"Sounds like they finished."
+
+[$b Voices $b crescendo $b and $b Nick, $b Quique, $b Grizzly, $b and $b several $b other $b pilots $b enter. $b Nick $b gestures $b wildly $b with $b his $b hands.]
+"I'm telling you, there's no way he could have gotten around me so fast!"
+
+[$b Quique $b grins $b and $b lays $b a $b reproving $b hand $b on $b Nick's $b shoulder.]
+"Not unless he pulled an Eller's turn...."
+
+"In an Apollo?!"
+
+"Ha ha! I saw it with my own eyes, amigo. The old man's got skills."
+
+[$b Nick $b scowls.]
+"Dirty tricks, you mean."
+
+[$b Grizzly $b saunters $b over $b to $b Jess $b and $b extends $b an $b open $b hand.]
+"Dirty tricks or not, I believe this is mine.”
+
+[$b He $b palms $b the $b two $b beverage $b cards $b and $b smirks $b at $b Nick.]
+"I'm off to get my beauty sleep, Nicky boy. Better luck next time."
+
+[$b Grizzly $b exits $b and $b leaves $b Nick $b with $b his $b arms $b crossed, $b still $b scowling.  $b Jess $b leaves $b without $b saying $b a $b word, $b and $b Joseph $b walks $b to $b join $b the $b rest $b of $b Alpha.]
+"No snappy comeback, Nick? Mouth finally let you down?"
+
+"Don't worry. I'll get him back sooner or later...."
+
+[$b Quique $b rolls $b his $b eyes.]
+"Right...."
+
+"I still can't believe you bet on Grizzly over me!"
+
+"Look on the bright side, amigo. I won this nifty commemorative pin from flight officer Macey.”
+
+[$b A $b lopsided $b grin $b spreads $b across $b Nick's $b face.]
+"She bet on me? That's almost good enough news to forget about losing to that old fart."
+
+"Easy now, champ. You came off looking pretty bad there...."
+
+[$b Joseph $b turns $b to $b leave $b and $b makes $b his $b way $b to $b the $b door.]
+"Briefing's at 0630. Don't stay out too late, kids."
+
+[$b Nick $b throws $b an $b arm $b across $b Quique's $b shoulders.]
+"Oh, don't worry about us, Commander. Now, Quique, amigo... I say we go give Macey back her pin."
+
+"It's my pin now, Nick."
+
+"Come on man, help a brother out..."
+
+[$b Voices $b fade $b as $b Joseph $b walks $b down $b the $b corridor, $b alone $b with $b his $b own $b thoughts.]

@@ -1,0 +1,58 @@
+// GTCv Phantom: Pilot's Lounge   //
+// 2230 hours - August 15, 2367 //
+
+[$b Joseph, $b Crew $b Chief $b Willard, $b Nick, $b and $b Jess $b sit $b around $b a $b small $b table, $b playing $b Bridge. $b Willard $b passes $b the $b deck $b to $b Nick $b to $b cut $b and $b then $b deals.]
+"It's just eerie over there. All those empty corridors.... If they ever had a full crew complement, they don't anymore."
+
+[$b Joseph $b picks $b up $b his $b hand $b and $b inspects $b his $b cards.]
+"Just one more thing that's a mystery about that ship...."
+
+[$b Chief $b Willard $b deals $b the $b last $b card $b to $b Jess $b and $b takes $b up $b his $b own $b hand.]
+"No kidding. I got a quick look at their subspace drive and they weren't joshing us about it being slagged. Damage looked pretty bad.  Subspace anomalies or not, those drives are designed to last. I'd like to have a few words with their Chief mechanic.... I'll say one spade."
+
+[$b Nick $b fondles $b his $b cards.]
+"Double."
+
+[$b The $b bid $b passes $b to $b Joseph $b who $b looks $b up $b from $b his $b hand $b at $b Willard $b across $b from $b him.]
+"3 hearts."
+
+[$b Jess $b casts $b her $b eyes $b sideways $b to $b Joseph, $b then $b to $b Willard, $b and $b then $b back $b to $b her $b hand.]
+"Pass...."
+
+[$b Willard $b bids $b again.]
+"3 spades."
+
+[$b Nick $b passes.]
+
+[$b Joseph $b lays $b down $b his $b hand.]
+"Okay partner, spades it is. Pass."
+
+[$b Jess $b sighs.]
+"Pass."
+
+[$b Nick $b leads $b the $b first $b trick $b and $b Joseph, $b the $b 'dummy,' $b reveals $b his $b cards. $b Play $b continues $b and $b Joseph $b and $b Willard $b capture $b three $b of $b their $b eight $b tricks. $b Then $b Nick $b puts $b down $b a $b king $b of $b hearts $b and $b takes $b one.]
+"Yeah. That's more like it."
+
+[$b He $b peers $b at $b his $b hand, $b looking $b for $b the $b next $b card $b to $b lead.]
+"Now, what really bothers me about the Acheron is that it isn't listed in the GTVI registry. And, its name means 'river of pain' -- creepy."
+
+[$b Jess $b rolls $b her $b eyes $b at $b Nick $b and $b he $b flashes $b her $b a $b grin.]
+"Hey, I know my way around a net interface too. Wasn't born in the dark ages...."
+
+[$b Willard $b motions $b impatiently $b for $b Nick $b to $b play $b and $b he $b drops $b a $b seven $b of $b diamonds $b on $b the $b table. $b Joseph $b plays $b his $b jack $b of $b diamonds $b at $b the $b Chief's $b request $b and $b addresses $b Nick.]
+"I know it's unlisted. The Captain and I talked about it. There are several good reasons a ship could be unlisted. And we don't even have access to an SOC registry -- if such a thing exists. Even if the Acheron's GTVI, we aren't exactly known for 'straightforward' operations."
+
+[$b Nick $b waves $b his $b hand $b dismissively.]
+"Yeah, but a whole destroyer? Just missing like that? You'd think somebody would notice."
+
+[$b Jess $b plays $b and $b Willard $b wins $b the $b trick, $b taking $b the $b lead $b back. $b He $b smirks, $b laying $b down $b another $b card.]
+"Don't trust 'em myself. My babies in the hanger I'd trust with my life, but more GTVI spooks? Never."
+
+[$b Jess $b frowns.]
+"Kale outranks the Captain. If they ever end up at odds, he could pull rank on Daniels."
+
+[$b Joseph $b smiles, $b and $b with $b a $b nod $b from $b Willard, $b slides $b an $b ace $b onto $b the $b pile.]
+"The Captain isn't one to blindly follow orders. And the chain of command seems pretty far away out here."
+
+[$b Jess $b gives $b up $b a $b loser $b and $b Joseph $b leads $b the $b next $b trick. $b Nick $b leans $b back $b as $b play $b continues, $b running $b his $b fingers $b through $b his $b hair.]
+"Ah, the benefits of being stranded out here by ourselves.... I'm going to remember that chain of command thing next time you tell me to shut up."

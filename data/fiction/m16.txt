@@ -1,0 +1,37 @@
+// GTCv Phantom: Captain's Cabin  //
+// 2100 hours - August 14, 2367  //
+
+
+[$b Joseph $b steps $b through $b the $b door.]
+"Sir?"
+
+[$b Daniels $b looks $b up $b from $b typing $b on $b his $b computer $b terminal.]
+"Ah, Joseph -- have a seat. I think... it would be best if we talked."
+
+"About Bosch."
+
+"Yes."
+
+"Well, you should know then that I expect him to pay for his crimes against the GTVA. He has blood on his hands, and ETAK or not, the dead deserve justice."
+
+"I want justice for Bosch too, but now is not the right time. We're at war, Joseph, and the truth is we need Bosch right now. Sometimes justice turns a blind eye to necessity."
+
+"So that's your answer."
+
+"That's my decision, yes. I don't have an answer, Joseph."
+
+"Maybe things would be simpler for you if you'd seen the war from the cockpit of a fighter and watched your friends die around you."
+
+[$b Daniels' $b face $b hardens.]
+"Watch yourself, Joseph -- you're not the only one who's lost friends to the NTF rebellion. And I have more to think about than the past. I'm responsible for every man and woman on this ship, and until the situation changes, for their safety, we need Bosch on our side."
+
+"Maybe you're making the best decision, then, but I don't think it's the right one."
+
+"That's always your prerogative, Commander. But I do expect your support."
+
+"You still have it, sir."
+
+[$b Joseph $b stands $b up.]
+"Will that be all?"
+
+"For now. You're dismissed."
