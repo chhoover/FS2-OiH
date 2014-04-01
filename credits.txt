@@ -1,0 +1,104 @@
+**** ODYSSEY INTO HELL - CREDITS ****
+
+*** NOTE: this file is incomplete ***
+
+-----------------------------------
+--- SHIPs ---			
+-----------------------------------
+
+MOD:					Author(s):
+
+ SI Arachnas				 Woomeister
+ GTD Menoetius (GTD Hecate Adv.)	 Droid803
+ SOC Oculus 				 Galemp, StratComm, Sheepy
+ SC Lamia				 Axem
+ SCv Yaksha				 Bobboau (reskin by Flaming_Sword)
+ SJ Raktavija (SCa Shiamak)		 Woomeister (reskin by Flaming_Sword)
+ SF Naga				 Mikhael
+ SF Chimera				 Venom, freespaceking, Raven2001
+ SB Vindhyachal				 Robin Varley
+ SSG Annihilator			 boewulf (reskin by Flaming_Sword)
+ SI Tartarus (Shivan Jump Gate)		 Woomeister(?) (reskin by Flaming_Sword)
+ ST Xerxes				 Galemp
+ SD Vassago				 Ancient-Shivan War 3.6.12
+ SB Yali				 Ancient-Shivan War 3.6.12
+
+
+-----------------------------------
+--- WEAPONS AND EFFECTS ---
+-----------------------------------
+
+MOD:					Author(s):
+
+ New Shivan weapon effects		 Lightspeed
+
+ Mission 15 dark nebula bitmap		 watsisname
+
+ planetglacial2, planetreddesert,	 watsisname
+  lavaplanet_cut2, planetglacial
+
+ planet_rings_T-LoW, planet_rock_T-LoW,	 T-LoW
+  planet_ice_T-LoW,
+ 
+-----------------------------------
+--- MUSIC ---
+-----------------------------------
+
+Music:					Author/Source:
+
+ Second Reality	 			 Skaven (files and table taken from Darius' Blue Planet: Age of Aquarius)
+
+ ODST Medley
+  odst_earv1, odst_earv2, odst_btl3	 Martin O'Donnell, Michael Salvatori ("Skyline" - Halo 3 ODST) * 
+  odst_btl1, odst_btl2			 Martin O'Donnell, Michael Salvatori ("The Menagerie" - Halo 3 ODST) *				 
+
+ DFA
+  Ambience				 Duane Decker ("T1" - Mechwarrior 4 Vengeance)				 
+  Battle				 Duane Decker ("DFA" - Mechwarrior 4 Vengeance)
+  Victory				 Duane Decker ("Aftermath" - Mechwarrior 4 Vengeance)
+ Push
+  Ambience				 Duane Decker ("T1" - Mechwarrior 4 Vengeance)
+  Battle				 Duane Decker ("Push" - Mechwarrior 4 Vengeance)
+  Victory				 Duane Decker ("Aftermath" - Mechwarrior 4 Vengeance)
+
+ emmity_road.ogg			 Duane Decker ("Emmity Road" - Mechwarrior 4 Vengeance)
+ wednesday7.ogg				 Duane Decker ("Wednesday 7" - Mechwarrior 4 Vengeance)
+
+ OiH_odst_brief.ogg			 Martin O'Donnell, Michael Salvatori ("(Crow's Nest) Honorable Intentions" - Halo 3) *
+ OiH_choral_end_option.ogg		 Martin O'Donnell, Michael Salvatori ("(Arrival) Luck" - Halo 3) *
+
+ OiH_menu.ogg				 Martin O'Donnell, Michael Salvatori ("Traffic Jam" - Halo 3 ODST) *			 
+
+ eday.ogg				 Kevin Riepl ("14 Years After E-Day" - Gears of War)
+ hiddenlab.ogg				 Kevin Riepl ("Hidden Lab" - Gears of War)
+
+ edgen_second_thoughts.ogg		 Justin R. Durban - Edgen Animations - www.edgen.com
+ edgen_grieve.ogg
+ edgen_intruder.ogg
+ edgen_last_words.ogg
+ m28.ogg (fatw_drone)
+ OiH_m36b_db.ogg (A Better Place)
+
+ intro.ogg				 Duane Decker ("Mechwarrior 4 Opening Video" - Mechwarrior 4 Vengeance) *
+ m39.ogg				 Duane Decker ("Closing Video B" - Mechwarrior 4 Vengeance) *
+							 ("Reflections" - MechCommander 2)
+
+ OiH_final_db.ogg			 Duane Decker ("Closing Video A" - Mechwarrior 4 Vengeance) *
+
+* Used under Microsoft's "Game Content Usage Rules" using assets from Halo 3 and Halo 3 ODST, © Microsoft Corporation. For more information, see: http://www.xbox.com/en-US/Community/Developer/Rules
+
+-----------------------------------
+--- MISC/ACKNOWLEDGEMENTS ---
+-----------------------------------
+
+And finally, the credits for the people who worked to bring you Odyssey Into Hell.
+
+
+ Furby:	    FREDder, co-writer, table monkey, voice of reason, blue-collar worker, buzzkill
+
+ Carburetor:  Original concept, writer, random idea guy, occasional slavedriver, irritating visionary
+
+ (Michael): Promotional graphics artist
+
+
+
