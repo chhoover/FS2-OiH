@@ -1,0 +1,41 @@
+#Primary Weapons
+
+$Name:			Alouqua
++nocreate
+$Muzzleflash:           Rmuzzle
+
+$Name:			Citra
++nocreate
+$Muzzleflash:           Rmuzzle
+
+
+$Name:			Phanuel
++nocreate
+$Muzzleflash:           Rmuzzle
+
+$Name:			Vapula
++nocreate
+$Muzzleflash:           Rmuzzle
+
+
+$Name:			Advachiel	
++nocreate
+$Muzzleflash:           Rmuzzle
+
+
+$Name:			Chirops
++nocreate
+$Muzzleflash:           Rmuzzle
+
+
+$Name:			Palit
++nocreate
+$Muzzleflash:           Rmuzzle
+
+
+$Name:			Vepar
++nocreate
+$Muzzleflash:           Rmuzzle
+
+
+#End

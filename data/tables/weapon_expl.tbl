@@ -1,0 +1,53 @@
+; weapon_expl.tbl
+;
+; Table file for specifying which filenames are to be used for which explosions
+;
+;
+#Start
+
+$Name:	exp20				; flak explosion
+$LOD:		4
+
+$Name:	ExpMissileHit1		; missile hits, etc.
+$LOD:		3
+
+$Name: Subach_Impact                            ;Subach
+$LOD:                     1
+
+$Name: Mekhu_Impact                           ;Mekhu
+$LOD:                     1
+
+$Name: Prometheus_Impact                           ;Prometheus
+$LOD:                     1
+
+$Name: Kayser_Impact                           ;Kayser
+$LOD:                     1
+
+$Name: Akheton_Impact                           ;Akheton
+$LOD:                     1
+
+$Name: Maxim_Impact                           ;Maxim
+$LOD:                     1
+
+$Name: MS_Impact                           ;MorningStar
+$LOD:                     1
+
+$Name: Lamprey_Impact                           ;Lamprey
+$LOD:                     1
+
+$Name: Circe_Impact                           ;Circe
+$LOD:                     1
+
+$Name: Shivan_Impact01		;Shivan Alouqua, Citra, Phanuel
+$LOD:                     1
+
+$Name: Shivan_Impact02		;Shivan Advachiel, Chirops, Palit
+$LOD:                     1
+
+$Name: Vapula_Impact		;Shivan Vapula
+$LOD:                     1
+
+$Name: Vepar_Impact		;Shivan Vepar
+$LOD:                     1
+
+#End

@@ -1,0 +1,1480 @@
+;;
+;; This file is messages.tbl.  It specifies all generic messages that can be sent to the player
+;; during the mission (at least for single player).  Format is as follows:
+;;
+;; #Personas
+;; $Persona: <name>				;; persona name
+;;
+;; repeat the above '$Persona:' field for as many personas as needed
+;;
+;; $Name: <name>					;; name is an identifier used in Freespace to play the message
+;; $Message: <message>					;; message is what actualy gets displayed to the player
+;; +Persona: <persona name>				;; name of persona for this message.  Must match one of the above personas
+;; +Wave Name: <wave file>				;; optional name of a wave file to play with this message
+;; +Avi Name: <avi file>				;; optional name of a flick to play with this message
+;;
+;;
+;;
+
+
+#Personas
+
+$Persona: Goldie	  
+$Type: wingman
+
+$Persona: Quique
+$Type: wingman
+
+$Persona: Lance
+$Type: wingman
+
+$Persona: Grizzly
+$Type: wingman
+
+$Persona: Wingman 1	  
+$Type: wingman
+
+$Persona: Wingman 2
+$Type: wingman
+
+$Persona: Wingman 3
+$Type: wingman
+
+$Persona: Wingman 4
+$Type: wingman
+
+$Persona: Wingman 5
+$Type: wingman
+
+$Persona: Wingman 6
+$Type: wingman
++Vasudan
+
+$Persona: Wingman 7
+$Type: wingman
++Vasudan
+
+$Persona: Support Ship
+$Type: support
+
+#Messages
+
+;; ALL CLEAR ..................................................................................
+
+;; ARRIVAL (Enemy) ............................................................................
+
+$Name: Arrive Enemy
+$Message: Contact! Hostiles inbound!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: Reading new bandits!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: More bad guys.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: Those guys don't look friendly.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: More meat for the grinder. Excellent.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: The more the merrier.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: New bandits inbound. Look sharp, kids.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Bandits incoming!", 1079)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Heads up! Enemy wing closing in!", 1078)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("IFF confirmed! Hostiles inbound!", 2732)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Hostiles approaching fast!", 2733)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("We've got company!", 1080)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Reading hostile indicators.", 2734)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Arrive Enemy 
+$Message: XSTR("Enemy wing inbound.", 2735)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; ATTACK MY TARGET ...........................................................................
+
+$Name: Attack Target
+$Message: New priority target acknowledged, sir.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: Affirmative, sir. Bandit is padlocked.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: I've got him, senor. No problema.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: Oye, muchacho! I got a little something for ya!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: With great pleasure, senor.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: He's as good as dead.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: This won't take long.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: Watch the master at work.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: You know what I like.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: Target data received.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: Eliminating the problem.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("Roger that, sir. Engaging your target.", 2737)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("Yes, sir! We'll take em down!", 2738)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("Breaking to attack.", 2739)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("I've got em in my sights!", 2740)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("Target acquired.", 2741)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("Affirmative. We will destroy your target.", 2742)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Attack Target
+$Message: XSTR("Commencing attack on your target.", 2743)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; BACKUP ARRIVAL (previously named "REINFORCEMENTS") .........................................
+
+;; BETA WING ARRIVAL ..........................................................................
+
+;; CHECK YOUR SIX .............................................................................
+
+$Name: Check 6
+$Message: Lead, bandit on your six! Break!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: Hostile has you padlocked, sir!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: Watch out, senor!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: Bad guy behind you! Look out!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: You'd better shake that bandit.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: Uh, you've got trouble, boss.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: You've picked one up!
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("Check your six!", 2758)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("Bandit on your tail!", 2759)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("Watch your back, pilot!", 2760)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("Behind you, pilot!", 2761)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("On your six! On your six!", 2762)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("Take evasive action, pilot!", 2763)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Check 6
+$Message: XSTR("Bandit at six o'clock!", 2764)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; DEATH (previously wingman scream)...........................................................
+
+$Name: Death
+$Message: XSTR("Noooooooo!!!", 2765)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Death
+$Message: XSTR("Aaaaaaaah!!!", 2766)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Death
+$Message: XSTR("Help me!!!", 2767)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Death
+$Message: XSTR("Mayday! Mayday!", 2768)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Death
+$Message: XSTR("I'm going down! I'm going down!", 2769)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Death
+$Message: XSTR("Avenge me!", 2770)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Death
+$Message: XSTR("Long live the Emperor!", 2771)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; DELTA WING ARRIVAL .........................................................................
+
+$Name: Delta Arrived
+$Message: XSTR("This is Delta wing. What's your status?", 2772)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing now in position.", 2773)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing now on station. Awaiting orders.", 2774)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Delta Arrived
+$Message: XSTR("This is Delta wing. Give us a target, sir!", 2775)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing here. Standing by.", 2776)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+;; DEPART (previously named "WARPOUT") ........................................................
+
+$Name: Depart
+$Message: XSTR("Yes, sir! I'm outta here!", 2779)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Depart
+$Message: XSTR("You don't have to tell me twice!", 2780)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Depart
+$Message: XSTR("Roger that, sir. See you back home.", 2781)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Depart
+$Message: XSTR("Right away, sir. Jump drive engaged.", 2782)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Depart
+$Message: XSTR("Acknowledged. Returning to base now.", 2783)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Depart
+$Message: XSTR("I copy. Engaging jump drive now.", 2786)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: emptymsg.wav
+
+;; DISABLE TARGET .............................................................................
+
+$Name: Disable Target
+$Message: Surgical strike on engines acknowledged.
++Persona: Goldie
++Wave Name: emptymsg.wav 
+
+$Name: Disable Target
+$Message: I'll throw a wrench in their gears.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: They won't get far. I'll make sure of it.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: Affirmative. Immobilizing target.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("Roger that, sir. Disabling your target.", 2789)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("Yes, sir! Targeting engines now!", 2790)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("Acquiring lock on engines.", 2791)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("I copy that. Disabling your target now.", 2792)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("Roger that. We'll knock out those engines for you, sir!", 2793)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("Affirmative. Disabling your target.", 2794)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Disable Target
+$Message: XSTR("Acknowledged. Engine subsystem targeted.", 2795)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; DISARM TARGET ..............................................................................
+
+$Name: Disarm Target
+$Message: Roger, going for precision strike on weapons.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: Let's teach him to play nice.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: I'll knock out their teeth.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: Right away, Commander. Weapons targeted.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("Yes, sir! Targeting weapons now!", 2796)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("Target data received. Acquiring lock.", 2797)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("I copy, sir. Disarming your target.", 2798)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("I'm on it.", 2799)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("Roger that, sir. Disarming target now.", 2800)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("Acknowledged. Weapon subsystem targeted. ", 2801)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Disarm Target
+$Message: XSTR("I copy. Neutralizing weapons.", 2802)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; ENGAGE ENEMY ...............................................................................
+
+$Name: Engage
+$Message: Yes, sir. Engaging at will.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: Free fire confirmed.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: It's party time!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: Let's get 'em!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: Time for a little target practice.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: It's about time.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: All right! Open season!
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: Let's see what they've got.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: XSTR("By your command. Engaging enemy.", 2808)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Engage
+$Message: XSTR("Breaking to attack.", 2809)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; HELP (REDUDANT TO ASSIST??) ................................................................
+
+$Name: Help
+$Message: Bandit on my six! Going defensive!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: I've got a problem here, amigos!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: I got one trying to line me up. Heh. Trying.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: Taking heavy fire!
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("Hull integrity failing! Get me out outta here, Command!", 2824)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("I can't hold them off much longer!", 2825)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("Get this bandit off me!", 2826)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("Cover me! Cover me!", 2827)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("This crate's gonna blow!", 2828)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("Sustained critical damage. Hull failure imminent.", 2829)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Help
+$Message: XSTR("Systems are failing. Please assist.", 2830)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; HIGH PRAISE ................................................................................
+
+$Name: High Praise
+$Message: Bravo Zulu, sir!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: High Praise
+$Message: How many is that, Commander?
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: High Praise
+$Message: Ay, come on, senor! You're making us look bad!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: High Praise
+$Message: Muy bueno!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: High Praise
+$Message: Just leave some for me, OK?
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: High Praise
+$Message: Nothing like a good turkey shoot, huh?
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: High Praise
+$Message: Now that's how it's done!
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+;; IGNORE TARGET ..............................................................................
+
+$Name: Ignore Target
+$Message: This one's all yours, sir.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Ignore Target
+$Message: Have fun, senor!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Ignore Target
+$Message: Trying to steal my kill, are you? Fine, you've got it.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Ignore Target
+$Message: Roger that. Ignoring your target.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+;; NEGATIVE REPLIES ...........................................................................
+
+$Name: No
+$Message: Confirm that last, sir?
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: I can't do that, senor.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: Uh... What?
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: I don't think so, kid.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("No can do, sir.", 2838)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("Sorry, sir. Unable to comply.", 2839)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("Not a chance, pilot.", 2840)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("With all due respect, sir, you're out of line.", 2841)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("That's an invalid order, pilot.", 2842)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("Negative. I cannot execute your command.", 2843)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: No
+$Message: XSTR("I will not perform that action.", 2844)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; NO TARGET ..................................................................................
+
+$Name: No Target
+$Message: Confirm target ID, sir?
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: Say again, senor? What target?
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: You gotta give me a target first, genius.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: What target?
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("Sorry, sir. I am unable to acquire your target.", 2845)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("Confirm your target, pilot. I can't get a reading.", 2846)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("Say again, sir?", 2847)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("Target? What target?", 2848)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("And what target would that be, sir?", 2849)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("Your target data is invalid.", 2850)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: No Target
+$Message: XSTR("You must specify a target.", 2851)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+
+;; Oops 1 (Player "accidentally" fires upon friendly ..........................................
+
+$Name: Oops 1
+$Message: Check your fire, Commander!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: Was it something I said?
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: Hey, how about you try shooting at the red guys?
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: What do you think you're doing?
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("Whose side are you on, pilot?", 2852)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("Don't make me hurt you, pilot!", 2853)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("You got a problem with your IFF, sir?", 2854)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("Back off, pilot! You're out of line!", 2855)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("You think that's funny?", 2856)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("Disengage, pilot!", 2857)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Oops 1
+$Message: XSTR("Constrain your actions, pilot.", 2858)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; PLAYER KILLED (previously "player died")...................................................
+
+$Name: Player Dead
+$Message: Sir, come in! Confirm ejection!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Player Dead
+$Message: Commander Castin is down!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Player Dead
+$Message: They won't live to regret that.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Player Dead
+$Message: We've lost Alpha lead!
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Player Dead
+$Message: XSTR("Friendly neutralized!", 2865)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Player Dead
+$Message: XSTR("No sorrow but vengeance.", 2866)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; PRAISE .....................................................................................
+
+$Name: Praise
+$Message: Nice shot!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: Great takedown, sir.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: Good one, senor!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: That guy's outta here.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: Chalk up another for the boss.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: Pretty good kill there.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: Not bad, kid.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("Objective neutralized!", 2867)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("That's a confirmed kill!", 2868)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("Show us how it's done, sir!", 2869)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("You got em!", 2870)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("Bandit down!", 2871)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("Formidable!", 2872)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Praise
+$Message: XSTR("You fight like a Vasudan!", 2873)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; PRAISE SELF ................................................................................
+
+$Name: Praise Self
+$Message: Alpha 2, reporting a kill.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Bandit destroyed.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Woo-hoo! Hasta la vista, muchacho!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Target is... no longer with us.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Heh heh, he blew up real good.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: I'm so good, it's disgusting.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Sometimes I even impress myself.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Pathetic. It's like he wanted to die.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Spanked that sucker.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Maybe next time I'll actually have to try.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Oh, YEAH! Who's your daddy?
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: That one won't be causing any more trouble.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Scratch another one.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Hostile eliminated.
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Praise Self
+$Message: Thus shall all the emperor's enemies fall.
++Persona: Wingman 7
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+;; REARM ......................................................................................
+
+$Name: Rearm
+$Message: Winchester! Disengaging for rearm!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: Hey Support, do you do free refills?
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: I'm empty. Support, get over here!
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: Secondaries expended. Calling in support.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: XSTR("Missile banks depleted! Calling in support!", 2874)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: XSTR("I need to rearm!", 2875)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: XSTR("Support, need more ordnance here!", 2876)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: XSTR("Secondary banks empty! Calling in support!", 2877)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Rearm
+$Message: XSTR("Ordnance depleted!", 2878)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+;; REPAIR .....................................................................................
+
+$Name: Repair
+$Message: Subsystem damage critical! Need immediate repair!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: Ouch, that can't be good. Support, you'd better fix this.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: Someone got a lucky shot on me. Get over here, support!
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: My systems are shot! Requesting support!
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: XSTR("Systems failing! Get support here pronto!", 2881)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: XSTR("Command, systems are blown! I need a repair!", 2882)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: XSTR("Subsystems are down! I need support here!", 2883)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: XSTR("Disengaging now for repair!", 2884)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Repair
+$Message: XSTR("My systems are going berserk! Calling in support!", 2885)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+;; STRAY ............................................................................
+
+$Name: Stray
+$Message: Um, sir? What about the mission?
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: The action's over here, senor.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: Newsflash for ya, buddy: Wandering off isn't part of the mission.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: Where are you going, kid?
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("You know where you're going, sir?", 2888)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("With all due respect, sir, we seem to be off course.", 2889)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("Let's focus on our objectives, sir.", 2890)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("What about our mission, sir?", 2891)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("We have orders to follow, sir.", 2892)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("You are deserting the field of engagement, Terran.", 2893)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Stray
+$Message: XSTR("You are violating our mission directives, Terran.", 2894)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; TRAITOR ...........................................................................
+
+$Name: Traitor
+$Message: Sorry it had to end like this, sir!
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: No mercy for traitors in this unit!
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: See you in hell, pilot!
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: You just had to keep firing, didn't you?
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: That's what you get when you don't play nice.
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: No refuge for traitors!
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: You disgrace your species, Terran.
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: Revise IFF on Alpha lead!
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: He's gone loco!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: That's the last mistake you'll ever make.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: Traitor
+$Message: You won't get away with this, kid.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+;; YES ...............................................................................
+
+$Name: yes
+$Message: Roger that, sir.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: Copy.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: Understood.
++Persona: Goldie
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: Si, senor!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: Right away!
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: Got it.
++Persona: Quique
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: I'm all over it.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: No sweat.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: Easy.
++Persona: Lance
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: You've got it.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: That's an affirmative.
++Persona: Grizzly
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("Affirmative.", 2903)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("Roger that.", 2904)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("I'm on it.", 2905)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("Yes, sir!", 2906)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("I copy.", 2907)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("Acknowledged.", 2908)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: emptymsg.wav
+
+$Name: yes
+$Message: XSTR("By your command.", 2909)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: emptymsg.wav
+
+;; SUPPORT SHIP SECTION ..............................................................
+
+$Name: On Way
+$Message: XSTR("I copy, pilot. Support ship in transit.", 2910)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: emptymsg.wav
+
+$Name: Repair Done
+$Message: XSTR("Rearming complete, sir. You're good to go.", 2915)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: emptymsg.wav
+
+$Name: Repair Aborted
+$Message: XSTR("Rearming sequence aborted.", 2917)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: emptymsg.wav
+
+#End

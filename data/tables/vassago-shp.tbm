@@ -1,0 +1,118 @@
+#Ship Classes
+
+$Name: SD Vassago
+$Short name: SDest
+$Species: Shivan
++Tech Description:
+XSTR("Write me", -1)
+$end_multi_text
+$POF file: Vassago.pof
+$Detail distance: (0, 3400, 10000, 20000)
+$ND: 0 99 96
+$ND: 245 1 1
+$Show damage: YES
+$Density: 1
+$Damp: 0.2
+$Rotdamp: 1.5
+$Max Velocity: 0.0, 0.0, 20.0
+$Rotation time: 200.0, 200.0, 200.0
+$Rear Velocity: 0.0
+$Forward accel: 20.0
+$Forward decel: 10.0
+$Slide accel: 0.0
+$Slide decel: 0.0
+$Expl inner rad: 200.0
+$Expl outer rad: 2500.0
+$Expl damage: 100.0
+$Expl blast: 6500.0
+$Expl Propagates: YES
+$Shockwave Speed: 700.0
+$Shockwave Count: 5
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Shields: 0
+$Power Output: 100.0
+$Max Oclk Speed: 25.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 100000
+$Flags: ( "capital" "big damage" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 8000
+$EngineSnd: 176
+$Closeup_pos: 0.0, 0.0, -3000
+$Closeup_zoom: 0.30
+$Score: 1100
+$Subsystem: turret01,2.0,0.5
+ $Default PBanks: ( "LRed" )
+$Subsystem: turret02,2.0,0.5
+ $Default PBanks: ( "LRed" )
+$Subsystem: turret03,2.0,0.5
+ $Default PBanks: ( "SRed" )
+$Subsystem: turret04,2.0,0.5
+ $Default PBanks: ( "SRed" )
+$Subsystem: turret05,1.0,0.5
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret06,1.5,0.5
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret07,1.2,0.5
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret08,1.5,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret09,1.2,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret10,1.5,0.5
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret11,1.1,0.5
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret12,1.5,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret13,1.0,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret14,1.0,0.5
+ $Default PBanks: ( "MRed" )
+$Subsystem: turret15,1.0,0.5
+ $Default PBanks: ( "MRed" )
+$Subsystem: turret16,1.0,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret17,1.0,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret18,1.0,0.5
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret19,1.0,0.5
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret20,1.0,0.5
+ $Default PBanks: ( "Shivan Cluster" )
+$Subsystem: turret21,1.0,0.5
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret22,1.0,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret23,1.0,0.5
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret24,1.0,0.5
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret25,1.5,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret26,1.0,0.5
+ $Default PBanks: ( "Shivan Cluster" )
+$Subsystem: turret27,1.0,0.5
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: navigation, 4,0.0
+$Subsystem: weapons, 5,0.0
+$Subsystem: sensors, 5,0.0
+$Subsystem: fighterbay, 0,0.0
+$Subsystem: engine01, 4,0.0
+ $Engine Wash: Default700
+$Subsystem: engine02, 4,0.0
+ $Engine Wash: Default700
+$Subsystem: engine03, 4,0.0
+ $Engine Wash: Default700
+$Subsystem: communications, 2,0.0
+$Subsystem: AftPeakPort, 4,0.0
++untargetable
+$Subsystem: AftPeakStarboard, 4,0.0
++untargetable
+
+#End

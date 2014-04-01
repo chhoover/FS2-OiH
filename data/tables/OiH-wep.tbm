@@ -1,0 +1,1830 @@
+#Primary Weapons
+
+$Name:                                 Alouqua
++Title:                                XSTR("'Alouqua' Shivan EM Laser", -1)
++Description:
+XSTR(
+"Low Energy Usage
+Poor Hull Damage
+Good Shield Damage
+ROF 6.67/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Alouqua", -1)
++Tech Anim:					   Tech_GTW-5a_Prometheus_R
++Tech Description:
+XSTR(
+"The Alouqua seems to be a modified version of the Citra. It fires a focused EM burst, which efficiently penetrates shields. Because of its limited effectiveness against hull plating, it is best paired with a weapon that inflicts more damage against armor. No other data is available."", -1)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							Alouqua_Bitmap
+@Laser Glow:						   Alouqua_Glow
+@Laser Color:						   250, 0, 61
+@Laser Color2:						   120, 10, 0
+@Laser Length:							2.2
+@Laser Head Radius:						2.7
+@Laser Tail Radius:						2.7
+$Mass:                                 0.02
+$Velocity:                             910.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.15                            ;; in seconds
+$Damage:                               12
+$Armor Factor:							0.3
+$Shield Factor:							2.0
+$Subsystem Factor:						0.2
+$Lifetime:                             1.5
+$Energy Consumed:						0.05                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            108                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "stream" )
+$Trail:																										;; Trail cannot be set if Exhaust is set
+	+Start Width:								0.35                                         ;; Width of trail nearest missile
+	+End Width:									0.1                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:								0.4
+	+End Alpha:									0.0
+	+Max Life:									0.07                                          ;; how many seconds before trail disappears
+	+Bitmap:									Alouqua_Trail											;; Bitmap used to draw trail
+$Icon:                                 iconPromR
+$Anim:                                 PromR
+$Impact Explosion:						Shivan_Impact01
+$Impact Explosion Radius:				2.5
+
+$Name:                                 Citra
++Title:                                XSTR("'Citra' Shivan Laser", -1)
++Description:
+XSTR(
+"Low Energy Usage
+Moderate Shield Damage
+Moderate Hull Damage
+ROF 5.88/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Citra", -1)
++Tech Anim:					   Tech_Akheton_SDG
++Tech Description:
+XSTR(
+"By far the most common Shivan primary weapon, the Citra is a well-rounded weapon that is effective against both shields and hull plating. Like its more specialized cousin, the Alouqua, the Citra boasts a high rate of fire and low energy requirements. No further data is available.", -1)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							Citra_Bitmap
+@Laser Glow:						   Alouqua_Glow
+@Laser Color:						   120, 0, 91
+@Laser Color2:						   91, 0, 10
+@Laser Length:							2.9
+@Laser Head Radius:						2.7
+@Laser Tail Radius:						2.7
+$Mass:                                 -0.02
+$Velocity:                             800.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.17                            ;; in seconds
+$Damage:                               14
+$Armor Factor:							0.9
+$Shield Factor:							0.9
+$Subsystem Factor:						0.3
+$Lifetime:                             1.3
+$Energy Consumed:						0.1                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            108                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "stream" "particle spew" )
+$Trail:																										;; Trail cannot be set if Exhaust is set
+	+Start Width:								0.3                                         ;; Width of trail nearest missile
+	+End Width:									0.15                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:								0.3
+	+End Alpha:									0.0
+	+Max Life:									0.1                                          ;; how many seconds before trail disappears
+	+Bitmap:									Alouqua_Trail											;; Bitmap used to draw trail
+$Icon:                                 iconScalpel
+$Anim:                                 Scalpel
+$Impact Explosion:						Shivan_Impact01
+$Impact Explosion Radius:				2.8
+$Pspew: 
++Count: 1 
++Time: 20 
++Vel: 0.30
++Radius: 0.32 
++Life: 0.4 
++Scale: 0.0  
++Bitmap: Shivan_Particle02
+
+$Name:                                 Phanuel
++Title:                                XSTR("'Phanuel' Shivan Plasma Cannon", -1)
++Description:
+XSTR(
+"Moderate Energy Usage
+Good Hull Damage
+Poor Shield Damage
+ROF 5/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Phanuel", -1)
++Tech Anim:					   Tech_GTW-5_Prometheus_S
++Tech Description:
+XSTR(
+"The Phanuel seems to be designed for use by heavy Shivan bombers. Its plasma projectiles are quite effective against hull armor, but have difficulty penetrating shields. No further data is available.", -1)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							Phanuel_Bitmap
+@Laser Glow:						   Alouqua_Glow
+@Laser Color:						   120, 0, 200
+@Laser Color2:						   91, 30, 00
+@Laser Length:							3.3
+@Laser Head Radius:						3
+@Laser Tail Radius:						3
+$Mass:                                 -0.09
+$Velocity:                             610.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.2                            ;; in seconds
+$Damage:                               23
+$Armor Factor:							0.9
+$Shield Factor:							0.3
+$Subsystem Factor:						0.4
+$Lifetime:                             1.6
+$Energy Consumed:						0.5                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            103                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "stream" "particle spew" )
+$Trail:																										;; Trail cannot be set if Exhaust is set
+	+Start Width:			0.9                                         ;; Width of trail nearest missile
+	+End Width:			0.5                                          ;; Width of trail before it "evaporates"
+	+Start Alpha:			0.25
+	+End Alpha:			0.0
+	+Max Life:			0.5                                          ;; how many seconds before trail disappears
+	+Bitmap:			Alouqua_Trail				;; Bitmap used to draw trail
+$Icon:                                 iconPromS
+$Anim:                                 PromS
+$Impact Explosion:						Shivan_Impact01
+$Impact Explosion Radius:				3.3
+$Pspew: 
++Count: 1 
++Time: 9 
++Vel: 0.31
++Radius: 0.25 
++Life: 0.4 
++Scale: 0.0  
++Bitmap: Shivan_Particle02
+
+; tractor weapon
+;
+$Name:                                  Vapula
++Title:                                 XSTR("'Vapula' Shivan Tractor Beam Cannon", -1)
++Description:
+XSTR(
+"Extreme Energy Usage
+Poor Hull Damage
+Poor Shield Damage
+ROF 8.33/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Vapula", -1)
++Tech Anim:					   Tech_GTW-83_Lamprey
++Tech Description:
+XSTR(
+"One of the more exotic known Shivan weapons, the Vapula appears to create a localized gravity field upon impact with its target, which then pulls the target toward the projectile's point of origin. Despite its limited damage potential, the Vapula is still a powerful tactical weapon. However, its astonishingly high energy requirements make sustained firing impossible. No further data is available.", -1)
+$end_multi_text
+$Model File:									none
+@Laser Bitmap:									Vapula_Bitmap
+@Laser Glow:								   Vapula_Glow
+@Laser Color:								   255, 225, 0
+@Laser Color2:								   150, 0, 0
+@Laser Length:									16.0
+@Laser Head Radius:							0.8
+@Laser Tail Radius:							0.8
+$Mass:                                 -1.5
+$Velocity:                             700.0												;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.12												;; in seconds
+$Damage:                               30
+$Armor Factor:								0.1
+$Shield Factor:								0.2
+$Subsystem Factor:							0.2
+$Lifetime:                             1.5
+$Energy Consumed:								1.4												;; Energy used when fired
+$Cargo Size:									0.0												;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            103                                    ;; The sound it makes when fired
+$ImpactSnd:                            85                                     ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "particle spew" )
+$Icon:                                 iconLich
+$Anim:                                 Lich
+$Impact Explosion:						Vapula_Impact
+$Impact Explosion Radius:				2.7
+$Pspew: 
++Count: 1 
++Time: 17
++Vel: 0.40 
++Radius: 0.40 
++Life: 0.2 
++Scale: 0.65 
++Bitmap: Vapula_Particle
+
+;--- Second Set
+
+$Name:                                 Advachiel
++Title:                                XSTR("'Advachiel' Outcast Scattershot Laser", -1)
++Description:
+XSTR(
+"High Energy Usage
+Good Shield Damage
+Good Hull Damage
+ROF 1.33/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Advachiel", -1)
++Tech Anim:					   Tech_GTW-5_Prometheus_S
++Tech Description:
+XSTR(
+"This unusual weapon seems to be found only on Outcast fighters. Although it is an energy weapon, it functions more like a shotgun, firing multiple energy blasts at slight angles with each shot. The Advachiel's unconventional design limits its effectiveness at anything beyond point-blank range, but it makes up for this weakness with impressive damage potential in close-range dogfights. Its area of effect also makes the Advachiel quite useful for intercepting bombs.", -1)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							ShivaStream_Bitmap
+@Laser Glow:						   Alouqua_Glow
+@Laser Color:						   200, 0, 0
+@Laser Color2:						   10, 0, 0
+@Laser Length:							1.5
+@Laser Head Radius:						1.2
+@Laser Tail Radius:						1.2
+$Mass:                                 0.8
+$Velocity:                             1000.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.75                            ;; in seconds
+$Damage:                               17
+$Armor Factor:							0.8
+$Shield Factor:							0.9
+$Subsystem Factor:						0.2
+$Lifetime:                             0.7
+$Energy Consumed:						0.8                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            100                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "stream" "particle spew" )
+$Icon:                                 iconPromS
+$Anim:                                 PromS
+$Impact Explosion:						Shivan_Impact02
+$Impact Explosion Radius:				1.5
+$Pspew: 
++Count: 1 
++Time: 20 
++Vel: 0.32
++Radius: 0.25 
++Life: 0.4 
++Scale: 0.1  
++Bitmap: Shivan_Laser_Stream
+$FOF: 1.5
+$Shots: 5
+
+
+$Name:                                 Chirops
++Title:                                XSTR("'Chirops' Outcast Laser", -1)
++Description:
+XSTR(
+"Medium Energy Usage
+Level 4 Hull Damage
+Level 2 Shield Damage", -1)
+$end_multi_text
++Tech Title:				   XSTR("Chirops", -1)
++Tech Anim:					   Tech_GTW-5_Prometheus_S
++Tech Description:
+XSTR(
+"This weapon, designated 'Chirops', appears to be the standard Outcast primary weapon. Unlike the Advachiel, the Chirops seems to have been designed for maximum versatility and all-around dependability. It delivers respectable damage at moderate range, and is also fairly energy-efficient.", -1)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							ShivaStream_Bitmap
+@Laser Glow:						   Alouqua_Glow
+@Laser Color:						   190, 80, 0
+@Laser Color2:						   10, 0, 0
+@Laser Length:							1.8
+@Laser Head Radius:						1.7
+@Laser Tail Radius:						1.7
+$Mass:                                 0.2
+$Velocity:                             800.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.4                            ;; in seconds
+$Damage:                               30
+$Armor Factor:							0.8
+$Shield Factor:							0.9
+$Subsystem Factor:						0.3
+$Lifetime:                             1.3
+$Energy Consumed:						0.25                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            100                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "stream" "particle spew" "cycle" )
+$Icon:                                 iconPromS
+$Anim:                                 PromS
+$Impact Explosion:						Shivan_Impact02
+$Impact Explosion Radius:				2.2
+$Pspew: 
++Count: 1 
++Time: 10 
++Vel: 0.22
++Radius: 0.3 
++Life: 0.4 
++Scale: 0.05  
++Bitmap: Shivan_Laser_Stream
+
+$Name:                                 Palit
++Title:                                XSTR("'Palit' Shivan Heavy Laser", -1)
++Description:
+XSTR(
+"Medium Energy Usage
+Good Hull Damage
+Good Shield Damage
+ROF 4/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Palit", -1)
++Tech Anim:					   Tech_GTW_UD-8_Kayser
++Tech Description:
+XSTR(
+"The Palit seems to be a recent development in Shivan weapon technology. We do not understand how this weapon operates, but it is nevertheless very potent against both shields and hull plating. Preliminary analysis indicates this weapon is comparable to the GTVA's Prometheus S cannon in damage potential. However, the Palit's energy requirements are surprisingly low for a weapon of its caliber, making it extremely powerful in prolonged combat situations. No further data is available.", -1)
+$end_multi_text
+$Model File:							none
+@Laser Bitmap:							ShivaStream_Bitmap
+@Laser Glow:						   Alouqua_Glow
+@Laser Color:						   100, 80, 160
+@Laser Color2:						   10, 0, 10
+@Laser Length:							2.1
+@Laser Head Radius:						1.9
+@Laser Tail Radius:						1.9
+$Mass:                                 -0.04
+$Velocity:                             1300.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.25                            ;; in seconds
+$Damage:                               40
+$Armor Factor:							0.45
+$Shield Factor:							1.2
+$Subsystem Factor:						0.2
+$Lifetime:                             0.9
+$Energy Consumed:						0.4                            ;; Energy used when fired
+$Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            108                              ;; The sound it makes when fired
+$ImpactSnd:                            85                              ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "stream" "particle spew" )
+$Icon:                                 iconKayser
+$Anim:                                 Kayser
+$Impact Explosion:						Shivan_Impact02
+$Impact Explosion Radius:				3.1
+$Pspew: 
++Count: 1 
++Time: 7 
++Vel: 0.1
++Radius: 0.4 
++Life: 0.4 
++Scale: 0.3  
++Bitmap: Shivan_Laser_Stream
+
+; emp weapon
+;
+$Name:                                  Vepar
++Title:                                 XSTR("'Vepar' Shivan EMP Cannon", -1)
++Description:
+XSTR(
+"Disrupts Electronics
+High Energy Usage 
+Extreme Shield Damage
+ROF 1.11/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Vepar", -1)
++Tech Anim:					   Tech_GTW-Circe
++Tech Description:
+XSTR(
+"The Vepar is, like the Vapula, a purely tactical weapon. It fires extremely concentrated blasts of EM interference, which, although ineffective against armor plating, are devastatingly powerful against shield systems. The EMP generated upon impact is also quite capable of disrupting the target's sensors and communications. No further data is available.", -1)
+$end_multi_text
+$Model File:									none
+@Laser Bitmap:									Vepar_Bitmap
+@Laser Glow:								   Vapula_Glow
+@Laser Color:								   0, 225, 230
+@Laser Color2:								   0, 10, 0
+@Laser Length:									12.0
+@Laser Head Radius:							0.9
+@Laser Tail Radius:							0.9
+$Mass:                                 0.5
+$Velocity:                             620.0												;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.9												;; in seconds
+$Damage:                               30
+$Blast Force:              		0.0
+$Inner Radius:					5.0                                    ;; radius at which damage is full
+$Outer Radius:					10.0                                    
+$Armor Factor:								0.0
+$Shield Factor:								5.4
+$Subsystem Factor:							0.3
+$Lifetime:                             1.5
+$Energy Consumed:								3.4												;; Energy used when fired
+$Cargo Size:									0.0												;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+$LaunchSnd:                            98                                    ;; The sound it makes when fired
+$ImpactSnd:                            85                                     ;; The sound it makes when it hits something
+$Flags:                                ( "player allowed" "particle spew" "EMP" )
+$Icon:                                 iconCirce
+$Anim:                                 Circe
+$Impact Explosion:						Vepar_Impact
+$Impact Explosion Radius:				3.1
+$EMP Intensity:								12500.0
+$EMP Time:                             10.0
+$Pspew: 
++Count: 1 
++Time: 17
++Vel: 0.40 
++Radius: 0.40 
++Life: 0.2 
++Scale: 0.65 
++Bitmap: Vepar_Particle
+
+;-----Lamia Beam by Axem
+$Name:                          MRed
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     25.0            ;; in seconds
+$Damage:                        300				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      30.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     125             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					4000			;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			7.0				;; how long it lasts once the beam is actually firing
+	+Warmup:		  			3000			;; warmup time in ms
+	+Warmdown:					1500			;; warmdown time in ms
+	+Radius:		  			60.0			;; muzzle glow radius in meters
+	+PCount:					12				;; particles spewed every interval
+	+PRadius:					1.9				;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particleexp01	;; particle ani
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					178				;; the looping beam-firing sound
+	+WarmupSound:				184				;; associated warmup sound
+	+WarmdownSound:				188				;; associated warmdown sound
+	+Muzzleglow:				SbeamAglow	;; muzzle glow bitmap	
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8			;; what percentage of max width we subtract per second
+	$Section:								;; one section of the beam (you can have up to 5)
+		+Width:					15.0				;; width of the section
+		+Texture:				beam-white		;; texture for this section
+		+RGBA Inner:			255 255 255 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			150 150 150 10	;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					2.0				;; hehe
+	$Section:								;; one section of the beam
+		+Width:					30.0				;; width of the section
+		+Texture:				beam-red2		;; texture for this section
+		+RGBA Inner:			160 160 0 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			60 60 0 10		;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					1.0				;; hehe
+	$Section:								;; one section of the beam
+		+Width:					50.0			;; width of the section
+		+Texture:				beam-red		;; texture for this section
+		+RGBA Inner:			255 0 0 255		;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			60 0 0 10		;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					0.0				;; hehe
+
+$Name:							LRBVas
+$Model File:					none 				; laser1-1.pof
+@Laser Bitmap:               	laserglow01
+@Laser Color:					255, 200, 67
+; Puke pale green 				R 192	G 255	B 200
+@Laser Length:					0.0
+@Laser Head Radius:				0.3
+@Laser Tail Radius:				0.3
+$Mass:                          100.0
+$Velocity:                      1600.0				;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     24.0				;; in seconds
+$Damage:                        1100				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
+$Damage Type:						HugeWeapon
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      25.0            	;; How long this thing lives
+$Energy Consumed:               0.30        	   	;; Energy used when fired
+$Cargo Size:                    0.0         	   	;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124             	;; The sound it makes when fired
+$ImpactSnd:                     88              	;; The sound it makes when it hits something
++Weapon Range:					7400				;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              exp04
+$Impact Explosion Radius:       80
+$BeamInfo:
+	+Type: 0
+	+Life: 3.7
+	+Warmup: 3500
+	+Warmdown: 3500
+	+Radius:			110.0
+	+PCount:			40
+	+PRadius:			2.8
+	+PAngle: 60.0
+	+PAni:				particle_yellow
+	+Miss Factor: 1.0 1.2 1.5 1.7 2.1
+	+BeamSound: 121
+	+WarmupSound: 122
+	+WarmdownSound: 123
+	+Muzzleglow:			beamglow6
+	+Shots: 0
+	+ShrinkFactor: 0.0
+	+ShrinkPct: 0.0
+	+Range:				11100
+	+Beam Flash Effect:		capflash
+	+Beam Flash Radius:		40.0
+	+Beam Piercing Effect:		exp06
+	+Beam Piercing Radius:		40.0
+	+Beam Piercing Effect Velocity:			200
+	+Beam Piercing Splash Effect Velocity:		-10
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		;+Index:			0
+		+Width:			40.0
+		+Texture:		VasBeam2Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.1
+		+Zadd:			9
+		+Tile Factor:	10, 1
+		+Translation:	-25
+	$Section:
+		;+Index:			1
+		+Width:			55.0
+		+Texture:		VasBeam2Glow
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.3
+		+Zadd:			6
+		+Tile Factor:	10, 1
+		+Translation:	-16
+	$Section:
+		;+Index:			2
+		+Width:			90.0
+		+Texture:		VasBeam2GlowHaze
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.4
+		+Zadd:			3
+		+Tile Factor:	10, 1
+		+Translation:	-13
+	$Section:
+		+Width:			170.0
+		+Texture:		OrangeFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
+
+$Name:                          SAAAf
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:			250, 30, 30
+@Laser Length:			0.0
+@Laser Head Radius:		0.60
+@Laser Tail Radius:		0.60
+$Mass:                          4.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     5.0             ;; in seconds
+$Damage:                        9		
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      50.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     124         	;; The sound it makes when fired
+$ImpactSnd:                     88        		;; The sound it makes when it hits something
++Weapon Range:					1500			;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       10.0
+$BeamInfo:
+	+Type:			3			;; 0 - 4 are valid #'s
+	+Life:			3.5			;; how long it lasts once the beam is actually firing
+	+Warmup:		1000			;; warmup time in ms
+	+Warmdown:		1000			;; warmdown time in ms
+	+Radius:		12.0			;; muzzle glow radius in meters
+	+PCount:		12			;; particles spewed every interval
+	+PRadius:		1.2			;; particle radius
+	+PAngle:		65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:			particleexp01		;; particle ani
+	+Miss Factor:		1.5 1.6 1.7 .18 2.0 	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:			179			;; the looping beam-firing sound
+	+WarmupSound:		182			;; associated warmup sound
+	+WarmdownSound:		189			;; associated warmdown sound
+	+Muzzleglow:		SbeamAglow		;; muzzle glow bitmap
+	+Shots:				3			;; only used for TYPE 3 beams
+	+ShrinkFactor:		0.0			;; what
+	+ShrinkPct:			0.0			;; what percentage of max width we subtract per second
+	$Section:					;; one section of the beam (you can have up to 5)
+		+Width:			1.0		;; width of the section
+		+Texture:		SAAACore	;; texture for this section
+		+RGBA Inner:		160 160 0 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:		60 60 0 10	;; rgba values (only for non-textured beam compiles)
+		+Flicker:		0.3		;; how much it flickers (0.0 to 1.0)
+		+Zadd:			1.0		;; hehe
+		+Tile Factor:		30, 1
+		+Translation:		-3
+	$Section:					;; one section of the beam
+		+Width:			3.0		;; width of the section
+		+Texture:		SbeamAB		;; texture for this section
+		+RGBA Inner:		255 255 255 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:		150 150 150 10	;; rgba values (only for non-textured beam compiles)
+		+Flicker:		0.2		;; how much it flickers (0.0 to 1.0)
+		+Zadd:			2.0		;; hehe
+	$Section:					;; one section of the beam
+		+Width:			7.5		;; width of the section
+		+Texture:		SbeamAC		;; texture for this section
+		+RGBA Inner:		160 160 0 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:		60 60 0 10	;; rgba values (only for non-textured beam compiles)
+		+Flicker:		0.001		;; how much it flickers (0.0 to 1.0)
+		+Zadd:			1.0		;; hehe
+		+Tile Factor: 		20, 1
+		+Translation:		-6
+	$Section:
+		+Width: 		15.0
+		+Texture:		SbeamAD
+		+RGBA Inner:		255 0 0 255
+		+RGBA Outer:		60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			0.0
+	$Section:
+		+Width:			16.5
+		+Texture:		SbeamAE
+		+RGBA Inner: 		255 0 0 255
+		+RGBA Outer:		60 0 0 10
+		+Flicker:		0.2
+		+Zadd:			0.0
+		
+$Name:                          	SBeamTiny
+$Model File:				none
+@Laser Bitmap:					laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          	100.0
+$Velocity:                      	50000.0 
+$Fire Wait:					10.0 
+$Damage:                        	200
+$Armor Factor:				1.0
+$Shield Factor:				1.0
+$Subsystem Factor:			1.0
+$Lifetime:                      	2.0 
+$Energy Consumed:				0.30 
+$Cargo Size:				0.0
+$Homing:                        	NO
+$LaunchSnd:                     	125 
+$ImpactSnd:                     	88 
++Weapon Range:				4000 
+$Flags:                         	("huge" "beam")
+$Icon:                          	icongun05
+$Anim:                          	LoadGun07
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:		20.0
+$BeamInfo:
+	+Type:					0
+	+Life:			  		2.0
+	+Warmup:		  			2000
+	+Warmdown:					2000
+	+Radius:		  			30.0
+	+PCount:					12
+	+PRadius:					1.9
+	+PAngle:					65.0
+	+PAni:					particleexp01
+	+Miss Factor:			 	2.5 1.85 1.25 0.85 0.5
+	+BeamSound:					177
+	+WarmupSound:				182
+	+WarmdownSound:				189
+	+Muzzleglow:				beamglow4
+	+Shots:					0
+	+ShrinkFactor:				0.1
+	+ShrinkPct:					1.8
+	$Section: 
+		+Width:				6.0
+		+Texture:				beam-white
+		+RGBA Inner:			0 0 0 0
+		+RGBA Outer:			0 0 0 0
+		+Flicker:				0.1
+		+Zadd:				2.0
+	$Section:
+		+Width:				15.0
+		+Texture:				beam-red2
+		+RGBA Inner:			0 0 0 0
+		+RGBA Outer:			0 0 0 0
+
+		+Flicker:				0.1
+		+Zadd:				1.0
+	$Section:
+		+Width:				20.0
+		+Texture:				beam-red
+		+RGBA Inner:			0 0 0 0
+		+RGBA Outer:			0 0 0 0
+		+Flicker:				0.1
+		+Zadd:				0.0
+
+
+#End
+
+;---------------------------------------------------------------------------------
+#Secondary Weapons
+;---------------------------------------------------------------------------------
+
+$Name: Rockeye#Shivan
+	+nocreate
++Title:                                XSTR("Shivan heat-seeking missile", -1)
++Description:
+XSTR(
+"Standard missile
+Yield: 18
+Range: 1900 m	Reload: 2/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan heat-seeker", -1)
++Tech Anim:					   Tech_GTM_MX-64_Rockeye
++Tech Description:
+XSTR(
+"This missile appears to be the Shivan counterpart to the GTVA's Rockeye. No other data is available.", -1)
+$end_multi_text
+$Model File: S_Rockeye.pof
+$Mass:					5.0
+$Velocity:				190.0
+$Fire Wait:				0.5
+$Damage:					45
+$Blast Force:			200.0
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		0.0
+$Armor Factor:			1.0
+$Shield Factor:		0.8
+$Subsystem Factor:	0.8
+$Lifetime:				10.0
+$Energy Consumed:		0.0
+$Cargo Size:			4.0
+$Homing:					YES
+	+Type:					HEAT
+	+Turn Time:				0.85
+	+View Cone:				100.0
+$LaunchSnd:				87
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			4.0
+$Flags:					( "player allowed" )
+$Trail:
+	+Start Width:			0.4
+	+End Width:				0.1
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				0.2
+	+Bitmap:					NewMiss1
+$Icon:		iconMX-64
+$Anim:		mx64
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	5.0
+$Decal:
+	+Texture:	Medium_Decal
+	+Radius:		2.5
+
+$Name: MX-64#Shivan
+	+nocreate
+$Model File: S_Rockeye.pof
+$Mass:					5.0
+$Velocity:				150.0
+$Fire Wait:				0.75
+$Damage:					30
+$Blast Force:			200.0
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		0.0
+$Armor Factor:			1.0
+$Shield Factor:		0.4
+$Subsystem Factor:	1.0
+$Lifetime:				12.0
+$Energy Consumed:		0.0
+$Cargo Size:			4.0
+$Homing:					YES
+	+Type:					HEAT
+	+Turn Time:				1.0
+	+View Cone:				40.0
+$LaunchSnd:				87
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			4.0
+$Flags:					( )
+$Trail:
+	+Start Width:			0.4
+	+End Width:				0.1
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				0.2
+	+Bitmap:					NewMiss1
+$Icon:		iconMX-64
+$Anim:		mx64
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	5.0
+$Decal:
+	+Texture:	Medium_Decal
+	+Radius:		2.2
+
+$Name: Tempest#Shivan
+	+nocreate
++Title:                                XSTR("Shivan dumbfire missile", -1)
++Description:
+XSTR(
+"Standard unguided missile
+Yield: 16
+Range: 650 m	Reload: 3/s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan dumbfire", -1)
++Tech Anim:					   Tech_GTM_MX-6_Tempest
++Tech Description:
+XSTR(
+"This is a Shivan dumbfire missile comparable to the Tempest. It compensates for its relatively low payload with its small size and high refire rate. No further data is available.", -1)
+$end_multi_text
+$Model File: S_Hornet.pof
+$Mass:					0.1
+$Velocity:				360.0
+$Fire Wait:				0.30
+$Damage:					45
+$Blast Force:			0.2
+$Inner Radius:			10.0
+$Outer Radius:			20.0
+$Shockwave Speed:		0
+$Armor Factor:			0.9
+$Shield Factor:		0.5
+$Subsystem Factor:	0.6
+$Lifetime:				1.8
+$Energy Consumed:		0.0
+$Cargo Size:			0.25
+$Homing:					NO
+$LaunchSnd:				193
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			12.0
+$Flags:					( "player allowed" )
+$Trail:
+	+Start Width:			0.1
+	+End Width:				0.2
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				0.3
+	+Bitmap:					NewMiss1
+$Icon:		iconTempest
+$Anim:		Tempest
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	3.0
+$Decal:
+	+Texture:	Tiny_Decal
+	+Radius:		0.5
+
+$Name: Hornet#Shivan
+	+nocreate
++Title:                                XSTR("Shivan swarm missile", -1)
++Description:
+XSTR(
+"Standard swarm missile
+Yield: 20
+Range: 1325 m	Reload: 2s
+Launches in swarms of 4", -1)
+$end_multi_text
+$Model File: S_Hornet.pof
+$Mass:					0.1
+$Velocity:				190.0
+$Fire Wait:				2.0
+$Damage:					20.0
+$Blast Force:			0.2
+$Inner Radius:			15.0
+$Outer Radius:			30.0
+$Shockwave Speed:		0
+$Armor Factor:			1.5
+$Shield Factor:		0.8
+$Subsystem Factor:	0.3
+$Lifetime:				7.0
+$Energy Consumed:		0.0
+$Cargo Size:			1.0
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					1.35
+	+Min Lock Time:			3.0
+	+Lock Pixels/Sec:			60
+	+Catch-up Pixels/Sec:	100
+	+Catch-up Penalty:		30
+$Swarm:					4
+$LaunchSnd:				102
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			1.0
+$Flags:					( "player allowed" )
+$Trail:					
+	+Start Width:			0.25
+	+End Width:				0.5
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				1.5
+	+Bitmap:					NewMiss1
+$Icon:		iconHornet
+$Anim:		hornet
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	5.0
+$Decal:
+	+Texture:	Small_Decal
+	+Radius:		1.2
+
+$Name: Tornado#Shivan
+	+nocreate
++Title:                                XSTR("Shivan advanced swarm missile", -1)
++Description:
+XSTR(
+"Swarm missile
+Yield: 20
+Range: 1600 m	Reload: 2.5s
+Launches in swarms of 4", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan advanced swarmer", -1)
++Tech Anim:					   Tech_Tornado
++Tech Description:
+XSTR(
+"A Shivan swarm missile. It seems to be similar to the Tornado in most respects. No further data is available.", -1)
+$end_multi_text
+$Model File: S_Hornet.pof
+$Mass:					0.1
+$Velocity:				230.0
+$Fire Wait:				2.5
+$Damage:					25.0
+$Blast Force:			0.2
+$Inner Radius:			10.0
+$Outer Radius:			20.0
+$Shockwave Speed:		0
+$Armor Factor:			2.0
+$Shield Factor:		1.0
+$Subsystem Factor:	0.3
+$Lifetime:				7.0
+$Energy Consumed:		0.0
+$Cargo Size:			1.25
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					1.25
+	+Min Lock Time:			2.25
+	+Lock Pixels/Sec:			63
+	+Catch-up Pixels/Sec:	100
+	+Catch-up Penalty:		30
+$LaunchSnd:				102
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			1.0
+$Flags:					( "Corkscrew" "lockarm" "player allowed" )
+$Trail:
+	+Start Width:			0.25
+	+End Width:				0.5
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:           1.5
+	+Bitmap:					NewMiss1
+$Icon:		iconBombardier
+$Anim:		Tornado
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	5.0
+$Decal:
+	+Texture:	Medium_Decal
+	+Radius:		1.2
+
+$Name: Harpoon#Shivan
+	+nocreate
++Title:                                XSTR("Shivan dogfight missile", -1)
++Description:
+XSTR(
+"Standard dogfight missile
+Yield: 40
+Range: 1250 m	Reload: 2s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan dogfight missile", -1)
++Tech Anim:					   Tech_Harpoon
++Tech Description:
+XSTR(
+"A Shivan aspect-seeking dogfight missile. No further data is available.", -1)
+$end_multi_text
+$Model File: S_Harpoon.pof
+$Mass:					15.0
+$Velocity:				250.0
+$Fire Wait:				2.0
+$Damage:					80
+$Blast Force:			60.0
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		0
+$Armor Factor:			1.0
+$Shield Factor:		0.8
+$Subsystem Factor:	0.5
+$Lifetime:				5.0
+$Energy Consumed:		0.0
+$Cargo Size:			2.5
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					1.0
+	+Min Lock Time:			2.0
+	+Lock Pixels/Sec:			70
+	+Catch-up Pixels/Sec:	100
+	+Catch-up Penalty:		30
+$LaunchSnd:				192
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			2.0
+$Flags:					( "player allowed" )
+$Trail:
+	+Start Width:  		0.25
+	+End Width:          0.5
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:           0.7
+	+Bitmap:					NewMiss1
+$Icon:		iconCrossbow
+$Anim:		cross
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	7.0
+$Decal:
+	+Texture:	Medium_Decal
+	+Radius:		3.2
+
+$Name: Trebuchet#Shivan
+	+nocreate
++Title:                                XSTR("Shivan light torpedo", -1)
++Description:
+XSTR(
+"Multi-purpose heavy missile
+Yield: 126
+Range: 2070 m	Reload: 6s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan light torpedo", -1)
++Tech Anim:					   Tech_GTM-55_Trebuchet
++Tech Description:
+XSTR(
+"This missile seems to be a cross between a bomb and a standard missile. Its range is relatively short compared to our Trebuchets, but its payload is significantly greater. This makes it a powerful threat to both bombers and small capital ships. However, its relatively low speed limits its effectiveness against more mobile targets. No further data is available.", -1)
+$end_multi_text
+$Model File: S_Trebuchet.pof
+$Mass:					20.0
+$Velocity:				230.0
+$Fire Wait:				6.0
+$Damage:					550
+$Blast Force:			160.0
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		50
+$Armor Factor:			0.9
+$Shield Factor:		0.5
+$Subsystem Factor:	0.3
+$Lifetime:				9.0
+$Energy Consumed:		0.0
+$Cargo Size:			10.0
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					3.0
+	+Min Lock Time:			3.5
+	+Lock Pixels/Sec:			70
+	+Catch-up Pixels/Sec:	120
+	+Catch-up Penalty:		15
+$LaunchSnd:				92
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			0.33
+$Flags:					( "Bomber+" "huge" "player allowed" )
+$Trail:
+	+Start Width:			0.25
+	+End Width:				0.7
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				0.3
+	+Bitmap:					NewMiss1
+$Icon:		iconTrebuchet
+$Anim:		Trebuchet
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	15.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		3.0
+
+$Name: EMP Adv.#Shivan
+	+nocreate
+$Model File: S_Harpoon.pof
+$Mass:		15.0
+$Velocity:		275.0
+$Fire Wait:		2.0
+$Damage:		45
+$Blast Force:					20.0
+$Inner Radius:					80.0
+$Outer Radius:					300.0
+$Shockwave Speed:				120.0
+$Armor Factor:					1.0
+$Shield Factor:				0.8
+$Subsystem Factor:				0.5
+$Lifetime:		5.0
+$Energy Consumed:				0.0
+$Cargo Size:					4.0
+$Homing:				YES
+	+Type:					ASPECT
+	+Turn Time:					1.0
+	+Min Lock Time:				2.0
+	+Lock Pixels/Sec:				70
+	+Catch-up Pixels/Sec:			100
+	+Catch-up Penalty:			30
+$LaunchSnd:		118
+$ImpactSnd:		88
+$FlyBySnd:		-1
+$Rearm Rate:					2.0
+$Flags:		( "EMP")
+$Trail:
+	+Start Width:				0.25
+	+End Width:					0.75
+	+Start Alpha:				1.0
+	+End Alpha:					0.0
+	+Max Life:					1.5
+	+Bitmap:		NewMiss1
+$Icon:		iconEMPulse
+$Anim:		ecm
+$Impact Explosion:				ExpMissileHit1
+$Impact Explosion Radius:			10.0
+$EMP Intensity:				375.0
+$EMP Time:		20.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		3.25
+
+$Name: Piranha#Shivan
+	+nocreate
++Title:                                XSTR("Shivan cluster bomb", -1)
++Description:
+XSTR(
+"Unguided anti-fighter missile
+Yield: 40 (15 submunitions)
+Range: 400 m	Reload: 5s
+Submunition yield: 24", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan cluster bomb", -1)
++Tech Anim:					   Tech_Piranha
++Tech Description:
+XSTR(
+"This weapon appears to be an anti-fighter weapon similar to our Piranha. It is commonly used by bombers. No further data is available.", -1)
+$end_multi_text
+$Model File: ShivanCluster.pof
+$Mass:					20.0
+$Velocity:				90.0
+$Fire Wait:				5.0
+$Damage:					100
+$Blast Force:			1500.0	
+$Inner Radius:			75.0
+$Outer Radius:			150.0
+$Shockwave Speed:		80.0
+$Armor Factor:			1.0
+$Shield Factor:		0.75
+$Subsystem Factor:	1.0
+$Lifetime:				4.0
+$Energy Consumed:		0.0
+$Cargo Size:			12.0
+$Homing:					NO
+$LaunchSnd:				93
+$ImpactSnd:				101
+$FlyBySnd:				-1
+$Rearm Rate:			0.1
+$Flags:					( "Spawn S_Cluster Baby,15" "Remote Detonate" "player allowed" )
+$Trail:
+	+Start Width:			0.25
+	+End Width:				0.75
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				1.5
+	+Bitmap:					NewMiss1
+$Icon:		iconPiranha
+$Anim:		Piranha
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	20.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		5.2
+
+$Name: Shivan Disruptor
+	+nocreate
++Title:                                XSTR("Shivan anti-subsystem missile", -1)
++Description:
+XSTR(
+"Tactical missile
+Yield: 310
+Range: 5500 m	Reload: 2s
+Damages subsystems only", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan anti-subsystem missile", -1)
++Tech Anim:					   Tech_GTM-43a-Stiletto_II
++Tech Description:
+XSTR(
+"A specialized missile designed to destroy subsystems. It appears to be comparable to our Stiletto II missiles. No further data is available.", -1)
+$end_multi_text
+$Model File: S_Trebuchet.pof
+$POF target LOD: 0
+$Mass:					10.0
+$Velocity:				220.0
+$Fire Wait:				2.0
+$Damage:					775
+$Blast Force:			40.0
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		0
+$Armor Factor:			0.01
+$Shield Factor:		0.0
+$Subsystem Factor:	1.0
+$Lifetime:				25.0
+$Energy Consumed:		0.0
+$Cargo Size:			8.0
+$Homing:					YES
+	+Type:					HEAT
+	+Turn Time:				1.0
+	+View Cone:				80.0
+$LaunchSnd:				95
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			1.2
+$Flags:					( "Huge" "Puncture" "Bomb" "player allowed" )
+$Trail:
+	+Start Width:  		0.25
+	+End Width:          0.5
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:           0.7
+	+Bitmap:					NewMiss1
+$Icon:		iconStilettoII
+$Anim:		Still
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	8.0
+$Decal:
+	+Texture:	Small_Decal
+	+Radius:		0.2
+
+$Name: Shivan Area Bomb
+	+nocreate
+$Model File: S_Infyrno.pof
+$POF target LOD: 0
+$Mass:					20.0
+$Velocity:				120.0
+$Fire Wait:				5.0
+$Damage:					150
+$Blast Force:			500.0
+$Inner Radius:			30.0
+$Outer Radius:			100.0
+$Shockwave Speed:		0.0
+$Armor Factor:			1.0
+$Shield Factor:		0.75
+$Subsystem Factor:	1.0
+$Lifetime:				7.0
+$Energy Consumed:		0.0
+$Cargo Size:			10.0
+$Homing:					NO
+;	+Type:					HEAT
+;	+Turn Time:				1.0
+;	+View Cone:				180.0
+$LaunchSnd:				93
+$ImpactSnd:				101
+$FlyBySnd:				-1
+$Rearm Rate:			0.1
+$Flags:					( "Spawn S_Cluster Bomb Baby, 14" "Bomb" "Remote Detonate")
+$Trail:
+	+Start Width:			0.25
+	+End Width:				0.75
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				1.5
+	+Bitmap:					NewMiss1
+$Icon:		iconInfyrno
+$Anim:		Infyrno
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	10.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		3.8
+
+$Name: Shivan Bomb
+	+nocreate
++Title:                                XSTR("Shivan bomb", -1)
++Description:
+XSTR(
+"Standard bomb
+Yield: 800
+Range: 2400 m	Reload: 20s
+Cannot fire without a lock", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan bomb", -1)
++Tech Anim:					   Tech_Cyclops
++Tech Description:
+XSTR(
+"This appears to be a standard Shivan anti-cruiser warhead. No further data is available.", -1)
+$end_multi_text
+$Model File: S_Bomb.pof
+$POF target LOD: 0
+$Mass:					25.0
+$Velocity:				95.0
+$Fire Wait:				20.0
+$Damage:					2200
+$Blast Force:			1000.0
+$Inner Radius:			100.0
+$Outer Radius:			200.0
+$Shockwave Speed:		80
+$Armor Factor:			1.0
+$Shield Factor:		0.02
+$Subsystem Factor:	0.5
+$Lifetime:				25.0
+$Energy Consumed:		0.0
+$Cargo Size:			15.0
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					1.0
+	+Min Lock Time:			5.0
+	+Lock Pixels/Sec:			35
+	+Catch-up Pixels/Sec:	70
+	+Catch-up Penalty:		12
+$LaunchSnd:				96
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			0.05
+$Flags:					( "Bomb" "Huge" "No Dumbfire" "player allowed" )
+$Trail:
+	+Start Width:			1.0
+	+End Width:				3.5
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				3.5
+	+Bitmap:					NewMiss1
+$Icon:		iconbelial
+$Anim:		belial
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	15.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		4.0
+
+$Name: Shivan Megabomb
+	+nocreate
++Title:                                XSTR("Shivan megabomb", -1)
++Description:
+XSTR(
+"Anti-Matter Bomb
+Yield: 2700
+Range: 1950 m	Reload: 30s
+Cannot fire without a lock", -1)
+$end_multi_text
++Tech Title:				   XSTR("Shivan megabomb", -1)
++Tech Anim:					   Tech_Cyclops
++Tech Description:
+XSTR(
+"A rare, extremely deadly Shivan bomb. Its payload seems to be similar to our Helios torpedoes. No further data is available.", -1)
+$end_multi_text
+$Model File: S_MegaBomb.pof
+$POF target LOD: 0
+$Mass:					35.0
+$Velocity:				65.0
+$Fire Wait:				30.0
+$Damage:					7000
+$Blast Force:			1000.0
+$Inner Radius:			100.0
+$Outer Radius:			270.0
+$Shockwave Speed:		75
+$Armor Factor:			1.0
+$Shield Factor:		0.02
+$Subsystem Factor:	0.85
+$Lifetime:				30.0
+$Energy Consumed:		0.0
+$Cargo Size:			25.0
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					1.5
+	+Min Lock Time:			7.0
+	+Lock Pixels/Sec:			25
+	+Catch-up Pixels/Sec:	0
+	+Catch-up Penalty:		15
+$LaunchSnd:				97
+$ImpactSnd:				101
+$FlyBySnd:				-1
+$Rearm Rate:			0.02
+$Flags:					( "Bomb" "Huge" "No Dumbfire" "player allowed" )
+$Trail:
+	+Start Width:			1.0
+	+End Width:				3.0  
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				4.0
+	+Bitmap:					NewMiss1
+$Icon:		iconHelios
+$Anim:		Helios
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	15.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		6.0
+
+$Name: FighterKiller#Shivan
+	+nocreate
+$Model File: S_Rockeye.pof
+$Mass:					15.0
+$Velocity: 				190.0
+$Fire Wait: 			8.0
+$Damage: 				100
+$Blast Force: 			60.0
+$Inner Radius: 		20.0
+$Outer Radius: 		40.0
+$Shockwave Speed: 	0
+$Armor Factor: 		1.0
+$Shield Factor: 		0.8
+$Subsystem Factor: 	0.5
+$Lifetime: 				5.0
+$Energy Consumed: 	0.0
+$Cargo Size: 			4.0
+$Homing: 				YES
+	+Type: 					ASPECT
+	+Turn Time: 				1.0
+	+Min Lock Time: 			2.0
+	+Lock Pixels/Sec:			70
+	+Catch-up Pixels/Sec:	100
+	+Catch-up Penalty:		30
+$LaunchSnd: 			91
+$ImpactSnd: 			88
+$FlyBySnd: 				-1
+$Rearm Rate: 			2.0
+$Flags: 				("Big Ship")
+$Icon: 		iconmissile06
+$Anim: 		LoadMissile04
+$Impact Explosion:	none 
+
+$Name: Swarmer#Shivan
+	+nocreate
+$Model File: S_Hornet.pof
+$Mass: 					15.0
+$Velocity: 				250.0
+$Fire Wait: 			15.0
+$Damage: 				60
+$Blast Force: 			60.0
+$Inner Radius: 		20.0
+$Outer Radius: 		40.0
+$Shockwave Speed: 	0
+$Armor Factor: 		1.0
+$Shield Factor: 		0.8
+$Subsystem Factor: 	0.5
+$Lifetime: 				5.0
+$Energy Consumed:		0.0
+$Cargo Size: 			4.0
+$Homing: 				YES
+	+Type: 					ASPECT
+	+Turn Time: 				1.0
+	+Min Lock Time: 			2.0
+	+Lock Pixels/Sec: 		70
+	+Catch-up Pixels/Sec:	100
+	+Catch-up Penalty:		30
+$LaunchSnd: 			91
+$ImpactSnd: 			88
+$FlyBySnd: 				-1
+$Rearm Rate: 			2.0
+$Flags: 				("Big Ship")
+$Icon: 		iconHornet
+$Anim: 		LoadMissile04
+$Impact Explosion: 	none
+
+$Name: MX-52#Shivan
+	+nocreate
+$Model File: S_Rockeye.pof
+$Mass:				5.0
+$Velocity:					150.0
+$Fire Wait:				30.0
+$Damage:				25
+$Blast Force:			200.0
+$Inner Radius:		20.0
+$Outer Radius:		40.0
+$Shockwave Speed:			0.0
+$Armor Factor:		1.0
+$Shield Factor:		0.4
+$Subsystem Factor:			1.0
+$Lifetime:					7.0
+$Energy Consumed:			0.0
+$Cargo Size:			4.0
+$Homing:					YES
+	+Type:			HEAT
+	+Turn Time:			0.7
+	+View Cone:			70.0
+$Swarm:									8
+$LaunchSnd:					102
+$ImpactSnd:		88
+$FlyBySnd:		-1
+$Rearm Rate:			4.0
+$Flags:				( "Big Ship" )
+$Trail:
+	+Start Width:		0.25
+	+End Width:		0.5
+	+Start Alpha:	1.0
+	+End Alpha:		0.0
+	+Max Life:		1.5
+	+Bitmap:	NewMiss1
+$Icon:				iconmissile01
+$Anim:				LoadMissile01
+$Impact Explosion:				ExpMissileHit1
+$Impact Explosion Radius:		5.0
+$Decal:
+	+Texture:	Medium_Decal
+	+Radius:		2.15
+
+$Name: S_Cluster Baby
+	+nocreate
+$Model File: S_Hornet.pof
+$Mass:					1.2
+$Velocity: 				175.0
+$Fire Wait:				0.5
+$Damage:					60
+$Blast Force:			5.0 
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		0
+$Armor Factor:			1.0
+$Shield Factor:		1.0
+$Subsystem Factor:	0.5
+$Lifetime:				6.0
+$Energy Consumed:		0.0
+$Cargo Size:			2.0
+$Homing: 				YES
+	+Type: 					HEAT
+	+Turn Time:				1.5
+	+View Cone:				180.0
+$LaunchSnd: 			94
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			1.0
+$Flags:				("child")
+$Trail:
+	+Start Width:			0.25
+	+End Width: 			0.75
+	+Start Alpha: 			1.0
+	+End Alpha: 			0.0
+	+Max Life: 				1.0
+	+Bitmap: 				NewMiss1
+$Icon: 		iconmissile08
+$Anim: 		LoadMissile06
+$Impact Explosion: 			ExpMissileHit1
+$Impact Explosion Radius: 	5.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		0.4
+
+$Name: S_Cluster Baby Weak
+	+nocreate
+$Model File: S_Harpoon.pof
+$Mass: 					1.2
+$Velocity: 				175.0
+$Fire Wait:				0.5
+$Damage:					30
+$Blast Force: 			5.0
+$Inner Radius: 		20.0
+$Outer Radius: 		40.0
+$Shockwave Speed:		0
+$Armor Factor: 		1.0
+$Shield Factor: 		1.0
+$Subsystem Factor: 	0.5
+$Lifetime: 				8.0
+$Energy Consumed: 	0.0
+$Cargo Size: 			2.0
+$Homing: 				YES
+	+Type: 					HEAT
+	+Turn Time:				1.0
+	+View Cone: 			180.0
+$LaunchSnd: 			94
+$ImpactSnd: 			88
+$FlyBySnd: 				-1
+$Rearm Rate: 			1.0
+$Flags: 				("child")
+$Trail:
+	+Start Width: 			0.25
+	+End Width: 			0.75
+	+Start Alpha: 			1.0
+	+End Alpha: 			0.0
+	+Max Life: 				1.0
+	+Bitmap: 				NewMiss1
+$Icon: 		iconmissile08
+$Anim: 		LoadMissile06
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius: 	5.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		0.2
+
+$Name: S_Cluster Bomb Baby
+	+nocreate
+$Model File: S_Hornet.pof
+$Mass: 					1.2
+$Velocity: 				250.0
+$Fire Wait: 			0.5
+$Damage: 				100
+$Blast Force: 			5.0
+$Inner Radius: 		20.0
+$Outer Radius: 		60.0
+$Shockwave Speed: 	0
+$Armor Factor: 		1.0
+$Shield Factor: 		1.0
+$Subsystem Factor: 	0.5
+$Lifetime: 				0.3
+$Energy Consumed: 	0.0
+$Cargo Size: 			2.0
+$Homing: 				YES
+	+Type: 					HEAT
+	+Turn Time: 			1.0
+	+View Cone: 			45.0
+$LaunchSnd: 			94
+$ImpactSnd: 			88
+$FlyBySnd: 				-1
+$Rearm Rate: 			1.0
+$Flags: 				("child")
+$Icon: 		iconmissile08
+$Anim: 		LoadMissile06
+$Impact Explosion: 			ExpMissileHit1
+$Impact Explosion Radius:	25.0
+$Decal:
+	+Texture:	Huge_Decal
+	+Radius:		1.0
+
+; ----------------------------------------------------------------------------------
+; Scourge
+;
+$Name:                                 Scourge
++Title:                                XSTR("GTM-X1 Scourge", -1)
++Description:
+XSTR(
+"Nanovirus delivery warhead
+Yield Factor 200
+Range 2400m Reload 20s
+Weapon must lock on to fire
+", -1)
+$end_multi_text
++Tech Title:				   XSTR("Scourge", -1)
++Tech Anim:					   Tech_Cyclops
++Tech Description:
+XSTR(
+"An experimental weapon designed to carry and deliver the anti-Shivan nanovirus.", -1)
+$end_multi_text
+$Model File:							belial.pof
+$Mass:									25.0
+$Velocity:								250.0
+$Fire Wait:								20.0
+;; note, damage toned down until ai and turrets start shooting at bombs.
+$Damage:                                                        500                                                                                                    ;; damage applied when within inner radius
+$Blast Force:							1000.0
+$Inner Radius:							100.0													;; radius at which damage is full (0 for impact only)
+$Outer Radius:							200.0													;; max radius for attenuated damage (0 for impact only)
+$Shockwave Speed:						80                                        ;; velocity of shockwave.  0 for none.
+$Armor Factor:							1.0
+$Shield Factor:							0.02
+$Subsystem Factor:						0.5					;; reduced from 1.0 to 0.5 by MikeK on 8/28/99.  Player shooting one down would often blow out player's subsystems.
+$Lifetime:								25.0													;; temporary fix for problem locking onto big ships.
+$Energy Consumed:						0.0
+$Cargo Size:							15.0
+$Homing:								YES
+	+Type:                              ASPECT												;; Legal: HEAT, ASPECT
+	+Turn Time:                         1.0
+	+Min Lock Time:						5.0													;; Minimum lock time (in seconds)
+	+Lock Pixels/Sec:					35														;; Pixels moved per sec while locking
+	+Catch-up Pixels/Sec:				70														;; Pixels moved per sec while catching up
+	+Catch-up Penalty:					12														;; Extra pixels to move after catching up
+$LaunchSnd:								96
+$ImpactSnd:								88
+$FlyBySnd:								-1
+$Rearm Rate:							0.05
+$Flags:									( "Huge" "No Dumbfire" "player allowed")
+$Trail:                                                                          ;; Trail cannot be set if Exhaust is set
+	+Start Width:						0.5                                       ;; Width of trail nearest missile
+	+End Width:							1.75                                      ;; Width of trail before it "evaporates"
+	+Start Alpha:						1.0
+	+End Alpha:							0.0
+	+Max Life:                          1.5                                       ;; how many seconds before trail disappears
+	+Bitmap:							MissileTrail04										;; Bitmap used to draw trail
+
+$Icon:                                 iconbelial
+$Anim:                                 belial
+$Impact Explosion:                     ExpMissileHit1
+$Impact Explosion Radius:					15.0
+$Tag:									2 11.0
+
+$Name:                                 Paralyzer
++Title:                                XSTR("GTM-X22 Paralyzer", -1)
++Description:
+XSTR(
+"Special Issue Unguided Rocket
+Prototype - Advanced EMP Weapon
+Disrupts Engines and Weapons
+Range 1200m	Reload 3.5s", -1)
+$end_multi_text
++Tech Title:				   XSTR("GTM-X22 Paralyzer", -1)
++Tech Anim:					   Tech_GTI_TAG_Missile_C
++Tech Description:
+XSTR(
+"Write me", -1)
+$end_multi_text
+$Model File:									tagc.pof
+$Mass:                                 15.0
+$Velocity:                             400.0
+$Fire Wait:                            3.5
+$Damage:                               0														;; damage applied when within inner radius
+$Blast Force:									20.0
+$Inner Radius:									80.0                                      ;; radius at which damage is full (0 for impact only)
+$Outer Radius:									300.0                                     ;; max radius for attenuated damage 
+$Shockwave Speed:								0                                         ;; velocity of shockwave.  0 for none.
+$Armor Factor:									1.0
+$Shield Factor:								0.8
+$Subsystem Factor:							0.5
+$Lifetime:                             3.0
+$Energy Consumed:								0.0													;; Energy used when fired
+$Cargo Size:									4.0													;; Amount of space taken up in weapon cargo
+$Homing:                               NO
+	;; the following indented fields are only required when $Homing is YES
+	;;+Type:										ASPECT												;; Legal: HEAT, ASPECT
+	;;+Turn Time:									1.0
+	;;+Min Lock Time:							2.0													;; Minimum lock time (in seconds)
+	;;+Lock Pixels/Sec:							70                                        ;; Pixels moved per sec while locking
+	;;+Catch-up Pixels/Sec:					100													;; Pixels moved per sec while catching up
+	;;+Catch-up Penalty:						30														;; Extra pixels to move after catching up
+$LaunchSnd:                            118                                       ;; The sound it makes when fired
+$ImpactSnd:                            88                                        ;; The sound it makes when it hits something
+$FlyBySnd:                             -1
+$Rearm Rate:									2.0													;; number of missiles/sec that are rearmed
+$Flags:                                ( "player allowed" "Electronics" "pierce shields" )                                       ;; Bomb = can be targeted                                                                
+
+$Trail:                                                                          ;; Trail cannot be set if Exhaust is set
+	+Start Width:								0.25                  ;; Width of trail nearest missile
+	+End Width:								0.5                   ;; Width of trail before it "evaporates"
+	+Start Alpha:								1.0
+	+End Alpha:								0.0
+	+Max Life:								1.5                   ;; how many seconds before trail disappears
+	+Bitmap:                            MissileTrail04					      ;; Bitmap used to draw trail
+$Icon:                                 iconTagC
+$Anim:                                 tagC
+$Impact Explosion:							ExpMissileHit1
+$Impact Explosion Radius:					10.0
+
+$Name: Silent Eye
++Title:                                XSTR("'Silent Eye' sensor drone delivery system", -1)
++Description:
+XSTR(
+"Spy drone delivery system
+Yield: 0
+Range: 16050 m	Reload: 5s", -1)
+$end_multi_text
++Tech Title:				   XSTR("Silent Eye", -1)
++Tech Anim:					   Tech_GTM-55_Trebuchet
++Tech Description:
+XSTR(
+"The Silent Eye is little more than a self-propelled delivery mechanism for a small sensor drone. Once the Silent Eye missile impacts an object, the drone affixes itself to the target and begins gathering broad-spectrum sensor data. The drone transmits all gathered information on a covert subspace frequency.", -1)
+$end_multi_text
+$Model File: S_Trebuchet.pof
+$Mass:					15.0
+$Velocity:				150.0
+$Fire Wait:				5.0
+$Damage:					0
+$Blast Force:			60.0
+$Inner Radius:			20.0
+$Outer Radius:			40.0
+$Shockwave Speed:		0
+$Armor Factor:			1.0
+$Shield Factor:		0.8
+$Subsystem Factor:	0.5
+$Lifetime:				11.0
+$Energy Consumed:		0.0
+$Cargo Size:			10.0
+$Homing:					YES
+	+Type:					ASPECT
+	+Turn Time:					1.0
+	+Min Lock Time:			2.0
+	+Lock Pixels/Sec:			70
+	+Catch-up Pixels/Sec:	100
+	+Catch-up Penalty:		30
+$LaunchSnd:				95
+$ImpactSnd:				88
+$FlyBySnd:				-1
+$Rearm Rate:			2.0
+$Flags:					( "player allowed" )
+$Trail:
+	+Start Width:  		0.25
+	+End Width:          0.5
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:           0.7
+	+Bitmap:					NewMiss1
+$Icon:		iconCrossbow
+$Anim:		cross
+$Impact Explosion:			ExpMissileHit1
+$Impact Explosion Radius:	7.0
+$Tag:									1 5.0										;; tag level : 1-3  and duration in seconds
+$Decal:
+	+Texture:	Medium_Decal
+	+Radius:		3.2
+
+#End

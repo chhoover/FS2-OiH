@@ -1,0 +1,84 @@
+#Ship Classes
+;---------------------------------
+$Name: SGs Asura
+$Short name:					Asura Gunship
+$Species: shivan
++Tech Description:
+XSTR("little is known of this vessel at this time...", 3056)
+$end_multi_text
+$POF file: 					asura shield1.1.pof
+$Detail distance:				(0, 900, 2000, 4000)
+$Show damage:				YES
+$Density: 					1
+$Damp: 					0.2
+$Rotdamp: 					2.0
+$Max Velocity:				15.0, 15.0, 35.0
+$Rotation time:				20.0, 20.0, 20.0
+$Rear Velocity:				25.0
+$Forward accel:				2.0
+$Forward decel:				0.75
+$Slide accel:				4.0
+$Slide decel:				4.0
+$Glide:                                 YES
+$Expl inner rad:				160.0
+$Expl outer rad:				500.0
+$Expl damage:					100.0
+$Expl blast:					3000.0
+$Expl Propagates:				NO						
+$Shockwave Speed:				550.0					
+$Shockwave Count:	1
+$Default PBanks:				("shivan heavy laser" "shivan mega laser")
+$Default SBanks:				("unknown bomb" "unknown megabomb" "trebuchet")
+$SBank Capacity:				(100, 100, 50)
+$Shields:				        4500
+$Power Output:					100.0
+$Shield Regeneration Rate: 0.06
+$Max Oclk Speed:				60.0
+$Max Weapon Eng:				100.0
+$Hitpoints: 					12000
+$Flags: ( "big damage" "bomber" "generate icon")
+$AI Class: Captain
+$Afterburner:           YES
+	+Aburn Max Vel: 0.0, 0.0, 65.0
+	+Aburn For accel:       0.2
+	+Aburn Fuel:            200.0
+	+Aburn Burn Rate:       60.0
+	+Aburn Rec Rate:        25.0
+$Countermeasures:				20
+$Scan time: 2000
+$EngineSnd:						128						
+$Closeup_pos:					0.0, 0.0, -800
+$Closeup_zoom:					0.1
+$Score:							100
+$Subsystem: turret01,0.833,1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret02,0.833,1.0
+ $Default PBanks: ( "Heavy Flak" )
+$Subsystem: turret03,0.833,1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret04,0.833,1.0
+ $Default PBanks: ( "SAAA" ) 
+$Subsystem: turret05,0.833,1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret06,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret07,2,1.0
+ $Default PBanks: ( "Shivan Megafunk Turret" )
+$Subsystem: turret08,0.833,1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret09,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret10,0.833,1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret11,2,1.0
+ $Default PBanks: ( "Shivan Megafunk Turret" )
+$Subsystem: turret12,2,1.0
+ $Default PBanks: ( "Shivan Megafunk Turret" )
+
+$Subsystem: engine,			10,0.0
+	$Engine Wash:	Default300
+$Subsystem: communication,		5,0.0
+$Subsystem: sensors,			5,0.0
+$Subsystem: navigation,			5,0.0
+$Subsystem: weapons,			8,0.0
+#End

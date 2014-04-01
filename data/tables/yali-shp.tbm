@@ -1,0 +1,73 @@
+#Ship Classes
+$Name: SB Yali
+$Short name: SBeamBomber
+$Species: Shivan
++Tech Description:
+XSTR("The Yali bears many similarities to the Naga in performance although not in appearance.  Carrying a pair of beam emplacements slightly heavier than those found on Nagas, Yalis have a significantly larger secondary capacity and are known to carry a variety of heavy warheads.  They share the high maneuverability and speed characteristic of Nagas and have superior armor, engage with caution.  Any Yali is considered a level 5 threat and is to be dealt with immediately.", -1)
+$end_multi_text
+$POF file: Yali.pof
+$Detail distance: (0,300,500,1000,1500)
+$Show damage:YES
+$Density:2
+$Damp:0.2
+$Rotdamp:0.5
+$Max Velocity: 12.0, 12.0, 60.0
+$Rotation time: 5.5, 5.5, 5.5
+$Rear Velocity: 12.0
+$Forward accel: 4.0
+$Forward decel: 2.0
+$Slide accel: 2.0
+$Slide decel: 2.0
+$Expl inner rad: 75.0
+$Expl outer rad: 150.0
+$Expl damage: 25.0
+$Expl blast: 1500.0
+$Expl Propagates: NO
+$Shockwave Speed: 0.0
+$Default PBanks: ("Shivan Light Laser" "Shivan Mega Laser")
+$Default SBanks: ("Hornet#Shivan" "Shivan Bomb" "Shivan Bomb")
+$SBank Capacity: (120, 240)
+$Shields: 1300
+$Shield Color: 255 92 92
+$Power Output: 4.0
+$Max Oclk Speed: 90.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 650
+$Flags: ("bomber")
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 2000
+$EngineSnd: 133
+$Closeup_pos: 0.0, 0.0, -33
+$Closeup_zoom: 0.7
+$Shield_icon: b158s-01
+$Score: 16
+$Trail:
++Offset: 15.71 -6.385 3.21
++Start Width: 0.25
++End Width: 0.05
++Start Alpha: 1.0
++End Alpha: 0.0
++Max Life: 1.0
++Spew Time: 120
++Bitmap: Contrail01
+$Trail:
++Offset: -15.71 -6.385 3.21
++Start Width: 0.25
++End Width: 0.05
++Start Alpha: 1.0
++End Alpha: 0.0
++Max Life: 1.0
++Spew Time: 120
++Bitmap: Contrail01
+$Subsystem:engines,35,0.0
+$Subsystem:sensors,10,0.0
+$Subsystem:weapons,15,0.0
+$Subsystem:navigation,8,0.0
+$Subsystem:communications,10,0.0
+$Subsystem:turret01,30,1.0
+$Default PBanks:("SBeamTiny")
+$Subsystem:turret02,30,1.0
+$Default PBanks:("SBeamTiny")
+#End

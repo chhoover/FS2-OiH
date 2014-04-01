@@ -1,0 +1,86 @@
+#SoundTrack Start	         				
+$Soundtrack Name: 8: DFA
+$Name:	mwamb.ogg				21.25	352800	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	dfa-earv.ogg				3.0	176400	; * Enemy Arrival during Normal
+$Name:	dfa-1.ogg				30.1	176400	; * Battle 1
+$Name:	dfa-2.ogg				24.48	176364	; * Battle 2
+$Name:	dfa-3.ogg				16.0	176345	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	dfa-earv.ogg				3.0	176400	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	aftermath.ogg				90.5	176400	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End
+
+#SoundTrack Start
+$Soundtrack Name: 9: Push
+$Name:	mwamb.ogg				42.5	176400	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	push-earv.ogg				4.75	176400	; * Enemy Arrival during Normal
+$Name:	push-1.ogg				26.5	176400	; * Battle 1
+$Name:	push-2.ogg				16.5	176400	; * Battle 2
+$Name:	push-3.ogg				25.5	176400	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	push-earv.ogg				4.75	176400	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	aftermath.ogg   			89.5	176400	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End
+
+#SoundTrack Start
+$Soundtrack Name: 10: ODST Medley
+$Name:  FS2_Amb_A01.wav				25.0	105840	; * Ambience
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:  odst_earv1.ogg				4.5	176400
+$Name:  odst_btl1.ogg				29.5	176400
+$Name:  odst_btl2.ogg				50.5	176400
+$Name:  odst_btl3.ogg				63	176400
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:  odst_earv2.ogg				1.5	176400
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_A02.wav			30.8	52920	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End
+
+#SoundTrack Start
+$Soundtrack Name: 11: Gears Ambience
+$Name:	eday.ogg					51		176400
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_B01.wav				4.8	81415	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_B01.wav				39.8	132300	; * Battle 1
+$Name:	FS2_Btl_B02.wav				23.8	75600	; * Battle 2
+$Name:	FS2_Btl_B03.wav				31.8	75600	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_B04.wav				4.8	75600	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_B02.wav			40.8	88200	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End
+
+
+#Menu Music Start
+
+$Name: 		Aquitaine
+$Filename:	OiH_menu.ogg
+
+$Name:		Emmity Road
+$Filename:	emmity_road.ogg				; briefing music 8
+
+$Name:		Wednesday 7
+$Filename:	wednesday7.ogg				; briefing music 9
+
+$Name:		ODST Brief
+$Filename:	OiH_odst_brief.ogg
+
+$Name:		A Better Place
+$Filename:	OiH_m36b_db.ogg
+
+$Name:		Final Debrief
+$Filename:	OiH_final_db.ogg
+
+#Menu Music End

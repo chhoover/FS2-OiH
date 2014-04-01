@@ -1,0 +1,1875 @@
+#Ship Classes
+
+$Name:				GTF Pegasus
+	+nocreate
+$Allowed PBanks: ( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Maxim" )
+
+$Name:                          @GTS Hygeia#norearm
+$Short name:            TSup
+$Species:                       Terran
++Tech Description:
+XSTR("The GTS Hygeia is the fleet's newest Terran support ship. It is fast and maneuverable, a necessity when trying to dock with fighters in the heat of battle. Triton Dynamics designed the Hygeia class with huge cargo bays for munitions storage, plus the latest magnetic-stasis delivery system for quickly re-supplying combat craft with missiles and bombs. The Hygeia's repair facilities are driven by neural-net AI, for ultra-fast system diagnostics and repair. The high number of warheads carried by the Hygeia makes it a dangerous ship to be near when it blows up.", 3037)
+$end_multi_text
+$POF file:                      support2t-01.pof
+$Detail distance:       (0, 130, 250, 800)
+$ND: 					236 227 89
+$ND: 					199 186 52
+$Show damage:           YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.3
+$Max Velocity:          0.0, 0.0, 70.0          ;;      We agreed on 60, but we also agreed to decrease 40%.  I lowered from 120 to 70.
+$Rotation time:         3.0, 3.0, 3.0
+$Rear Velocity:         0.0
+$Forward accel:         2.0
+$Forward decel:         0.25            ;;      lower numbers mean faster acceleration.
+$Slide accel:           0.0
+$Slide decel:           0.0
+;; Lots of weapons onboard means big explosion
+$Expl inner rad:        100.0
+$Expl outer rad:        200.0
+$Expl damage:           100.0
+$Expl blast:            4000.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       500
+$Shield Color:		100 100 255
+$Power Output:          1.0
+$Max Oclk Speed:        100.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     500
+$Flags:                         ( "transport" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:         136                 ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -29
+$Closeup_zoom:          0.7
+$Score:						15
+$Subsystem:                     communications,      30, 0.0
+$Subsystem:                     engine,                        20,     0.0
+$Subsystem:                     sensors,                        10,     0.0
+$Subsystem:                     navigation,                        10,     0.0
+
+$Name:                  SB Seraphim#autoaim
+$Short name:            SBomb10
+$Species:                       Shivan
+	+Type:			XSTR("Assault Bomber", -1)
+	+Maneuverability:       XSTR("Poor", -1)
+	+Armor:			XSTR("Very Heavy", -1)
+	+Manufacturer:          XSTR("Shivans", -1)
+	+Description:		XSTR(" ", -1)
+	+Tech Description:
+	XSTR("The SB Seraphim is a familiar foe to GTVA forces. They appear to be similar to Nephilims in speed, armor, and shield strength, but have demonstrated a larger bomb capacity.", 3149)
+	$end_multi_text
+	+Length:		52 m
+	+Gun Mounts:		11
+	+Missile Banks:		4
+$POF file:                      bomber10.pof
+$Detail distance:       (0, 300, 500, 1000)
+$Show damage:           YES
+$Density:                       2
+$Damp:                          0.2
+$Rotdamp:                       0.5
+$Max Velocity:          12.0, 12.0, 60.0
+$Rotation time:         6.0, 6.0, 6.0
+$Rear Velocity:         12.0
+$Forward accel:         4.0
+$Forward decel:         2.0
+$Slide accel:           2.0
+$Slide decel:           2.0
+$Autoaim FOV:		30
+	+Converging Autoaim
+	+Minimum Distance: 400
+$Convergence:
+	+Automatic
+		+Minimum Distance: 400
+$Expl inner rad:        75.0
+$Expl outer rad:        150.0
+$Expl damage:           25.0
+$Expl blast:            1500.0
+$Expl Propagates:       NO                                         ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:       0.0                                        ;; speed shockwave expands at, 0 means no shockwave
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Phanuel" "Phanuel" "Phanuel" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Megabomb" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Rockeye#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Bomb" )
+$SBank Capacity:		( 40, 40, 80, 80 )
+$Shields:                       1600
+$Shield Color:		255 92 92
+$Power Output:          4.0
+$Max Oclk Speed:        90.0
+$Max Weapon Eng:        100.0
+$Hitpoints:                     500
+$Flags:                         ( "player_ship" "bomber" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       133           ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -75
+$Closeup_zoom:          0.7
+$Shield_icon:           shield-b10
+$Score:             16
+$Trail:
+	+Offset:		0.0 -8.43 -4.03
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		-9.98 1.32 -5.39
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		9.98 1.32 -5.39
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		-16.15 -18.25 -9.2
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		16.15 -18.25 -9.2
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Subsystem:                     turret01,5,1.0
+	$Default PBanks:        ( "Shivan Light Laser" )
+$Subsystem:                     turret02,5,1.0
+	$Default PBanks:        ( "Shivan Light Laser" )
+$Subsystem:                     sensors,                        10,0.0
+$Subsystem:                     communication,  10,0.0
+$Subsystem:                     engine,                 35,0.0
+$Subsystem:                     weapons,                        15,0.0
+$Subsystem:                     navigation,              5,0.0	
+
+$Name:                          SF Dragon
+	+nocreate
++Type:			XSTR("Space Superiority", -1)
++Maneuverability:       XSTR("Excellent", -1)
++Armor:			XSTR("Light", -1)
++Manufacturer:          XSTR("Shivans", -1)
++Description:		XSTR(" ", -1)
+$end_multi_text
++Length:          9 m
++Gun Mounts:      5
++Missile Banks:   1
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Harpoon#Shivan" )
+$SBank Capacity:		( 20 )
+$Flags:                 	( "player_ship" "fighter" )
+
+$Name:                          SF Basilisk
+	+nocreate
++Type:			XSTR("Heavy Fighter", -1)
++Maneuverability:       XSTR("Average", -1)
++Armor:			XSTR("Heavy", -1)
++Manufacturer:          XSTR("Shivans", -1)
++Description:		XSTR(" ", -1)
+$end_multi_text
++Length:          21 m
++Gun Mounts:      4
++Missile Banks:   2
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Rockeye#Shivan" "Harpoon#Shivan" )
+$SBank Capacity:		( 80, 80 )
+$Flags:                 	( "player_ship" "fighter" )
+
+$Name:                          SF Manticore
+	+nocreate
++Type:				XSTR("Interceptor", -1)
++Maneuverability:       	XSTR("Excellent", -1)
++Armor:				XSTR("Light", -1)
++Manufacturer:          	XSTR("Shivans", -1)
++Description:			XSTR(" ", -1)
+$end_multi_text
++Length:          14 m
++Gun Mounts:      2
++Missile Banks:   2
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Harpoon#Shivan" "Harpoon#Shivan" )
+$SBank Capacity:		( 40, 40 )
+$Flags:                 	( "player_ship" "fighter" )
+
+$Name:                          SF Aeshma
+	+nocreate
++Type:				XSTR("Heavy Fighter", -1)
++Maneuverability:       	XSTR("Poor", -1)
++Armor:				XSTR("Heavy", -1)
++Manufacturer:          	XSTR("Shivans", -1)
++Description:			XSTR(" ", -1)
+$end_multi_text
++Length:          24 m
++Gun Mounts:      2
++Missile Banks:   1
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Harpoon#Shivan" )
+$SBank Capacity:		( 80 )
+$Flags:                 	( "player_ship" "fighter" )
+
+$Name:                          SF Mara
+	+nocreate
++Type:				XSTR("Advanced Space Superiority", -1)
++Maneuverability:       	XSTR("Good", -1)
++Armor:				XSTR("Heavy", -1)
++Manufacturer:         		XSTR("Shivans", -1)
++Description:			XSTR(" ", -1)
+$end_multi_text
++Length:          16 m
++Gun Mounts:      4
++Missile Banks:   2
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Harpoon#Shivan" "Tornado#Shivan" )
+$SBank Capacity:		( 80, 80 )
+$Flags:                 	( "player_ship" "fighter" )
+
+$Name:                  SF Astaroth
+	+nocreate
++Type:			XSTR("Interceptor", -1)
++Maneuverability:       XSTR("Average", -1)
++Armor:			XSTR("Light", -1)
++Manufacturer:          XSTR("Shivans", -1)
++Description:		XSTR(" ", -1)
+$end_multi_text
++Length:          19 m
++Gun Mounts:      2
++Missile Banks:   2
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Harpoon#Shivan" "Harpoon#Shivan" )
+$SBank Capacity:		( 40, 40 )
+$Flags:                     	( "player_ship" "fighter" )
+
+$Name:                          SB Nephilim
+	+nocreate
++Type:				XSTR("Heavy Bomber", -1)
++Maneuverability:       	XSTR("Poor", -1)
++Armor:				XSTR("Heavy", -1)
++Manufacturer:          	XSTR("Shivans", -1)
++Description:			XSTR(" ", -1)
+$end_multi_text
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Vapula" "Vepar" "Phanuel")
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Phanuel" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Megabomb" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Rockeye#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Bomb" )
+$SBank Capacity:		( 40, 40, 40, 40 )
+$Flags:                         ( "player_ship" "bomber" )
+
+$Name:                          SB Taurvi
+	+nocreate
++Type:				XSTR("Medium Bomber", -1)
++Maneuverability:       	XSTR("Average", -1)
++Armor:				XSTR("Average", -1)
++Manufacturer:          	XSTR("Shivans", -1)
++Description:			XSTR(" ", -1)
+$end_multi_text
++Length:          19 m
++Gun Mounts:      3
++Missile Banks:   2
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Bomb""Shivan Megabomb" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Shivan Bomb" "Shivan Bomb" )
+$SBank Capacity:		( 40, 40 )
+$Flags:                         ( "player_ship" "bomber" )
+
+$Name:                          SB Nahema
+	+nocreate
++Type:				XSTR("Strike Bomber", -1)
++Maneuverability:       	XSTR("Average", -1)
++Armor:				XSTR("Heavy", -1)
++Manufacturer:          	XSTR("Shivans", -1)
++Description:			XSTR(" ", -1)
+$end_multi_text
++Length:          26 m
++Gun Mounts:      4
++Missile Banks:   3
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Citra" "Citra" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Megabomb" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Piranha#Shivan" "Shivan Bomb" "Shivan Bomb" )
+$SBank Capacity:		( 40, 40, 20 )
+$Flags:                         ( "player_ship" "bomber" )
+
+$Name:                  SB Seraphim
+	+nocreate
++Type:			XSTR("Assault Bomber", -1)
++Maneuverability:       XSTR("Poor", -1)
++Armor:			XSTR("Very Heavy", -1)
++Manufacturer:          XSTR("Shivans", -1)
++Description:		XSTR(" ", -1)
+$end_multi_text
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Phanuel" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:        	( "Phanuel" "Phanuel" "Phanuel" )
+$Allowed SBanks:        	( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Megabomb" )
+$Allowed Dogfight SBanks:       ( "" )
+$Default SBanks:        	( "Rockeye#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Bomb" )
+$SBank Capacity:		( 40, 40, 80, 80 )
+$Flags:                         ( "player_ship" "bomber" )
+
+
+$Name: 			SF Naga
+$Short name:		SF01
+$Species:		Shivan
++Type:			XSTR("Advanced Space Superiority", -1)
++Maneuverability:       XSTR("Good", -1)
++Armor:			XSTR("Very Heavy", -1)
++Manufacturer:          XSTR("Shivans", -1)
++Description:		XSTR(" ", -1)
+$end_multi_text
++Tech Description:
+XSTR("Apparently a new addition to the Shivan arsenal, the SF Naga is a powerful fighter that shares the Mara's agility, speed, and strong shielding. Six primary weapon banks and a large missile bay give Nagas excellent firepower. These fighters also possess powerful lateral thrusters, which gives them an unparalleled ability to move in multiple directions simultaneously.", -1)
+$end_multi_text
+$POF file:		SF_Naga.pof
+$Detail distance:	(0,80,200,500,1000)
+$Show damage:		YES
+$Density:		1
+$Damp:			0.1
+$Rotdamp:		0.4
+$Max Velocity:		50.0,50.0,70.0
+$Rotation time:		3.0,2.5,2.5
+$Rear Velocity:		20.0
+$Forward accel:		3
+$Forward decel:		1.5
+$Slide accel:		2.0
+$Slide decel:		2.0
+$Expl inner rad:	25.0
+$Expl outer rad:	55.0
+$Expl damage:		15.0
+$Expl blast:		1000.0
+$Expl Propagates:	NO
+$Shockwave Speed:	0.0
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:		( "Citra" "Citra" )
+$Allowed SBanks:		( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" )
+$Allowed Dogfight SBanks:	( "" )
+$Default SBanks:		( "Harpoon#Shivan" )
+$SBank Capacity:		( 120 )
+$Shields:		750
+$Shield Color:		255 92 92
+$Power Output:		2.5
+$Max Oclk Speed:	95.0
+$Max Weapon Eng:	150.0
+$Hitpoints:		350
+$Flags:			( "fighter" "player_ship" )
+$AI Class:		Captain
+$Afterburner:		YES
+	+Aburn Max Vel: 	30.0, 30.0, 135.0
+	+Aburn For accel:	2.5
+	+Aburn Fuel:		300.0
+	+Aburn Burn Rate:	50.0
+	+Aburn Rec Rate:	25.0
+$Trails:
+	+Bitmap:	sabtrail
+	+Width:		1.0
+	+Alpha:		0.5
+	+Life:		1
+$Countermeasures:	30
+$Scan time:		200
+$EngineSnd:		132
+$Closeup_pos:		0.0,0.0,-35
+$Closeup_zoom:		0.5
+$Shield_icon:		f158s-01
+$Score:			60
+$Trail:
+	+Offset: 	-2.65 1.75 -8.25
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset: 	2.65 1.75 -8.25
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset: 	0 -1.3 -7.85
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset: 	0 -4.5 -6.6
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Subsystem:	sensors,10,0.0
+$Subsystem:	communications,10,0.0
+$Subsystem:	engine01,20,0.0
+$Subsystem:	engine02,20,0.0
+$Subsystem:	weapons,15,0.0
+$Subsystem:	navigation,5,0.0
+
+$Name: SF Chimera 
+$Short name: SChime 
+$Species: Shivan
++Type:			XSTR("Stealth Fighter", -1)
++Maneuverability:       XSTR("Average", -1)
++Armor:			XSTR("Average", -1)
++Manufacturer:          XSTR("Shivans", -1)
++Description:		XSTR(" ", -1)
+$end_multi_text
++Tech Description: 
+XSTR("Write me", -1) 
+$end_multi_text 
+$POF file: chimera.pof 
+$Detail distance: (0, 80, 220, 900) 
+$Show damage: YES 
+$Density: 1 
+$Damp: 0.1 
+$Rotdamp: 0.4 
+$Max Velocity: 20.0, 20.0, 85.0 
+$Rotation time: 3.0, 3.0, 3.5 
+$Rear Velocity: 0.0 
+$Forward accel: 2.0 
+$Forward decel: 0.75 
+$Slide accel: 2.0 
+$Slide decel: 2.0 
+$Expl inner rad: 25.0 
+$Expl outer rad: 55.0 
+$Expl damage: 15.0 
+$Expl blast: 1000.0 
+$Expl Propagates: NO 
+$Shockwave Speed: 0.0 
+$Allowed PBanks:		( "Alouqua" "Advachiel" "Citra" "Chirops" "Vapula" "Vepar" "Palit" )
+$Allowed Dogfight PBanks:	( "" )
+$Default PBanks:		( "Chirops" "Chirops" )
+$Allowed SBanks:		( "Rockeye#Shivan" "Tempest#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Silent Eye" )
+$Allowed Dogfight SBanks:	( "" )
+$Default SBanks:		( "Harpoon#Shivan" ) 
+$SBank Capacity: ( 20 ) 
+$Shields: 500 
+$Shield Color: 255 92 92 
+$Power Output: 2.5 
+$Max Oclk Speed: 120.0 
+$Max Weapon Eng: 150.0 
+$Hitpoints: 350 
+$Flags: ( "player_ship" "fighter" "generate icon" ) 
+$AI Class: Captain 
+$Afterburner: YES 
+    +Aburn Max Vel: 0.0, 0.0, 200.0 
+    +Aburn For accel: 0.7 
+    +Aburn Fuel: 200.0 
+    +Aburn Burn Rate: 60.0 
+    +Aburn Rec Rate: 25.0
+$Trails:
+	+Bitmap:	sabtrail
+	+Width:		1.0
+	+Alpha:		0.5
+	+Life:		1
+$Countermeasures: 20 
+$Scan time: 2000 
+$EngineSnd: 132 
+$Closeup_pos: 0.0, 0.5, -45 
+$Closeup_zoom: 0.5 
+;;$Shield_icon: shieldChimera 
+$Score: 16
+$Stealth:
+$Trail: 
+    +Offset: 12.5 -1.5 1.33 
+    +Start Width: 0.25 
+    +End Width: 0.05 
+    +Start Alpha: 1.0 
+    +End Alpha: 0.0 
+    +Max Life: 1.0 
+    +Spew Time: 120 
+    +Bitmap: Contrail01 
+$Trail: 
+    +Offset: -12.5 -1.5 1.33 
+    +Start Width: 0.25 
+    +End Width: 0.05 
+    +Start Alpha: 1.0 
+    +End Alpha: 0.0 
+    +Max Life: 1.0 
+    +Spew Time: 120 
+    +Bitmap: Contrail01 
+$Subsystem: sensors, 10,0.0 
+$Subsystem: communications, 10,0.0 
+$Subsystem: engine01, 5,0.0 
+$Subsystem: engine02, 5,0.0 
+$Subsystem: engine03, 5,0.0 
+$Subsystem: engine04, 5,0.0 
+$Subsystem: weapons, 15,0.0 
+$Subsystem: navigation, 5,0.0 
+
+$Name:                          SB Vindhyachal
+$Short name:			SBeamBomb
+$Species:                       Shivan
++Tech Description:
+XSTR("The SB Vindhyachal is a terrifying reminder of the power of Shivan military technology. It is armed with a cruiser-grade anti-warship beam cannon, which allows it to engage capital ships from much longer range than any other bomber. The Vindhyachal is also quite capable of inflicting grievous damage with its large secondary payload. With several powerful laser turrets, unmatched hull armor, and nearly impenetrable shielding, this behemoth is incredibly difficult to destroy. Fighter pilots are advised to work in groups to take these monstrosities down. Only a wing of three or four fighters has the firepower needed to neutralize a Vindhyachal quickly.", 3041)
+$end_multi_text
+$POF file:		Vindhyachal.pof
+$Detail distance:       (0, 250, 1000, 2000)
+$ND: 			255 0 0  ;;these make the
+$ND: 			255 13 0 ;;colour with the
+$ND: 			252 2 2	 ;;corresponding
+$ND: 			246 2 2  ;;RGB value, always
+$ND: 			242 2 2  ;;bright ie they glow
+$ND: 			250 130 2
+$ND: 			250 0 0
+$ND: 			230 0 0
+$ND: 			252 46 1
+$ND: 			218 0 0
+$Show damage:		YES
+$Density:		2
+$Damp:			0.2
+$Rotdamp:		0.5
+$Max Velocity:		20.0, 20.0, 65.0
+$Rotation time:		5.0, 5.0, 5.0
+$Rear Velocity:		30.0
+$Forward accel:		2.0
+$Forward decel:		2.0
+$Slide accel:		2.0
+$Slide decel:		2.0
+$Expl inner rad:	75.0
+$Expl outer rad:	250.0
+$Expl damage:		75.0
+$Expl blast:		2500.0
+$Expl Propagates:	YES                                                      
+$Shockwave Speed:	300.0 
+$Allowed PBanks:	( "Alouqua" "Citra" "Phanuel" "Vapula" "Vepar" "Palit" )                                            
+$Default PBanks:        ( "Phanuel" )
+$Allowed SBanks:	( "Rockeye#Shivan" "Hornet#Shivan" "Tornado#Shivan" "Harpoon#Shivan" "Trebuchet#Shivan" "Piranha#Shivan" "Shivan Bomb" "Shivan Megabomb" )
+$Default SBanks:        ( "Shivan Megabomb" "Piranha#Shivan" )
+$SBank Capacity:        ( 80, 80 )
+$Shields:               5000
+$Shield Color:		255 92 92
+$Power Output:		6.0
+$Max Oclk Speed:	95.0
+$Max Weapon Eng:	100.0
+$Hitpoints:		1500
+$Flags:			( "bomber" "flash" )
+$AI Class:		Captain
+$Afterburner:           YES
+	+Aburn Max Vel: 	0.0, 0.0, 120.0
+	+Aburn For accel:	0.4
+	+Aburn Fuel:		200.0
+	+Aburn Burn Rate:	50.0
+	+Aburn Rec Rate:	25.0
+$Trails:
+	+Bitmap:	sabtrail
+	+Width:		1.0
+	+Alpha:		0.5
+	+Life:		1
+$Countermeasures:       0
+$Scan time:		2000
+$EngineSnd:       	133           
+$Closeup_pos:		0.0, 0.0, -80
+$Closeup_zoom:		0.7
+$Shield_icon:		shieldVindhyachal
+$Score:             	35
+$Trail:
+	+Offset:	14.5 0 -30.4
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:	-14.5 0 -30.4
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:	3.74 -8.5 -8 
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:	-3.74 -8.5 -8 
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Subsystem:             turret01,10,1.0
+	$Default PBanks:	( "SBeamTiny" )
+$Subsystem:             turret02,5,1.0
+	$Default PBanks: 	( "Citra" )
+$Subsystem:             turret03,5,1.0
+	$Default PBanks: 	( "Citra" )
+$Subsystem:             turret04,5,1.0
+	$Default PBanks: 	( "Citra" )
+$Subsystem:             sensors,	10,0.0
+$Subsystem:             communication,	10,0.0
+$Subsystem:             engine,		35,0.0
+$Subsystem:             weapons,	15,0.0
+$Subsystem:             navigation,	15,0.0
+
+$Name: ST Xerxes
+$Short name: STran2
+$Species: Shivan
++Tech Description:
+XSTR("Very little information is available about this vessel. It has only been encountered once, when three of these ships attempted to board the Raktavija while the supercarrier was being captured. This leads us to believe these vessels are Shivan assault transports, similar in role to the GTT Argo. Their transport capacity is unknown, but they are known to possess both laser and flak turrets, making them much more dangerous to attack than any GTVA transport.", -1)
+$end_multi_text
+$POF file: X3.pof
+$Detail distance: (0, 850, 2000, 5500)
+$Show damage: YES
+$Density: 1
+$Damp: 0.2
+$Rotdamp: 0.6
+$Max Velocity: 0.0, 0.0, 30.0
+$Rotation time: 4.0, 7.0, 6.0
+$Rear Velocity: 0.0
+$Forward accel: 2.0
+$Forward decel: 1.0
+$Slide accel: 0.0
+$Slide decel: 0.0
+$Expl inner rad: 50.0
+$Expl outer rad: 500.0
+$Expl damage: 500.0
+$Expl blast: 1300.0
+$Expl Propagates: yes 
+$Shockwave Speed: 140.0 ;;
+$Shockwave Count: 	 2
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Shields: 0
+$Power Output: 38.0
+$Max Oclk Speed: 35.0
+$Max Weapon Eng: 0.0
+$Hitpoints: 9000
+$Flags: ( "transport" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 2000
+$EngineSnd: 133 ;;
+$Closeup_pos: 0.0, 3.0, -250
+$Closeup_zoom: 0.4
+$Score: 50
+$Subsystem: engine, 25, 0
+$Subsystem: navigation, 15, 0
+$Subsystem: communications,			5, 0
+$Subsystem: sensors, 10, 0
+$Subsystem: weapons, 10, 0
+$Subsystem: turret01, .5, 20.0
+	$Default PBanks: ( "Standard Flak" )
+$Subsystem: turret02, .5, 20.0
+	$Default PBanks: ( "Standard Flak" )
+$Subsystem: turret03, .5, 20.0
+	$Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret04, 1, 20.0
+	$Default PBanks: ( "Shivan Light Laser" )
+$Subsystem: turret05, 1, 20.0
+	$Default PBanks: ( "Shivan Light Laser" )
+
+$Name: SOC Oculus
+$Short name: SOCfrigate
+$Species: Terran
++Tech Description:
+XSTR("The Oculus is a unique vessel used exclusively by the GTVI's Special Operations Command branch. Boasting a tri-redundant multi-spectrum sensor array, the Oculus' AWACS, sensor, and electronic warfare capabilities are superior to even the dedicated Charybdis-class of AWACS. The Oculus is moderately armed and armored for a ship of its size, and also has a small internal hangar bay for recon fighter deployment or retrieval.", 3058)
+$end_multi_text
+$POF file: oculus.pof
+$Detail distance: (0, 2000, 8000, 20000)
+$ND: 251 248 167
+$ND: 255 253 196
+$ND: 239 234 134
+$ND: 216 212 122
+$Show damage: YES
+$Density: 1
+$Damp: 0.2
+$Rotdamp: 2.0
+$Max Velocity: 0.0, 0.0, 40.0
+$Rotation time: 100.0, 100.0, 80.0
+$Rear Velocity: 0.0
+$Forward accel: 10.0
+$Forward decel: 4.0
+$Slide accel: 0.0
+$Slide decel: 0.0
+$Expl inner rad: 150.0
+$Expl outer rad: 900.0
+$Expl damage: 200.0
+$Expl blast: 12500.0
+$Expl Propagates: YES
+$Shockwave Speed: 400.0
+$Shockwave Count: 3
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Shields: 0
+$Power Output: 100.0
+$Max Oclk Speed: 60.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 90000
+$Flags: ( "corvette" "big damage" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 2000
+$EngineSnd: 128
+$Closeup_pos: 0.0, 0.0, -1300
+$Closeup_zoom: 0.5
+$Score: 300
+$Subsystem: turret01,1.0,1.0
+ $Default PBanks: ( "TerSlash" )
+$Subsystem: turret02,1.0,1.0
+ $Default PBanks: ( "TerSlash" )
+$Subsystem: turret03,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret04,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret05,0.833,1.0
+ $Default PBanks: ( "Terran Turret" )
+$Subsystem: turret06,0.833,1.0
+ $Default PBanks: ( "Terran Turret" )
+$Subsystem: turret07,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret08,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret09,0.833,1.0
+ $Default PBanks: ( "Terran Turret" )
+$Subsystem: turret10,0.833,1.0
+ $Default PBanks: ( "Terran Turret" )
+$Subsystem: turret11,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret12,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret13,0.833,1.0
+ $Default PBanks: ( "AAAf" )
+$Subsystem: turret14,0.833,1.0
+ $Default PBanks: ( "AAAf" )
+$Subsystem: turret15,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret16,1.0,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret17,0.833,1.0
+ $Default PBanks: ( "TerSlash" )
+$Subsystem: turret18,1.0,1.0
+ $Default PBanks: ( "TerSlash" )
+$Subsystem: turret19,0.833,1.0
+ $Default PBanks: ( "Standard Flak" )
+$Subsystem: turret20,0.833,1.0
+ $Default PBanks: ( "AAAf" )
+$Subsystem: engine01, 5,0.0
+ $Engine Wash: Default300
+$Subsystem: engine02, 2,0.0
+ $Engine Wash: Default300
+$Subsystem: engine03, 2,0.0
+ $Engine Wash: Default300
+$Subsystem: communications, 5,0.0
+$Subsystem: navigation, 5,0.0
+$Subsystem: weapons, 8,0.0
+$Subsystem: bridge, 5,0.0
+$Subsystem: fighterbay, 10, 0.0
+$Subsystem: disc1a, 15, 0.0
+ $AWACS: 1.0 2500.0 
+$Subsystem: disc2a, 15, 0.0
+ $AWACS: 1.0 3500.0 
+$Subsystem: disc3a, 15, 0.0
+ $AWACS: 1.0 2500.0
+
+$Name:                  SC Lamia
+$Short name:            Lamia
+$Species:               Shivan
++Tech Description:
+XSTR("Every guerrilla fighting force needs a ship that is mobile, versatile, and deadly. The Lamia delivers in all these areas. A previously unknown class, it appears to have been designed by the Outcasts themselves. The Lamia is more than a match for virtually any other vessel of comparable size, and a formidable array of anti-fighter beams and flak batteries allows it to tear through fighters and bombers with astonishing ease. These powerful cruisers seem to be a mainstay of the Outcast fleet.", -1)
+$end_multi_text
+$POF file:              SCLamia.pof
+$Detail distance:       (0, 750, 2000)
+$Show damage:           YES
+$Density:               1
+$Damp:                  0.2
+$Rotdamp:               1.0
+$Max Velocity:          0.0, 0.0, 35.0
+$Rotation time:         170.0, 170.0, 120.0
+$Rear Velocity:         0.0
+$Forward accel:         15.0
+$Forward decel:         10.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        100.0
+$Expl outer rad:        800.0
+$Expl damage:           450.0
+$Expl blast:            3000.0
+$Expl Propagates:       YES              ;;  If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:       600.0            ;; speed shockwave expands at, 0 means no shockwave
+$Shockwave Count:	3
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:               0
+$Power Output:          90.0
+$Max Oclk Speed:        12.0
+$Max Weapon Eng:        100.0
+$Hitpoints:             65000
+$Flags:                 ( "cruiser" )
+$AI Class:              Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:             15000
+$EngineSnd:				134                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -300
+$Closeup_zoom:          0.5
+$Score:				    250
+$Subsystem:                     turret01,5,1.0
+	$Default PBanks:        ( "MRed" )
+$Subsystem:                     turret02,1,1.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret03,1,1.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret04,1,1.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret05,1,1.0
+	$Default PBanks:        ( "Shivan Turret Laser" )
+$Subsystem:                     turret06,1,1.0
+	$Default PBanks:        ( "Shivan Turret Laser" )
+$Subsystem:                     turret07,1,1.0
+	$Default PBanks:        ( "Shivan Turret Laser" )
+$Subsystem:                     turret08,1,1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret09,1,1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret10,1,1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret11,1,1.0
+	$Default PBanks:        ( "Shivan Turret Laser" )
+$Subsystem:                     turret12,1,1.0
+	$Default PBanks:        ( "Shivan Turret Laser" )
+$Subsystem:                     turret13,1,1.0
+	$Default PBanks:        ( "Shivan Turret Laser" )
+$Subsystem:                     turret14,1,1.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret15,1,1.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret16,1,1.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     turret17,2,1.0
+	$Default SBanks:        ( "Shivan Cluster" )
+$Subsystem:                     turret18,2,1.0
+	$Default SBanks:        ( "Shivan Cluster" )
+$Subsystem:                     turret19,2,1.0
+	$Default SBanks:        ( "Shivan Cluster" )
+$Subsystem:                     sensors,                        5,0.0
+$Subsystem:                     communication,  3,0.0
+$Subsystem:                     engine01,                 7.5,0.0
+$Subsystem:                     engine02,                 7.5,0.0
+$Subsystem:                     engine03,                 7.5,0.0
+$Subsystem:                     weapons,                        10,0.0
+$Subsystem:                     navigation,              2.5,0.0
+$Subsystem:      arm_t,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:24,0,0
+   +velocity:20,0,0
+   +acceleration:20,0,0
+   +time:10000
+$Subsystem:      arm_l,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:-12,21,0
+   +velocity:10,17,0
+   +acceleration:10,17,0
+   +time:10000
+$Subsystem:      arm_r,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:-12,-21,0
+   +velocity:10,17,0
+   +acceleration:10,17,0
+   +time:10000
+$Subsystem:      tendon_t,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:-90,0,0
+   +velocity:50,0,0
+   +acceleration:2000,0,0
+   +time:10000
+$Subsystem:      tendon_l,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:45,-78,0
+   +velocity:25,43,0
+   +acceleration:1000,1732,0
+   +time:10000
+$Subsystem:      tendon_r,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:45,78,0
+   +velocity:25,43,0
+   +acceleration:1000,1732,0
+   +time:10000
+$Subsystem:      fin_t,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:-30,0,0
+   +velocity:20,0,0
+   +acceleration:20,0,0
+   +time:10000
+$Subsystem:      fin_l,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:15,-26,0
+   +velocity:10,17,0
+   +acceleration:10,17,0
+   +time:10000
+$Subsystem:      fin_r,    100,0.0
+	+untargetable
+	$animation:triggered
+   $type:Turret Firing
+   +sub_type:1
+   +delay:0
+   +relative_angle:15,26,0
+   +velocity:10,17,0
+   +acceleration:10,17,0
+   +time:10000
+
+$Name:                          SCv Yaksha
+$Short name:            	SCorv_R2
+$Species:                       Shivan
++Tech Description:
+XSTR("Although virtually all Shivan craft appear alien to Terran eyes, the Yaksha is arguably the most alien Shivan vessel ever encountered. None of these corvettes have been sighted under hostile Shivan control, so it is probable that the Yaksha was designed and built by the Outcasts. We have absolutely no idea what advantage the Yaksha gains from its mystifying configuration, but it is nevertheless a very capable warship. First-hand combat reports indicate that the Yaksha is armed with several heavy beam cannons. It is also well-defended with plasma, flak, and anti-fighter beam turrets.", 3055)
+$end_multi_text
+$POF file:                      yaksha.pof
+$Detail distance:       (0, 2000, 8000)
+$ND:					226 2 8
+$Show damage:           NO
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       1.5
+$Max Velocity:          0.0, 0.0, 30.0
+$Rotation time:         110.0, 110.0, 100.0
+$Rear Velocity:         0.0
+$Forward accel:         20.0
+$Forward decel:         10.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad: 250.0
+$Expl outer rad: 1350.0
+$Expl damage: 200.0
+$Expl blast: 11000.0
+$Expl Propagates: YES
+$Shockwave Speed: 650.0
+$Shockwave Count: 3
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          100.0
+$Max Oclk Speed:        8.0
+$Max Weapon Eng:        100.0
+$Hitpoints:                     80000
+$Flags:                         ( "corvette" "big damage" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     6000
+$EngineSnd:       106                  
+$Closeup_pos:           0.0, 0.0, -800
+$Closeup_zoom:          0.5
+$Score:             400
+$Subsystem:                     Turret01,0.5,1.0
+	$Default PBanks:	( "MRed" )
+$Subsystem:                     Turret02,0.5,1.0
+	$Default PBanks:	( "MRed" )
+$Subsystem:                     Turret03,0.5,1.0
+	$Default PBanks:	( "Standard Flak" )
+$Subsystem:                     Turret04,0.5,1.0
+	$Default PBanks:	( "SRed" )
+$Subsystem:                     Turret05,0.5,1.0
+	$Default PBanks:	( "SAAA" )
+$Subsystem:                     Turret06,0.5,1.0
+	$Default PBanks:	( "SAAA" )
+$Subsystem:                     Turret07,0.5,1.0
+	$Default PBanks:	( "Standard Flak" )
+$Subsystem:                     Turret08,0.5,1.0
+	$Default PBanks:	( "Standard Flak" )
+$Subsystem:                     Turret09,0.5,1.0
+	$Default PBanks:	( "Shivan Turret Laser" )
+$Subsystem:                     Turret10,0.5,1.0
+	$Default PBanks:	( "Shivan Turret Laser" )
+$Subsystem:                     Turret11,0.5,1.0
+	$Default PBanks:	( "Standard Flak" )
+$Subsystem:                     Turret12,0.5,1.0
+	$Default PBanks:	( "Standard Flak" )
+$Subsystem:                     Turret13,0.5,1.0
+	$Default PBanks:	( "Shivan Turret Laser" )
+$Subsystem:                     Turret14,0.5,1.0
+	$Default PBanks:	( "Shivan Turret Laser" )
+$Subsystem:                     Turret15,0.5,1.0
+	$Default PBanks:	( "Shivan Turret Laser" )
+$Subsystem:                     Turret16,0.5,1.0
+	$Default PBanks:	( "Shivan Turret Laser" )
+$Subsystem:                     Turret17,0.5,1.0
+	$Default PBanks:	( "SRed" )
+$Subsystem:                     communication,  		10, 0
+$Subsystem:                     navigation,             	10, 0
+$Subsystem:                     weapons,                        20, 0
+$Subsystem:                     sensors,                        10, 0
+$Subsystem:                     engine,                         35, 0
+
+$Name:                          GTD Menoetius
+$Short name:					TCap
+$Species:                       Terran
++Tech Description:
+XSTR("This vessel, designated GTD Menoetius, appears to be a radically upgraded GTD Hecate. GTVI and SOC information archives contain no information regarding the Menoetius, but from what we have seen, its combat capabilities are far superior to those of any other Terran destroyer. Much of what used to be the fighterbay is now occupied by multiple Vasudan-designed reactors, which give the Menoetius the power capacity it needs to power its devastating beam weaponry. The Menoetius also boasts a greater top speed, stronger hull armor, and better anti-fighter defenses than the Hecate. As far as we know, the GTD Acheron is the only Menoetius-class destroyer in existence.", 3052)
+$end_multi_text
+$POF file:					capital3t-01x.pof
+$Detail distance:			(0, 4300, 8000, 22000)
+$ND: 							255 253 196
+$ND: 							239 234 134
+$ND: 							251 248 167
+$Show damage:				NO
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					1.5
+$Max Velocity:				0.0, 0.0, 20.0
+$Rotation time:				150.0, 150.0, 150.0
+$Rear Velocity:				0.0
+$Forward accel:				20.0
+$Forward decel:				10.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			100.0
+$Expl outer rad:			2400.0
+$Expl damage:				400.0
+$Expl blast:				6500.0
+$Expl Propagates:			YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:			600.0                                           ;; speed shockwave expands at, 0 means no shockwave
+$Shockwave Count:			4
+$Default PBanks:			()
+$Default SBanks:			()
+$SBank Capacity:			()
+$Shields:					0
+$Power Output:				100.0
+$Max Oclk Speed:			8.0
+$Max Weapon Eng:			100.0
+$Hitpoints:					135000
+$Flags:						( "capital" "big damage" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:                     2000
+$EngineSnd:       138                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -2820
+$Closeup_zoom:          0.5
+$Score:             1300
+$Subsystem:                     Turret01, 1.875, 3.0
+	$Default PBanks:        ( "Heavy Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,0,0
+$Subsystem:                     Turret02, 1.875, 3.0
+	$Default PBanks:        ( "AAAf" )
+$Subsystem:                     Turret03, 1.875, 3.0
+	$Default PBanks:        ( "Terran Huge Turret" )
+$Subsystem:                     Turret04, 1.875, 3.0
+	$Default PBanks:        ( "Long Range Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,0,0
+$Subsystem:                     Turret05, 1.875, 3.0
+	$Default PBanks:        ( "Heavy Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,0,0
+$Subsystem:                     Turret06, 0.625, 2.0
+	$Default PBanks:        ( "Long Range Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,0,0
+$Subsystem:                     Turret07, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,180,0
+$Subsystem:                     Turret08, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,180,0
+$Subsystem:                     Turret09, 0.625, 2.0
+	$Default PBanks:        ( "AAAf" )
+$Subsystem:                     Turret10, 0.625, 2.0
+	$Default PBanks:        ( "Terran Turret" )
+$Subsystem:                     Turret11, 0.625, 2.0
+	$Default PBanks:        ( "Terran Turret" )
+$Subsystem:                     Turret12, 0.625, 2.0
+	$Default PBanks:        ( "AAAf" )
+$Subsystem:                     Turret13, 0.625, 2.0
+	$Default PBanks:        ( "AAAf" )
+$Subsystem:                     Turret14, 0.625, 2.0
+	$Default PBanks:        ( "Terran Turret" )
+$Subsystem:                     Turret15, 0.625, 2.0
+	$Default PBanks:        ( "Terran Turret" )
+$Subsystem:                     Turret16, 0.625, 2.0
+	$Default PBanks:        ( "Terran Turret" )
+$Subsystem:                     Turret17, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     Turret18, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     Turret19, 0.625, 2.0
+	$Default PBanks:        ( "AAAf" )
+$Subsystem:                     Turret20, 0.625, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret21, 0.625, 2.0
+	$Default PBanks:        ( "AAAf" )
+$Subsystem:                     Turret22, 0.625, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret23, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     Turret24, 0.625, 2.0
+	$Default PBanks:        ( "TerSlash" )
+$Subsystem:                     Turret25, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     Turret26, 0.625, 2.0
+	$Default PBanks:        ( "TerSlash" )
+$Subsystem:                     Turret27, 0.625, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret28, 0.625, 2.0
+	$Default PBanks:        ( "TerSlash" )
+$Subsystem:                     Turret29, 0.625, 2.0
+	$Default PBanks:        ( "TerSlash" )
+$Subsystem:                     Turret30, 0.625, 2.0
+	$Default PBanks:        ( "Long Range Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,0,0
+$Subsystem:                     Turret31, 0.625, 2.0
+	$Default PBanks:        ( "Long Range Flak" )
+	$animation:		triggered
+	$type:			initial
+	+relative_angle:	75,0,0
+$Subsystem:                     Turret32, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     Turret33, 0.625, 2.0
+	$Default PBanks:        ( "Standard Flak" )
+$Subsystem:                     Turret34, 0.625, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     Turret35, 0.625, 2.0
+	$Default PBanks:        ( "BGreen" )
+$Subsystem:                     navigation,     5, 0.0
+$Subsystem:                     communications,  5, 0.0
+$Subsystem:                     weapons,        5, 0.0
+$Subsystem:                     sensors,        5, 0.0
+$Subsystem:                     engine01,        5, 0.0
+	$Engine Wash:	Default900
+$Subsystem:                     engine02,        5, 0.0
+	$Engine Wash:	Default900
+$Subsystem:                     engine03,        5, 0.0
+	$Engine Wash:	Default100
+$Subsystem:                     engine04,        5, 0.0
+	$Engine Wash:	Default900
+$Subsystem:                     fighterbay,     0, 0.0
+
+$Name: SJ Raktavija
+$Short name: SCarrier
+$Species: Shivan
++Tech Description:
+XSTR("Fill in later", -1)
+$end_multi_text
+$POF file: ShivWorm.pof
+$Detail distance: (0, 7500, 18000, 30000)
+$Show damage: NO
+$Density: 1
+$Damp: 0.2
+$Rotdamp: 1.5
+$Max Velocity: 0.0, 0.0, 25.0
+$Rotation time: 200.0, 200.0, 200.0
+$Rear Velocity: 0.0
+$Forward accel: 20.0
+$Forward decel: 10.0
+$Slide accel: 0.0
+$Slide decel: 0.0
+$Expl inner rad: 500.0
+$Expl outer rad: 7400.0
+$Expl damage: 800.0
+$Expl blast: 8500.0
+$Expl Propagates: YES
+$Shockwave Speed: 300.0
+$Shockwave Count: 5
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Shields:               1500000
+$Shield Color:          255 92 92
+$Power Output: 100.0
+$Max Oclk Speed: 25.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 1500000
+$Flags: ( "supercap" "big damage" "surface shields" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 6000
+$EngineSnd: 105
+$Closeup_pos: 0.0, 0.0, -6820
+$Closeup_zoom: 0.5
+$Shield_icon:           GenericShield
+$Score: 20000
+$Subsystem: turret01, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret02, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret03, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret04, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret05, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret06, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret07, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret08, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret09, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret10, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret11, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret12, 2.0, 1.0
+ $Default PBanks: ( "BFRed" )
+$Subsystem: turret13, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret14, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret15, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret16, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret17, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret18, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret19, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret20, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret21, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret22, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret23, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret24, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret25, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret26, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret27, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret28, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret29, 1.0, 1.0
+ $Default SBanks: ( "Standard Flak" )
+$Subsystem: turret30, 0.5, 1.0
+ $Default SBanks: ( "Shivan Cluster" )
+$Subsystem: turret31, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret32, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret33, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret34, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret35, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret36, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret37, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret38, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret39, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret40, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret41, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret42, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret43, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret44, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret45, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret46, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret47, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret48, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret49, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret50, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret51, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret52, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret53, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret54, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret55, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret56, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret57, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret58, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret59, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret60, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret61, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret62, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret63, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret64, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret65, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret66, 0.5, 1.0
+ $Default SBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret67, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret68, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret69, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret70, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret71, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret72, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret73, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret74, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret75, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret76, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret77, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret78, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret79, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret80, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret81, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret82, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret83, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret84, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret85, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret86, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret87, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret88, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret89, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret90, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret91, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret92, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret93, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret94, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret95, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret96, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret97, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret98, 1.0, 1.0
+ $Default PBanks: ( "SAAA" )
+$Subsystem: turret99, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: turret100, 0.5, 1.0
+ $Default PBanks: ( "Shivan Turret Laser" )
+$Subsystem: navigation, 2, 0.0
+$Subsystem: communication, 2, 0.0
+$Subsystem: weapons, 2, 0.0
+$Subsystem: sensors, 2, 0.0
+$Subsystem: engine, 2, 0.0
+ $Engine Wash: Default1100
+$Subsystem: fighterbay, 0, 0.0
+$Subsystem: reactor, 10, 0.0
+
+$Name:		SJ Dante
+$Short name:				SJShiva
+$Species:					Shivan
+	+Tech Description:		XSTR( "Write me", -1 )
+$end_multi_text
+$POF file:					dante.pof
+$Detail distance:			(0, 4000, 25000, 40000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					1.5
+$Max Velocity:				0.0, 0.0, 25.0
+$Rotation time:				200.0, 200.0, 200.0
+$Rear Velocity:				0.0
+$Forward accel:				20.0
+$Forward decel:				10.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad: 			500.0
+$Expl outer rad: 			7400.0
+$Expl damage: 				800.0
+$Expl blast: 				8500.0
+$Expl Propagates: 			YES
+$Shockwave Speed: 			600.0
+$Shockwave Count:			5
+$Shields:					0
+$Power Output: 				100.0
+$Max Oclk Speed: 			8.0
+$Max Weapon Eng: 			100.0
+$Hitpoints: 				10000000
+$Flags: 					( "supercap" "big damage" )
+$AI Class: 					Captain
+$Afterburner: 				NO
+$Countermeasures: 			0
+$Scan time: 				6000
+$EngineSnd:					105
+$Closeup_pos: 				0.0, 0.0, -6820
+$Closeup_zoom: 				0.5
+$Score:						10000
+$Subsystem: 	forcefield1, 		0.01, 0.0
+$Subsystem: 	forcefield2, 		0.01, 0.0
+$Subsystem: 	forcefield3, 		0.01, 0.0
+$Subsystem: 	forcefield4, 		0.01, 0.0
+	$AWACS: 			1.0 10000
+$Subsystem: 	turret01, 			5.0, 1.0
+	$Default PBanks:			( "Sred" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret02, 			2.0, 1.0
+	$Default PBanks:			( "BFRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret03, 			1.0, 1.0
+	$Default PBanks:			( "BFRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret04, 			1.0, 1.0
+	$Default PBanks:			( "BFRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret05, 			1.0, 1.0
+	$Default PBanks:			( "BFRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret06, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret07, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret08, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret09, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret10, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret11, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret12, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret13, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret14, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret15, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret16, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret17, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret18, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret19, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret20, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret21, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret22, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret23, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret24, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret25, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret26, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret27, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret28, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret29, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret30, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret31, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret32, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret33, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret34, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret35, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret36, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret37, 			1.0, 1.0
+	$Default PBanks:			( "SAAA" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret38, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret39, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret40, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret41, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret42, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret43, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret44, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret45, 			1.0, 1.0
+	$Default PBanks:			( "SRed" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret46, 			1.0, 1.0
+	$Default PBanks:			( "Standard Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret47, 			1.0, 1.0
+	$Default PBanks:			( "Standard Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret48, 			1.0, 1.0
+	$Default PBanks:			( "Standard Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret49, 			1.0, 1.0
+	$Default PBanks:			( "Standard Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret50, 			1.0, 1.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret51, 			1.0, 1.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret52, 			1.0, 1.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret53, 			1.0, 1.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret54, 			1.0, 1.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret55, 			1.0, 1.0
+	$Default PBanks:			( "Long Range Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret56, 			1.0, 1.0
+	$Default PBanks:			( "Heavy Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret57, 			1.0, 1.0
+	$Default PBanks:			( "Heavy Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret58, 			1.0, 1.0
+	$Default PBanks:			( "Heavy Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret59, 			1.0, 1.0
+	$Default PBanks:			( "Heavy Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret60, 			1.0, 1.0
+	$Default PBanks:			( "Heavy Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret61, 			1.0, 1.0
+	$Default PBanks:			( "Heavy Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret62, 			1.0, 1.0
+	$Default PBanks:			( "Standard Flak" )
+	$Flags:			 			( "check hull" )
+$Subsystem: 	turret63, 			1.0, 1.0
+	$Default PBanks:			( "Standard Flak" )
+	$Flags:			 			( "check hull" )
+
+$Name: SI Tartarus
+$Short name: SInstallation
+$Species: Shivan
++Tech Description:
+XSTR("The SI Tartarus is by far the largest artificial object encountered in recorded history, measuring twenty kilometers in length and over eight kilometers in diameter. Its primary function seems to be similar to that of the Knossos portals. However, unlike the Knossos, which stablilizes a natural jump node, the Tartarus appears to be capable of creating an artificial subspace corridor between itself and another Tartarus installation. The method by which this incredible feat is accomplished is a complete mystery to us.", -1)
+$end_multi_text
+$POF file: ShivNode1.pof
+$Detail distance: (0, 2000, 6500, 18000)
+$ND: 255 0 0
+$Show damage: NO
+$Density: 1
+$Damp: 0.2
+$Rotdamp: 0.2
+$Max Velocity: 0.0, 0.0, 0.0
+$Rotation time: 200.0, 200.0, 200.0
+$Rear Velocity: 0.0
+$Forward accel: 0.0
+$Forward decel: 0.0
+$Slide accel: 0.0
+$Slide decel: 0.0
+$Expl inner rad: 100.0
+$Expl outer rad: 2400.0
+$Expl damage: 400.0
+$Expl blast: 6500.0
+$Expl Propagates: YES
+$Shockwave Speed: 600.0
+$Shockwave Count: 1
+$Default PBanks: ()
+$Default SBanks: ()
+$SBank Capacity: ()
+$Shields: 0
+$Power Output: 1.0
+$Max Oclk Speed: 0.0
+$Max Weapon Eng: 100.0
+$Hitpoints: 1000000
+$Flags: ( "capital" "dont collide invisible" "big damage" )
+$AI Class: Captain
+$Afterburner: NO
+$Countermeasures: 0
+$Scan time: 3000
+$EngineSnd: 190
+$Closeup_pos: 0.0, 0.0, -22000
+$Closeup_zoom: 0.5
+$Score: 0
+
+$Name:                         SI Arachnas
+$Short name:            SStation
+$Species:                       Shivan
++Tech Description:
+XSTR("The Arachnas is the first Shivan installation ever encountered. With a diameter of over four kilometers, it dwarfs even our own Arcadias. It also appears to be heavily armed with both anti-warship and anti-fighter beam cannons. The sole Arachnas encountered to date is in Outcast hands, suggesting that the Outcasts may have developed this monstrous installation after their separation from the Shivans. Its exact role and capabilities have yet to be determined.", 3063)
+$end_multi_text
+$POF file:                      Arachnas.pof
+$Detail distance:       (0, 2000, 6500, 18000)
+$ND:			13 238 238
+$ND:			250 252 252
+$Show damage:           NO
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         200.0, 200.0, 200.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        500.0
+$Expl outer rad:        7400.0
+$Expl damage:           800.0
+$Expl blast:            8500.0
+$Expl Propagates:       YES
+$Shockwave Speed:       600.0
+$Shockwave Count:	3
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          1.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        100.0
+$Hitpoints:                     1000000
+$Flags:                         (  "dont collide invisible" "big damage" "knossos" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       190
+$Closeup_pos:           0.0, -200.0, -4500
+$Closeup_zoom:          0.5
+$Score:             10000
+$Subsystem:                     turret01, 0.150, 1.0
+	$Default PBanks:        ( "Shivan Mega laser" )
+$Subsystem:                     turret02, 0.150, 1.0
+	$Default PBanks:        ( "Shivan Mega laser" )
+$Subsystem:                     turret03, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret04, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret05, 0.150, 1.0
+	$Default PBanks:        ( "LRed" )
+$Subsystem:                     turret06, 0.150, 1.0
+	$Default PBanks:        ( "LRed" )
+$Subsystem:                     turret07, 0.150, 1.0
+	$Default PBanks:        ( "LRed" )
+$Subsystem:                     turret08, 0.150, 1.0
+	$Default PBanks:        ( "LRed" )
+$Subsystem:                     turret09, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret10, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret11, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret12, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret13, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret14, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret15, 0.150, 1.0
+	$Default PBanks:        ( "SAAA" )
+$Subsystem:                     turret16, 0.150, 1.0
+
+#End
