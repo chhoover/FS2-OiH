@@ -24,7 +24,7 @@ MOD:					Author(s):
  SB Yali				 Ancient-Shivan War 3.6.12
  SCv Scylla				 Betrayal
  SSG Somnath				 Headdie, MjnMixael
-
+ SF Ifrit				 petrev, freespaceking
 
 -----------------------------------
 --- WEAPONS AND EFFECTS ---

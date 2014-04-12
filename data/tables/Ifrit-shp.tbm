@@ -1,0 +1,95 @@
+#Ship Classes
+
+
+$Name:                          SF Ifrit
+$Short name:            fighter3s-03
+$Species:                       Shivan
++Tech Description:
+XSTR(
+"THIS SHIP IS AWESOME
+
+SNAIL WUZ 'ERE
+
+Dragon replacement
+
+(tech description which makes sense coming sooon)", -1)
+$end_multi_text
+$POF file:                     fighter3s-03.pof
+$Detail distance:       (0, 80, 160, 500)
+$Show damage:           YES
+$Density:                       1
+$Damp:                          0.1
+$Rotdamp:                       0.4
+$Max Velocity:          40.0, 40.0, 80.0
+$Rotation time:         2.5, 2.0, 2.0
+$Rear Velocity:         35.0
+$Forward accel:         2.0
+$Forward decel:         0.75
+$Slide accel:           4.0
+$Slide decel:           4.0
+$Glide: YES
+$Expl inner rad:        25.0
+$Expl outer rad:        55.0
+$Expl damage:           15.0
+$Expl blast:            1000.0
+$Expl Propagates:       NO
+$Shockwave Speed:       0.0
+$Default PBanks:        ( "Shivan Heavy Laser" "Shivan Heavy Laser" )
+$Default SBanks:        ( "Harpoon#Shivan" )
+$SBank Capacity:        ( 40 )
+$Shields:                       950
+$Shield Color:		100 100 100
+$Power Output:          2.0
+$Shield Regeneration Rate: 0.06
+$Max Oclk Speed:        100.0
+$Max Weapon Eng:        100.0
+$Hitpoints:                     300
+$Flags:                         ( "fighter" )
+$AI Class:                      Captain
+$Afterburner:           YES
+	+Aburn Max Vel: 0.0, 0.0, 150.0
+	+Aburn For accel:       0.2
+	+Aburn Fuel:            200.0
+	+Aburn Burn Rate:       60.0
+	+Aburn Rec Rate:        25.0
+$Countermeasures:       20
+$Scan time:                     2000
+$EngineSnd:       132     
+$Closeup_pos:           0.0, 0.5, -20
+$Closeup_zoom:          0.5
+$Shield_icon:           fighter3s-03-hud
+$Score:             16
+$Trail:
+	+Offset:		4.7 3.4 -7.9
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		-4.7 3.4 -7.9
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Trail:
+	+Offset:		0.0 -4.1 -1.5
+	+Start Width:	0.25
+	+End Width:	0.05
+	+Start Alpha:	1.0
+	+End Alpha:	0.0
+	+Max Life:	1.0
+	+Spew Time:	120
+	+Bitmap:	Contrail01
+$Subsystem:                     sensors,                        10,0.0
+$Subsystem:                     communication,  10,0.0
+$Subsystem:                     engine,                 35,0.0
+$Subsystem:                     weapons,                        15,0.0
+$Subsystem:                     navigation,              5,0.0
+
+#end
