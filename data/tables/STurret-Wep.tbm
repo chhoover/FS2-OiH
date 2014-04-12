@@ -1,0 +1,70 @@
+#primary weapons
+
+$Name:                          STurret
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					250, 30, 30
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          75.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     15.0            ;; in seconds
+$Damage:                        300				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      20.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:                     125             ;; The sound it makes when fired
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					3750			;; Limit to range at which weapon will actively target object
+$Flags:                         ("Big Ship" "huge" "beam")
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:              ExpMissileHit1
+$Impact Explosion Radius:       50.0
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			7.0				;; how long it lasts once the beam is actually firing
+	+Warmup:		  			4000			;; warmup time in ms
+	+Warmdown:					2000			;; warmdown time in ms
+	+Radius:		  			70.0			;; muzzle glow radius in meters
+	+PCount:					10				;; particles spewed every interval
+	+PRadius:					1.9				;; particle radius
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:						particleexp01	;; particle ani
+	+Miss Factor:				2.5 1.875 1.25 0.875 0.5	;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					178				;; the looping beam-firing sound
+	+WarmupSound:				184				;; associated warmup sound
+	+WarmdownSound:				188				;; associated warmdown sound
+	+Muzzleglow:				thrusterglow01	;; muzzle glow bitmap	
+	+Shots:						0				;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.1			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					1.8			;; what percentage of max width we subtract per second
+	$Section:								;; one section of the beam (you can have up to 5)
+		+Width:					10.0				;; width of the section
+		+Texture:				beam-white		;; texture for this section
+		+RGBA Inner:			255 255 255 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			150 150 150 10	;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					2.0				;; hehe
+	$Section:								;; one section of the beam
+		+Width:					30.0				;; width of the section
+		+Texture:				beam-red2		;; texture for this section
+		+RGBA Inner:			160 160 0 255	;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			60 60 0 10		;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					1.0				;; hehe
+	$Section:								;; one section of the beam
+		+Width:					55.0			;; width of the section
+		+Texture:				beam-red		;; texture for this section
+		+RGBA Inner:			255 0 0 255		;; rgba values (only for non-textured beam compiles)
+		+RGBA Outer:			60 0 0 10		;; rgba values (only for non-textured beam compiles)
+		+Flicker:				0.1				;; how much it flickers (0.0 to 1.0)
+		+Zadd:					0.0				;; hehe
+
+
+#end

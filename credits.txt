@@ -22,6 +22,8 @@ MOD:					Author(s):
  ST Xerxes				 Galemp
  SD Vassago				 Ancient-Shivan War 3.6.12
  SB Yali				 Ancient-Shivan War 3.6.12
+ SCv Scylla				 Betrayal
+ SSG Somnath				 Headdie, MjnMixael
 
 
 -----------------------------------

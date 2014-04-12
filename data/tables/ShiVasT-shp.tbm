@@ -1,0 +1,52 @@
+#Ship Classes
+
+$Name:                          SSG Somnath
+$Short name:                    ShivanAnticap
+$Species:                       Shivan
+$POF file:                  	Shivturret.pof
+$Detail distance:			(0, 180, 300, 1100)
+$Show damage:			YES
+$Density:                   	1
+$Damp:                      	0.2
+$Rotdamp:                   	0.35
+$Max Velocity:			0.0, 0.0, 0.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:			2.3, 2.4, 1.8
+$Rear Velocity:			0.0
+$Forward accel:			1.9
+$Forward decel:			1.4
+$Slide accel:			0.0
+$Slide decel:			0.0
+$Expl inner rad:		25.0
+$Expl outer rad:		75.0
+$Expl damage:			25.0
+$Expl blast:			1000.0
+$Expl Propagates:		NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:		0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Power Output:			3.5
+$Max Weapon Eng:		120.0
+$Hitpoints:                 	1000
+$Flags:                     	( "cruiser" "generate icon" )
+$AI Class:                 	Captain
+$Scan time:                 	2000
+;$EngineSnd:			126                   ;; Engine sound of ship
+$Closeup_pos:			0.0, 0.0, -200
+$Closeup_zoom:			0.5
+$Score:				10
+$Subsystem:                     turret01, 5, 1.0
+	$Default PBanks:        ( "STurret" )
+	$Flags:                 ( "Check hull")
+$Subsystem:                     turret02, 5, 1.0
+	$Default PBanks:        ( "STurret" )
+	$Flags:                 ( "Check hull")
+$Subsystem:                     turret03, 5, 1.0
+	$Default PBanks:        ( "STurret" )
+	$Flags:                 ( "Check hull")
+$Subsystem:                     turret04, 5, 1.0
+	$Default PBanks:        ( "STurret" )
+	$Flags:                 ( "Check hull")
+$Subsystem:                     Sensors, 	10, 1.0
+$Subsystem:                     Weapons, 10, 1.0
+
+
+
+#end
