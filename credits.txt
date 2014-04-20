@@ -25,6 +25,8 @@ MOD:					Author(s):
  SCv Scylla				 Betrayal
  SSG Somnath				 Headdie, MjnMixael
  SF Ifrit				 petrev, freespaceking
+ SB Kasdeya				 petrev, freespaceking
+ SCv Armaros			 Moonred, Esarai
 
 -----------------------------------
 --- WEAPONS AND EFFECTS ---
