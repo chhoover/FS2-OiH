@@ -64,9 +64,10 @@ $AI Shield Manage Delay: 					1.8, 	1.6, 	1.4, 	1.2, 	1.0
 $Friendly AI Fire Delay Scale: 				1.0, 	1.0, 	1.0, 	1.0, 	1.0
 $Hostile AI Fire Delay Scale: 				1.6, 	1.5, 	1.0, 	1.0, 	1.0
 $AI Turn Time Scale: 						1.6, 	1.5, 	1.0, 	1.0, 	1.0
-$Glide Attack Percent: 						35, 	40, 	45, 	50, 	55
-$Circle Strafe Percent: 					35, 	40, 	45, 	50, 	55
-$Glide Strafe Percent: 						35, 	40, 	45, 	50, 	55
+$Glide Attack Percent: 						5, 		10, 	15, 	20, 	25
+$Circle Strafe Percent: 					5, 		10, 	15, 	20, 	25
+$Glide Strafe Percent: 						5,		10,		15,		20,		25
+$Random Sidethrust Percent:					5,		10,		15,		20,		25
 $Stalemate Time Threshold: 					10, 	10, 	10, 	10, 	10
 $Stalemate Distance Threshold: 				150, 	150, 	150, 	150, 	150
 $Chance AI Has to Fire Missiles at Player: 	1, 		1, 		2, 		2, 		3
@@ -94,9 +95,10 @@ $AI Shield Manage Delay: 					1.6, 	1.4, 	1.2, 	1.0, 	0.8
 $Friendly AI Fire Delay Scale: 				1.0, 	1.0, 	1.0, 	1.0, 	1.0
 $Hostile AI Fire Delay Scale: 				1.5, 	1.4, 	1.0, 	1.0, 	1.0
 $AI Turn Time Scale: 						1.5, 	1.4, 	1.0, 	1.0, 	1.0
-$Glide Attack Percent: 						45, 	50, 	55, 	60, 	65
-$Circle Strafe Percent: 					45, 	50, 	55, 	60, 	65
-$Glide Strafe Percent: 						45, 	50, 	55, 	60, 	65
+$Glide Attack Percent: 						15, 	20, 	25, 	30, 	35
+$Circle Strafe Percent: 					15, 	20, 	25, 	30, 	35
+$Glide Strafe Percent: 						15,		20,		25,		30,		35
+$Random Sidethrust Percent:					15,		20,		25,		30,		35
 $Stalemate Time Threshold: 					10, 	10, 	10, 	10, 	10
 $Stalemate Distance Threshold: 				150, 	150, 	150, 	150, 	150
 $Chance AI Has to Fire Missiles at Player: 	2, 		2, 		3, 		3,		4
@@ -124,9 +126,10 @@ $AI Shield Manage Delay: 					1.4, 	1.2,	1.0, 	0.8, 	0.6
 $Friendly AI Fire Delay Scale: 				1.0, 	1.0, 	1.0, 	1.0, 	1.0
 $Hostile AI Fire Delay Scale: 				1.4, 	1.3, 	1.0, 	1.0, 	1.0
 $AI Turn Time Scale: 						1.4, 	1.3, 	1.0, 	1.0, 	1.0
-$Glide Attack Percent: 						55, 	60, 	65, 	70, 	75
-$Circle Strafe Percent: 					55, 	60, 	65, 	70, 	75
-$Glide Strafe Percent: 						55, 	60, 	65, 	70, 	75
+$Glide Attack Percent: 						25, 	30, 	35, 	40, 	45
+$Circle Strafe Percent: 					25, 	30, 	35, 	40, 	45
+$Glide Strafe Percent: 						25, 	30, 	35, 	40, 	45
+$Random Sidethrust Percent:					25, 	30, 	35, 	40, 	45
 $Stalemate Time Threshold: 					10, 	10, 	10, 	10, 	10
 $Stalemate Distance Threshold: 				150, 	150, 	150, 	150, 	150
 $Chance AI Has to Fire Missiles at Player: 	3, 		3, 		4, 		4,		5
@@ -154,9 +157,10 @@ $AI Shield Manage Delay: 					1.2, 	1.0, 	0.8, 	0.6, 	0.4
 $Friendly AI Fire Delay Scale: 				1.0, 	1.0, 	1.0, 	1.0, 	1.0
 $Hostile AI Fire Delay Scale: 				1.3, 	1.2, 	1.0, 	1.0, 	1.0
 $AI Turn Time Scale: 						1.3, 	1.2, 	1.0, 	1.0, 	1.0
-$Glide Attack Percent: 						65, 	70, 	75, 	80, 	85
-$Circle Strafe Percent: 					65, 	70, 	75, 	80, 	85
-$Glide Strafe Percent: 						65, 	70, 	75, 	80, 	85
+$Glide Attack Percent: 						35, 	40, 	45, 	50, 	55
+$Circle Strafe Percent: 					35, 	40, 	45, 	50, 	55
+$Glide Strafe Percent: 						35, 	40, 	45, 	50, 	55
+$Random Sidethrust Percent:					35, 	40, 	45, 	50, 	55
 $Stalemate Time Threshold: 					10, 	10, 	10, 	10, 	10
 $Stalemate Distance Threshold: 				150, 	150, 	150, 	150, 	150
 $Chance AI Has to Fire Missiles at Player: 	4, 		4, 		5, 		5, 		6
@@ -184,9 +188,10 @@ $AI Shield Manage Delay: 					1.0, 	0.8, 	0.6, 	0.4, 	0.2
 $Friendly AI Fire Delay Scale: 				1.0, 	1.0, 	1.0, 	1.0, 	1.0
 $Hostile AI Fire Delay Scale: 				1.2, 	1.1, 	1.0, 	1.0, 	1.0
 $AI Turn Time Scale: 						1.2, 	1.1, 	1.0, 	1.0, 	1.0
-$Glide Attack Percent: 						75, 	80, 	85, 	90, 	95
-$Circle Strafe Percent: 					75, 	80, 	85, 	90, 	95
-$Glide Strafe Percent: 						75, 	80, 	85, 	90, 	95
+$Glide Attack Percent: 						45, 	50, 	55, 	60, 	75
+$Circle Strafe Percent: 					45, 	50, 	55, 	60, 	75
+$Glide Strafe Percent: 						45, 	50, 	55, 	60, 	75
+$Random Sidethrust Percent:					45, 	50, 	55, 	60, 	75
 $Stalemate Time Threshold: 					10, 	10, 	10, 	10, 	10
 $Stalemate Distance Threshold: 				150, 	150, 	150, 	150, 	150
 $Chance AI Has to Fire Missiles at Player: 	5, 		5, 		6, 		6, 		7
