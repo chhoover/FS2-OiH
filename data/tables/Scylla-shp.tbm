@@ -106,10 +106,10 @@ $Subsystem: turret21,0.250,1.0
 $Default PBanks: ( "Shivan Turret Laser")
 $Flags: ( "check hull" "fire down normals" "fire on Target")
 $Subsystem: turret22,0.250,1.0
-$Default SBanks: ( "Standard Flak" )
+$Default SBanks: ( "Piranha#Shivan" )
 $Flags: ( "check hull" "fire down normals" "fire on Target")
 $Subsystem: turret23,0.250,1.0
-$Default SBanks: ( "Standard Flak" )
+$Default SBanks: ( "Piranha#Shivan" )
 $Flags: ( "check hull" "fire down normals" "fire on Target")
 $Subsystem: turret24,0.250,1.0
 $Default PBanks: ( "Shivan Turret Laser")
