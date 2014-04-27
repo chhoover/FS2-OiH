@@ -26,7 +26,8 @@ MOD:					Author(s):
  SSG Somnath				 Headdie, MjnMixael
  SF Ifrit				 petrev, freespaceking
  SB Kasdeya				 petrev, freespaceking
- SCv Armaros			 Moonred, Esarai
+ SCv Armaros				 Moonred, Esarai
+ GTCv Diomedes				 Aesaar
 
 -----------------------------------
 --- WEAPONS AND EFFECTS ---
@@ -44,6 +45,8 @@ MOD:					Author(s):
  planet_rings_T-LoW, planet_rock_T-LoW,	 T-LoW
   planet_ice_T-LoW,
  
+ Subach_Green				 Retsof
+
 -----------------------------------
 --- MUSIC ---
 -----------------------------------

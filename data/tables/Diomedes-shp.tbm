@@ -1,0 +1,159 @@
+#Ship Classes
+
+$Name:		GTCv Diomedes
+$Short name:				TStrCorv
+$Species:					Terran
+	+Tech Description:		XSTR( "The Diomedes-class Strike Corvette is the newest capital ship in the GTVA fleet.  Unlike the Chimera and Bellerophon-classes of assault corvette, the Diomedes was not designed to emulate Shivan shock jump tactics, instead being built from the ground up for independent operations.  The result is a very versatile, very capable, and very expensive vessel.  Because of its prohibitive cost, it is not planned to replace the Deimos in Alliance formations, despite outperforming it in nearly every field.
+
+Compared to the Federation Karuna-class frigate, the Diomedes is slower and has less effective point-defense coverage, but vastly superior direct engagement capability and a faster subspace drive.", -1 )
+$end_multi_text
+$POF file:					diomedes_nodrone.pof
+$Detail distance:			(0, 10000, 10000, 10000)
+$Density:					1
+$Damp:						0.2
+$Rotdamp:					0.6
+$Max Velocity:				0.0, 0.0, 25.0
+$Rotation time:				48.0, 52.0, 42.0
+$Rear Velocity:				0.0
+$Forward accel:				2.0
+$Forward decel:				1.0
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			75.0
+$Expl outer rad:			750.0
+$Expl damage:				500.0
+$Expl blast:				1300.0
+$Expl Propagates:			yes
+$Shockwave Speed:			190.0
+$Shockwave Count:			3
+$Shields:					0
+$Power Output:				38.0
+$Max Oclk Speed:			35.0
+$Max Weapon Eng:			0.0
+$Hitpoints:					95000
+$Flags:						( "corvette" "big damage" )
+$AI Class:					Captain
+$Afterburner:				NO
+$Countermeasures:			0
+$Scan time:					2000
+$EngineSnd:					128
+$Closeup_pos:				0.0, -25, -1050
+$Closeup_zoom:				0.5
+$Score:						40
+$Subsystem:		engine01,			15, 0
+	$Engine Wash: 				Default300
+$Subsystem:		navigation,			7.5, 0
+$Subsystem:		communications,		5, 0
+$Subsystem:		sensors, 			7.5, 0
+$Subsystem:		fighterbay,			0, 0
+$Subsystem:		weapons,			7.5, 0
+$Subsystem:		engine02,			15, 0
+	$Engine Wash: 				Default300
+$Subsystem:		turret01,			5.5, 20.0
+	$Default PBanks:			( "STerPulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 0, 0
+$Subsystem:		turret02, 			5.5, 20.0
+	$Default PBanks:			( "STerPulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret03, 			5.5, 20.0
+	$Default PBanks:			( "STerPulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret04, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret05, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret06, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret07, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret08, 			3, 20.0
+	$Default PBanks:			( "TerSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret09, 			3, 20.0
+	$Default PBanks:			( "TerSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret10, 			3, 20.0
+	$Default PBanks:			( "Terran Turret" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret11, 			3, 20.0
+	$Default PBanks:			( "Terran Turret" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret12, 			3, 20.0
+	$Default PBanks:			( "Terran Turret" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret13, 			3, 20.0
+	$Default PBanks:			( "Terran Turret" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret14, 			3, 20.0
+	$Default SBanks:			( "Cyclops" "Cyclops" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret15, 			3, 20.0
+	$Default SBanks:			( "Cyclops" "Cyclops" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret16, 			3, 20.0
+	$Default PBanks:			( "STerPulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 0, 0
+$Subsystem:		turret17, 			3, 20.0
+	$Default PBanks:			( "STerPulse" )
+	$Turret Base RotationSnd: 	254
+	$Turret Gun RotationSnd: 	255
+	$Turret BaseSnd Volume: 	1.0
+	$Turret GunSnd Volume: 		1.0
+	$Turret Reset Delay:		15000
+	$Flags: 					( "check hull" "reset when idle" )
+	$animation:					triggered
+	$type:						initial
+		+relative_angle:	70, 180, 0
+$Subsystem:		turret18, 			3, 20.0
+	$Default PBanks:			( "TerSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret19, 			3, 20.0
+	$Default PBanks:			( "TerSlash" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret20, 			3, 20.0
+	$Default PBanks:			( "AAAf" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret21, 			3, 20.0
+	$Default PBanks:			( "Terran Turret" )
+	$Flags: 					( "check hull" )
+$Subsystem:		turret22, 			3, 20.0
+	$Default PBanks:			( "Terran Turret" )
+	$Flags: 					( "check hull" )
+	
+#End
