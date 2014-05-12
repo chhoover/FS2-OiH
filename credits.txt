@@ -49,6 +49,10 @@ MOD:					Author(s):
 
  Gas Giant skybox			 rscaper1070
 
+ Jolan					 BlasterNT
+
+ Volcanic				 FreeSpaceFreak
+
 -----------------------------------
 --- MUSIC ---
 -----------------------------------
