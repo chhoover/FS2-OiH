@@ -47,6 +47,8 @@ MOD:					Author(s):
  
  Subach_Green				 Retsof
 
+ Gas Giant skybox			 rscaper1070
+
 -----------------------------------
 --- MUSIC ---
 -----------------------------------
