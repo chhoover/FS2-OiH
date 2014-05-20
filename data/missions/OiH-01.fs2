@@ -1,0 +1,1520 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Untitled", -1)
+$Author: Furby
+$Created: 05/18/14 at 21:55:42
+$Modified: 05/19/14 at 22:55:05
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 131224
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 1
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 5534.789063, 3599.222412, 3163.415771
++Viewer orient:
+	0.174292, -0.000000, 0.984694,
+	-0.630212, 0.768368, 0.111548,
+	-0.756607, -0.640008, 0.133920
+
+$Starting wing names: ( "Thiazi" "Skadi" "Tyr" )
+$Squadron wing names: ( "Thiazi" "Skadi" "Tyr" "Scald" "Freki" )
+$Team-versus-team wing names: ( "Thiazi" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: BP2 R2
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"Thiazi2Disengage"		"0"		"number"
+		1		"Thiazi3Disengage"		"0"		"number"
+		2		"Thiazi4Disengage"		"0"		"number"
+)
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 0
+
+#Callsigns:
+$Callsign: Fisher
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Thiazi 1
+$Ship Choices: (
+	"GTF Ulysses"	5
+	"GTF Hercules"	5
+	"GTF Hercules Mark II"	5
+	"GTF Ares"	5
+	"GTF Erinyes"	5
+	"GTF Loki"	5
+	"GTF Pegasus"	5
+	"GTF Perseus"	5
+	"GTF Myrmidon"	5
+	"SF Mara (terrans)"	5
+	"GTB Artemis"	5
+	"GTB Artemis D.H."	5
+	"GTB Medusa"	5
+	"GTB Ursa"	5
+	"GTB Zeus"	5
+	"GTB Boanerges"	5
+	"GVF Ptah"	5
+)
+
++Weaponry Pool: (
+	"Subach HL-7"	20
+	"Subach HL-D"	16
+	"Mekhu HL-7"	16
+	"Mekhu HL-7D"	16
+	"Akheton SDG"	16
+	"Morning Star"	16
+	"MorningStar D"	16
+	"Prometheus R"	16
+	"Prometheus S"	16
+	"Prometheus D"	16
+	"Maxim"	16
+	"Maxim D"	16
+	"UD-8 Kayser"	20
+	"UD-D Kayser"	16
+	"Circe"	16
+	"Lamprey"	16
+	"Alouqua"	16
+	"Citra"	16
+	"Phanuel"	16
+	"Vapula"	16
+	"Advachiel"	16
+	"Chirops"	16
+	"Palit"	16
+	"Vepar"	16
+	"Rockeye"	500
+	"Rockeye D"	500
+	"Tempest"	500
+	"Tempest D"	500
+	"Hornet"	500
+	"Hornet D"	500
+	"Tornado"	500
+	"Tornado D"	500
+	"Harpoon"	580
+	"Harpoon D"	500
+	"Trebuchet"	500
+	"TAG-A"	500
+	"TAG-B"	500
+	"TAG-C"	500
+	"Piranha"	500
+	"Stiletto II"	500
+	"Infyrno"	500
+	"Infyrno D"	500
+	"Cyclops"	500
+	"Cyclops#short"	500
+	"Helios"	500
+	"EMP Adv."	540
+	"Rockeye#Shivan"	500
+	"Tempest#Shivan"	500
+	"Hornet#Shivan"	500
+	"Tornado#Shivan"	500
+	"Harpoon#Shivan"	500
+	"Trebuchet#Shivan"	500
+	"Piranha#Shivan"	500
+	"Shivan Disruptor"	500
+	"Shivan Bomb"	500
+	"Shivan Megabomb"	500
+	"Scourge"	500
+	"Paralyzer"	500
+	"Silent Eye"	500
+)
+
+#Objects		;! 17 total
+
+$Name: Thiazi 1		;! Object #0
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 0.000000, 0.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Subach HL-7" )
++Secondary Banks: ( "EMP Adv." "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Score: 8
+
+$Name: Geri 1		;! Object #1
+$Class: GTB Zeus
+$Callsign: Fisher
+
+$Team: Friendly
+$Location: -2.539417, -0.001560, 4072.774414
+$Orientation:
+	-0.079121, 0.000000, 0.996865,
+	0.000000, 1.000000, 0.000000,
+	-0.996865, 0.000000, -0.079121
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 60
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "escort" "invulnerable" )
++Flags2: ( "no-builtin-messages" )
++Respawn priority: 0
++Escort priority: 80
++Special Hitpoints: 400
++Special Shield Points: 900
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Thiazi 2		;! Object #2
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -104.759621, 0.003343, -103.229263
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Subach HL-7" )
++Secondary Banks: ( "EMP Adv." "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Thiazi 3		;! Object #3
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: 102.133430, 0.003333, -102.933792
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Subach HL-7" )
++Secondary Banks: ( "EMP Adv." "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Thiazi 4		;! Object #4
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -1.614875, 0.003367, -205.283569
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Subach HL-7" )
++Secondary Banks: ( "EMP Adv." "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Scorpio 1		;! Object #5
+$Class: GTF Loki
+$Team: Hostile
+$Location: 3013.214355, -0.002273, 3584.482422
+$Orientation:
+	0.267499, 0.000000, 0.963558,
+	0.000000, 1.000000, 0.000000,
+	-0.963558, 0.000000, 0.267499
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Scorpio 2		;! Object #6
+$Class: GTF Loki
+$Team: Hostile
+$Location: 3083.821289, -0.002261, 3453.458740
+$Orientation:
+	0.267499, -0.000000, 0.963558,
+	0.000000, 1.000000, 0.000000,
+	-0.963558, 0.000000, 0.267499
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Scorpio 3		;! Object #7
+$Class: GTF Loki
+$Team: Hostile
+$Location: 3136.003662, -0.002201, 3653.005371
+$Orientation:
+	0.267499, -0.000000, 0.963558,
+	0.000000, 1.000000, 0.000000,
+	-0.963558, 0.000000, 0.267499
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Virgo 1		;! Object #8
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: 3105.987793, -0.002148, 3973.443115
+$Orientation:
+	0.267499, -0.000000, 0.963558,
+	0.000000, 1.000000, 0.000000,
+	-0.963558, 0.000000, 0.267499
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Virgo 2		;! Object #9
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: 3175.569580, -0.002146, 3845.766846
+$Orientation:
+	0.267499, -0.000000, 0.963558,
+	0.000000, 1.000000, 0.000000,
+	-0.963558, 0.000000, 0.267499
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Virgo 3		;! Object #10
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: 3231.486328, -0.002141, 4044.100342
+$Orientation:
+	0.267499, -0.000000, 0.963558,
+	0.000000, 1.000000, 0.000000,
+	-0.963558, 0.000000, 0.267499
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Support 1		;! Object #11
+$Class: GTS Hygeia#norearm
+$Team: Friendly
+$Location: 1442.325195, -0.000220, 1600.716919
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Captain
+$AI Goals: ( goals ( ai-dock "Geri 1" "lower ring" "Bomber Dock" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Near Ship
++Arrival Distance: 1400
+$Arrival Anchor: Geri 1
+$Arrival Cue: ( and 
+   ( is-destroyed-delay 31 "Scorpio" ) 
+   ( is-destroyed-delay 31 "Virgo" ) 
+   ( not 
+      ( is-destroyed-delay 0 "Geri 1" ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( or 
+   ( has-undocked-delay 
+      "Support 1" 
+      "Geri 1" 
+      1 
+      0 
+   )
+   ( is-destroyed-delay 8 "Geri 1" ) 
+)
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Pisces 1		;! Object #12
+$Class: GTF Myrmidon
+$Team: Hostile
+$Location: -2009.853394, 0.002502, 3022.223633
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Pisces 2		;! Object #13
+$Class: GTF Myrmidon
+$Team: Hostile
+$Location: -2101.754150, 0.002791, 2899.540283
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Pisces 3		;! Object #14
+$Class: GTF Myrmidon
+$Team: Hostile
+$Location: -1896.575684, 0.002818, 2897.093018
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Pisces 4		;! Object #15
+$Class: GTF Myrmidon
+$Team: Hostile
+$Location: -2000.571899, 0.002831, 2794.590576
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
++Secondary Banks: ( "Hornet" "Hornet" "Hornet" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Virgo 4		;! Object #16
+$Class: GTF Hercules Mark II
+$Team: Hostile
+$Location: 3293.162598, 0.001108, 3924.301025
+$Orientation:
+	0.238476, 0.000000, 0.971149,
+	0.000000, 1.000000, 0.000000,
+	-0.971149, 0.000000, 0.238476
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+#Wings		;! 5 total
+
+$Name: Thiazi
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Thiazi 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Thiazi 1"
+	"Thiazi 2"
+	"Thiazi 3"
+	"Thiazi 4"
+)
++Hotkey: 0
++Flags: ( )
+
+$Name: Geri
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Geri 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Geri 1 departing" 
+   0 
+)
+$Ships: (		;! 1 total
+	"Geri 1"
+)
+$AI Goals: ( goals ( ai-waypoints-once "Geri 1 Path" 89 ) ( ai-chase-any 50 ) )
++Flags: ( )
+
+$Name: Scorpio
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Scorpio 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Scorpio 1"
+	"Scorpio 2"
+	"Scorpio 3"
+)
+$AI Goals: ( goals ( ai-chase-wing "Geri" 50 ) )
++Hotkey: 1
++Flags: ( )
+
+$Name: Virgo
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Virgo 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Virgo 1"
+	"Virgo 2"
+	"Virgo 3"
+	"Virgo 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Geri" 50 ) )
++Hotkey: 2
++Flags: ( )
+
+$Name: Pisces
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Pisces 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 2750
+$Arrival Anchor: Geri 1
+$Arrival Cue: ( is-event-true-delay 
+   "Support arrived" 
+   49 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Pisces 1"
+	"Pisces 2"
+	"Pisces 3"
+	"Pisces 4"
+)
+$AI Goals: ( goals ( ai-chase "Geri 1" 50 ) )
++Hotkey: 3
++Flags: ( )
+
+#Events		;! 21 total
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-guardian-threshold 
+      ( rand-multiple 5 13 ) 
+      "Thiazi 2" 
+   )
+   ( ship-guardian-threshold 
+      ( rand-multiple 5 13 ) 
+      "Thiazi 3" 
+   )
+   ( ship-guardian-threshold 
+      ( rand-multiple 5 13 ) 
+      "Thiazi 4" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 17 43 ) 
+      "Thiazi 2" 
+      "communications" 
+      "engine" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 17 43 ) 
+      "Thiazi 3" 
+      "communications" 
+      "engine" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 17 43 ) 
+      "Thiazi 4" 
+      "communications" 
+      "engine" 
+   )
+)
++Name: Thiazi guardian
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-num-countermeasures 
+      "Scorpio 1" 
+      0 
+   )
+   ( set-num-countermeasures 
+      "Scorpio 2" 
+      0 
+   )
+   ( set-num-countermeasures 
+      "Scorpio 3" 
+      0 
+   )
+)
++Name: I accidentally your CMs
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-ets-values 12 0 0 "Geri 1" ) 
+)
++Name: Geri 1 ETS
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( has-time-elapsed 92 ) 
+      ( percent-ships-destroyed 
+         75 
+         "Scorpio" 
+         "Virgo" 
+      )
+   )
+   ( sabotage-subsystem 
+      "Geri 1" 
+      "<all engines>" 
+      100 
+   )
+   ( clear-goals "Geri" ) 
+)
++Name: Geri 1 engine fails
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Support 1" ) 
+   ( do-nothing ) 
+)
++Name: Support arrived
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Support 1" 
+      "Geri 1" 
+      1 
+      80 
+   )
+   ( repair-subsystem 
+      "Geri 1" 
+      "<all engines>" 
+      100 
+   )
+   ( add-goal 
+      "Support 1" 
+      ( ai-undock 89 ) 
+   )
+)
++Name: Geri 1 engines repaired
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-undocked-delay 
+         "Support 1" 
+         "Geri 1" 
+         1 
+         4 
+      )
+      ( not 
+         ( is-destroyed-delay 0 "Geri 1" ) 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Geri 1 departing
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Thiazi 2" ) 25 ) 
+      ( = @Thiazi2Disengage[0] 0 ) 
+   )
+   ( lock-primary-weapon "Thiazi 2" ) 
+   ( lock-secondary-weapon "Thiazi 2" ) 
+   ( clear-goals "Thiazi 2" ) 
+   ( add-goal 
+      "Thiazi 2" 
+      ( ai-keep-safe-distance 89 ) 
+   )
+   ( protect-ship "Thiazi 2" ) 
+   ( training-msg "TMSG: Thiazi 2 hurt" ) 
+   ( modify-variable 
+      @Thiazi2Disengage[0] 
+      1 
+   )
+)
++Name: Thiazi 2 hurt
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Thiazi 3" ) 25 ) 
+      ( = @Thiazi3Disengage[0] 0 ) 
+   )
+   ( lock-primary-weapon "Thiazi 3" ) 
+   ( lock-secondary-weapon "Thiazi 3" ) 
+   ( clear-goals "Thiazi 3" ) 
+   ( add-goal 
+      "Thiazi 3" 
+      ( ai-keep-safe-distance 89 ) 
+   )
+   ( protect-ship "Thiazi 3" ) 
+   ( training-msg "TMSG: Thiazi 3 hurt" ) 
+   ( modify-variable 
+      @Thiazi3Disengage[0] 
+      1 
+   )
+)
++Name: Thiazi 3 hurt
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Thiazi 4" ) 25 ) 
+      ( = @Thiazi4Disengage[0] 0 ) 
+   )
+   ( lock-primary-weapon "Thiazi 4" ) 
+   ( lock-secondary-weapon "Thiazi 4" ) 
+   ( clear-goals "Thiazi 4" ) 
+   ( add-goal 
+      "Thiazi 4" 
+      ( ai-keep-safe-distance 89 ) 
+   )
+   ( protect-ship "Thiazi 4" ) 
+   ( training-msg "TMSG: Thiazi 4 hurt" ) 
+   ( modify-variable 
+      @Thiazi4Disengage[0] 
+      1 
+   )
+)
++Name: Thiazi 4 hurt
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( > ( hits-left "Thiazi 2" ) 25 ) 
+      ( = @Thiazi2Disengage[0] 1 ) 
+   )
+   ( unlock-primary-weapon "Thiazi 2" ) 
+   ( unlock-secondary-weapon "Thiazi 2" ) 
+   ( add-goal 
+      "Thiazi 2" 
+      ( ai-chase-any 50 ) 
+   )
+   ( unprotect-ship "Thiazi 2" ) 
+   ( training-msg 
+      "TMSG: Thiazi 2 recovered" 
+   )
+   ( modify-variable 
+      @Thiazi2Disengage[0] 
+      0 
+   )
+   ( add-goal 
+      "Thiazi 2" 
+      ( ai-guard "Geri 1" 89 ) 
+   )
+)
++Name: Thiazi 2 back in action
++Repeat Count: -1
++Trigger Count: 999999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( > ( hits-left "Thiazi 3" ) 25 ) 
+      ( = @Thiazi3Disengage[0] 1 ) 
+   )
+   ( unlock-primary-weapon "Thiazi 3" ) 
+   ( unlock-secondary-weapon "Thiazi 3" ) 
+   ( add-goal 
+      "Thiazi 3" 
+      ( ai-chase-any 50 ) 
+   )
+   ( unprotect-ship "Thiazi 3" ) 
+   ( training-msg 
+      "TMSG: Thiazi 3 recovered" 
+   )
+   ( modify-variable 
+      @Thiazi3Disengage[0] 
+      0 
+   )
+   ( add-goal 
+      "Thiazi 3" 
+      ( ai-guard "Geri 1" 89 ) 
+   )
+)
++Name: Thiazi 3 back in action
++Repeat Count: -1
++Trigger Count: 999999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( > ( hits-left "Thiazi 4" ) 25 ) 
+      ( = @Thiazi4Disengage[0] 1 ) 
+   )
+   ( unlock-primary-weapon "Thiazi 4" ) 
+   ( unlock-secondary-weapon "Thiazi 4" ) 
+   ( add-goal 
+      "Thiazi 4" 
+      ( ai-chase-any 50 ) 
+   )
+   ( unprotect-ship "Thiazi 4" ) 
+   ( training-msg 
+      "TMSG: Thiazi 4 recovered" 
+   )
+   ( modify-variable 
+      @Thiazi4Disengage[0] 
+      0 
+   )
+   ( add-goal 
+      "Thiazi 4" 
+      ( ai-guard "Geri 1" 89 ) 
+   )
+)
++Name: Thiazi 4 back in action
++Repeat Count: -1
++Trigger Count: 999999999
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Thiazi 2" 
+      "Thiazi 3" 
+      "Thiazi 4" 
+   )
+   ( < ( hits-left "<argument>" ) 49 ) 
+   ( repair-subsystem 
+      "<argument>" 
+      "Hull" 
+      1 
+   )
+)
++Name: Repair wingmen
++Repeat Count: -1
++Trigger Count: 999999999
++Interval: 5
+
+$Formula: ( when 
+   ( or 
+      ( has-time-elapsed 16 ) 
+      ( < 
+         ( distance "Thiazi 1" "<any hostile>" ) 
+         1700 
+      )
+   )
+   ( clear-goals "Virgo" ) 
+   ( add-goal 
+      "Virgo" 
+      ( ai-chase "Thiazi" 89 ) 
+   )
+)
++Name: Virgo attacks Thiazi
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Scorpio" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Destroy Scorpio
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Scorpio", -1)
++Objective key:  XSTR("Press F6", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Virgo" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Destroy Virgo
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Virgo", -1)
++Objective key:  XSTR("Press F7", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Pisces" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Destroy Pisces
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Pisces", -1)
++Objective key:  XSTR("Press F8", -1)
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Geri 1" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Protect Geri 1
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Protect Geri 1", -1)
+
+$Formula: ( when 
+   ( has-time-elapsed 40 ) 
+   ( ship-vulnerable "Geri 1" ) 
+)
++Name: Geri 1 vulnerable! Onoz!
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 32 ) 
+   ( set-num-countermeasures 
+      "Scorpio 1" 
+      20 
+   )
+   ( set-num-countermeasures 
+      "Scorpio 2" 
+      20 
+   )
+   ( set-num-countermeasures 
+      "Scorpio 3" 
+      20 
+   )
+)
++Name: I can haz CMs?
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 1 total
+
+$Type: Primary
++Name: Protect Geri 1
+$MessageNew:  XSTR("Protect Geri 1", -1)
+$end_multi_text
+$Formula: ( has-departed-delay 0 "Geri 1" ) 
+
+#Waypoints		;! 1 lists total
+
+$Name: Geri 1 Path
+$List: (		;! 1 points in list
+	( -25.200001, 300.000000, -948.400024 )
+)
+
+#Messages		;! 6 total
+
+
+$Name: TMSG: Thiazi 2 hurt
+$Team: -1
+$MessageNew:  XSTR("Thiazi 2 Disengaging!", -1)
+$end_multi_text
+
+$Name: TMSG: Thiazi 3 hurt
+$Team: -1
+$MessageNew:  XSTR("Thiazi 3 Disengaging!", -1)
+$end_multi_text
+
+$Name: TMSG: Thiazi 4 hurt
+$Team: -1
+$MessageNew:  XSTR("Thiazi 4 Disengaging!", -1)
+$end_multi_text
+
+$Name: TMSG: Thiazi 2 recovered
+$Team: -1
+$MessageNew:  XSTR("Thiazi 2 reengaging", -1)
+$end_multi_text
+
+$Name: TMSG: Thiazi 3 recovered
+$Team: -1
+$MessageNew:  XSTR("Thiazi 3 reengaging", -1)
+$end_multi_text
+
+$Name: TMSG: Thiazi 4 recovered
+$Team: -1
+$MessageNew:  XSTR("Thiazi 4 reengaging", -1)
+$end_multi_text
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 53 total
+
+$Num stars: 0
+$Ambient light level: 65793
+
+$Bitmap List:
+$Sun: SunSiriusA
++Angles: 6.178466 0.000000 3.211406
++Scale: 2.000000
+$Sun: SunSiriusB
++Angles: 0.034907 0.000000 2.949604
++Scale: 0.200000
+$Starbitmap: NebulB3-Main
++Angles: 4.328417 2.775074 0.000000
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB2-Main
++Angles: 4.276053 0.000000 5.916662
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 4.345866 2.792525 5.585049
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 4.188787 1.570795 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.520399 2.356193 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 4.101521 5.585049 0.349066
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 4.188787 5.934115 0.436332
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 4.188787 2.617992 0.610865
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 4.101521 3.141590 0.436332
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB1-Main
++Angles: 0.000000 0.000000 1.745328
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB3-Main
++Angles: 0.000000 0.000000 4.380773
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 0.663225 0.000000 5.393063
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 0.174533 0.942477 4.014254
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 0.785398 5.585049 5.131264
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 0.069813 0.000000 1.221730
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 0.000000 4.520399 4.712385
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 0.000000 5.916662 2.007127
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB12-Whisp
++Angles: 5.916662 1.570795 1.483529
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 5.061451 1.570795 1.919861
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 0.872664 3.926988 4.345866
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.872664 5.846848 2.076940
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 0.872664 0.698131 2.356193
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 0.436332 0.174533 1.308996
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.712385 2.076940 6.091194
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.625119 5.759582 6.195914
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 4.520399 0.000000 0.349066
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 4.712385 1.570795 0.174533
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 5.585049 3.926988 4.014254
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 4.363320 1.570795 0.174533
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB14-Whisp
++Angles: 4.363320 0.349066 5.934115
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 4.363320 2.356193 5.393063
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.014254 3.141590 4.886918
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 4.014254 3.054324 4.886918
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB7-Whisp
++Angles: 4.014254 0.000000 0.872664
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB5-Whisp
++Angles: 4.014254 0.349066 0.872664
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB9-Whisp
++Angles: 1.570795 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB13-Whisp
++Angles: 1.396262 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 1.919861 0.785398 0.000000
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.698131 2.356193 2.076940
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB8-Whisp
++Angles: 0.349066 3.490656 1.884954
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB10-Whisp
++Angles: 0.261799 3.665189 3.316123
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB11-Whisp
++Angles: 0.261799 0.506145 3.054324
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB6-Whisp
++Angles: 0.226893 3.141590 3.630282
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulB4-Whisp
++Angles: 0.174533 0.000000 4.520399
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA4-Whisp
++Angles: 0.174533 5.759582 0.698131
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA6-Whisp
++Angles: 0.174533 0.000000 0.872664
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA9-Whisp
++Angles: 0.174533 4.712385 0.872664
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA7-Whisp
++Angles: 0.000000 1.570795 0.872664
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA11-Whisp
++Angles: 0.174533 4.712385 0.610865
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA10-Whisp
++Angles: 0.000000 0.000000 0.523598
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA3-Whisp
++Angles: 5.934115 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA12-Whisp
++Angles: 6.038835 0.698131 0.174533
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulA5-Whisp
++Angles: 5.759582 5.585049 6.108648
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: 3: Leviticus
+$Briefing Music: None
+
+#End
+
