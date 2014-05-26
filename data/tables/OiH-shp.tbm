@@ -4,6 +4,106 @@ $Name:				GTF Pegasus
 	+nocreate
 $Allowed PBanks: ( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Maxim" )
 
+$Name:				GTF Pegasus#dock
+$Short name:                    TFight21
+$Species:                       Terran
++Type:                          XSTR("Stealth Recon", 2975)
++Maneuverability:               XSTR("Excellent", 2976)
++Armor:                         XSTR("Light", 2977)
++Manufacturer:                  XSTR("Nankam Aeronautical", 2978)
++Description:					XSTR(" ", 2979)
+$end_multi_text
++Tech Description:
+XSTR("The Pegasus is used almost exclusively for reconnaissance missions. It's the fastest, most maneuverable ship in the Terran arsenal. The craft's contours and hull materials were carefully designed to minimize its profile to detection sensors. It is woefully armored and packs only minimal weaponry, making it a death box in a firefight. Pegasus pilots are a special breed of daredevils who pride themselves on getting into and out of situations that would be the death of other pilots, all without firing a shot.", 2980)
+$end_multi_text
++Length:					19 m
++Gun Mounts:				2
++Missile Banks:				1
+
+$POF file:                  fighter2t-01.pof
+$Detail distance:			(0, 180, 300, 1100)
+$ND: 							74 73 246
+$ND: 							46 46 242
+$ND: 							60 58 213
+$Show damage:				YES
+$Density:                   1
+$Damp:                      0.2
+$Rotdamp:                   0.35
+$Max Velocity:				0.0, 0.0, 90.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:				2.5, 2.6, 2.0
+$Rear Velocity:				0.0
+$Forward accel:				2.0
+$Forward decel:				1.5
+$Slide accel:				0.0
+$Slide decel:				0.0
+$Expl inner rad:			25.0
+$Expl outer rad:			75.0
+$Expl damage:				25.0
+$Expl blast:				1000.0
+$Expl Propagates:			NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:			0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Allowed PBanks:			( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Maxim" )
+$Allowed Dogfight PBanks:	( "Subach HL-D" "Prometheus D" )
+$Default PBanks:			( "Subach HL-7" )
+$Allowed SBanks:			( "Rockeye"  "Tempest" "TAG-A" "TAG-B" "Harpoon" "Trebuchet" "Hornet" "Tornado" "Hornet#Weak" "EMP Adv." )
+$Allowed Dogfight SBanks:	( "Rockeye D" "Tempest D" "Hornet D" )
+$Default SBanks:			( "Harpoon" "Hornet" )
+$SBank Capacity:			( 20, 10 )
+$Shields:                   	330
+$Shield Color:			100 100 255
+$Power Output:				3.0
+$Max Oclk Speed:			110.0
+$Max Weapon Eng:			150.0
+$Hitpoints:                 	220
+$Armor Type:				LightArmor
+$Flags:                     ( "player_ship" "transport" )
+$AI Class:                  Captain
+$Afterburner:				YES
+	+Aburn Max Vel:			0.0, 0.0, 160.0
+	+Aburn For accel:       0.7
+	+Aburn Fuel:            300.0
+	+Aburn Burn Rate:       60.0
+	+Aburn Rec Rate:        25.0
+		$Trails:
+		+Bitmap:		ABTrail
+		+Width:			1.0
+		+Alpha:			1.0
+		+Life:			1
+$Countermeasures:			40
+$Scan time:                 2000
+$EngineSnd:					126                   ;; Engine sound of ship
+$Closeup_pos:				0.0, 0.0, -30
+$Closeup_zoom:				0.5
+$Shield_icon:				shieldft-01
+$Ship_icon:                 iconfighter2t-01
+$Ship_anim:                 ssfighter2t-01
+$Ship_overhead:				loadfighter2t-01
+$Score:						10
+$Stealth:
+$Trail:
+	+Offset:				9.56 -2.22 -1.31
+	+Start Width:			0.25
+	+End Width:				0.05
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				1.0
+	+Spew Time:				120
+	+Bitmap:				Contrail01
+$Trail:
+	+Offset:				-9.56 -2.22 -1.31
+	+Start Width:			0.25
+	+End Width:				0.05
+	+Start Alpha:			1.0
+	+End Alpha:				0.0
+	+Max Life:				1.0
+	+Spew Time:				120
+	+Bitmap:				Contrail01
+$Subsystem:                 sensors,                                10,0.0
+$Subsystem:                 communications, 10,0.0
+$Subsystem:                 weapons,                                10,0.0
+$Subsystem:                 navigation,                     10,0.0
+$Subsystem:                 engine,                         35,0.0
+
 $Name:                          @GTS Hygeia#norearm
 $Short name:            TSup
 $Species:                       Terran
