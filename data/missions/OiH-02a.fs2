@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 05/25/14 at 22:29:42
-$Modified: 05/25/14 at 23:29:33
+$Modified: 05/26/14 at 00:59:29
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1008.757751, 855.515137, 1646.242065
++Viewer pos: 1251.516357, 1762.068359, -3519.311279
 +Viewer orient:
-	0.010318, 0.000000, -0.999947,
-	0.652633, 0.757644, 0.006734,
-	0.757604, -0.652668, 0.007817
+	-0.088165, -0.000000, -0.996106,
+	0.455638, 0.889251, -0.040328,
+	0.885788, -0.457419, -0.078401
 
 $Starting wing names: ( "Thiazi" "Beta" "Gamma" )
 $Squadron wing names: ( "Thiai" "Beta" "Gamma" "Delta" "Epsilon" )
@@ -133,16 +133,16 @@ $Ship Choices: (
 	"Silent Eye"	500
 )
 
-#Objects		;! 2 total
+#Objects		;! 7 total
 
 $Name: Thiazi 1		;! Object #0
 $Class: GTF Pegasus#dock
 $Team: Friendly
-$Location: 0.000000, 0.000000, 0.000000
+$Location: 6007.052246, -636.639160, 1628.600830
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	-0.709793, 0.000000, 0.704411,
+	0.187888, 0.963771, 0.189324,
+	-0.678891, 0.266731, -0.684078
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -158,17 +158,17 @@ $Determination: 10
 +Group: 0
 +Score: 8
 
-$Name: GTSC Faustus 1		;! Object #1
+$Name: Heisenberg		;! Object #1
 $Class: GTSC Faustus
-$Team: Friendly
-$Location: 0.000000, 0.000000, 2000.000000
+$Team: Hostile
+$Location: 3226.676514, 1346.687012, -3561.198486
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.629412, 0.000000, 0.777072,
+	-0.640995, 0.565300, 0.519193,
+	-0.439278, -0.824885, 0.355806
 $AI Behavior: None
 +AI Class: BP2-Captain
-$AI Goals: ( goals ( ai-waypoints-once "Regulus node ctr" 50 ) )
+$AI Goals: ( goals ( ai-waypoints-once "Heisenberg Path" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 15
 +Initial Hull: 100
@@ -181,25 +181,185 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret05
 +Subsystem: turret06
 $Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
+$Arrival Cue: ( is-event-true-delay 
+   "Heisenberg arrival" 
+   0 
+)
 $Departure Location: Hyperspace
 $Departure Cue: ( < 
    ( distance 
-      "GTSC Faustus 1" 
-      "Regulus node ctr:1" 
+      "Heisenberg" 
+      "Heisenberg Path:1" 
    )
    800 
 )
 $Determination: 10
-+Flags: ( "no-shields" "scannable" )
++Flags: ( "no-shields" "escort" "scannable" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 50
 +Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 50
 
-#Wings		;! 1 total
+$Name: Thassos		;! Object #2
+$Class: GTC Fenris
+$Team: Hostile
+$Location: 3540.244385, 1345.076660, -3172.314697
+$Orientation:
+	0.629412, -0.000000, 0.777072,
+	-0.640995, 0.565300, 0.519193,
+	-0.439279, -0.824886, 0.355806
+$AI Behavior: None
++AI Class: BP2-Captain
+$AI Goals: ( goals ( ai-waypoints-once "Thassos Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Primary Banks: ( "AAAh" )
++Subsystem: turret05
++Subsystem: turret06
++Primary Banks: ( "AAAh" )
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09a-01-main
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Heisenberg arrival" 
+   4 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( < 
+   ( distance "Thassos" "Thassos Path:1" ) 
+   800 
+)
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
+
+$Name: Aquarius 1		;! Object #3
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: 2556.039551, 1088.415405, -3634.774414
+$Orientation:
+	0.231736, -0.968672, -0.089297,
+	0.872071, 0.247543, -0.422157,
+	0.431036, 0.019956, 0.902115
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Aquarius 2		;! Object #4
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: 3495.125732, 1186.203003, -3759.452393
+$Orientation:
+	0.231736, -0.968672, -0.089297,
+	0.872070, 0.247543, -0.422157,
+	0.431036, 0.019956, 0.902114
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Aquarius 3		;! Object #5
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: 2961.331543, 984.663086, -3103.009277
+$Orientation:
+	0.231736, -0.968672, -0.089297,
+	0.872070, 0.247543, -0.422157,
+	0.431036, 0.019956, 0.902114
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Aquarius 4		;! Object #6
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: 2904.063232, 1394.367310, -3439.335205
+$Orientation:
+	0.231736, -0.968672, -0.089297,
+	0.872070, 0.247543, -0.422157,
+	0.431036, 0.019956, 0.902114
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+#Wings		;! 2 total
 
 $Name: Thiazi
 $Waves: 1
@@ -215,14 +375,33 @@ $Ships: (		;! 1 total
 )
 +Flags: ( )
 
-#Events		;! 3 total
+$Name: Aquarius
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Aquarius 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Heisenberg arrival" 
+   3 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Aquarius 1"
+	"Aquarius 2"
+	"Aquarius 3"
+	"Aquarius 4"
+)
+$AI Goals: ( goals ( ai-guard "Heisenberg" 50 ) )
++Flags: ( )
+
+#Events		;! 5 total
 
 $Formula: ( when 
    ( true ) 
-   ( cap-waypoint-speed 
-      "GTSC Faustus 1" 
-      15 
-   )
+   ( ship-stealthy "Thiazi 1" ) 
+   ( protect-ship "Thiazi 1" ) 
 )
 +Name: Mission setup
 +Repeat Count: 1
@@ -238,7 +417,7 @@ $Formula: ( when
    ( add-goal 
       "Thiazi 1" 
       ( ai-dock 
-         "GTSC Faustus 1" 
+         "Heisenberg" 
          "Fighter Dock" 
          "port docking" 
          89 
@@ -252,7 +431,7 @@ $Formula: ( when
 $Formula: ( when 
    ( has-docked-delay 
       "Thiazi 1" 
-      "GTSC Faustus 1" 
+      "Heisenberg" 
       1 
       0 
    )
@@ -265,17 +444,41 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( has-time-elapsed 6 ) 
+   ( do-nothing ) 
+)
++Name: Heisenberg arrival
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of "Heisenberg" "Thassos" ) 
+   ( has-arrived-delay 0 "<argument>" ) 
+   ( cap-waypoint-speed "<argument>" 15 ) 
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Heisenberg Thassos WP speeds
++Repeat Count: -1
++Trigger Count: 2
++Interval: 1
+
 #Goals		;! 0 total
 
 
-#Waypoints		;! 1 lists total
+#Waypoints		;! 2 lists total
 
 
-$Jump Node: 0.000000, 0.000000, 6000.000000
+$Jump Node: 0.000000, 0.000000, 0.016490
 $Jump Node Name: Regulus
-$Name: Regulus node ctr
+$Name: Heisenberg Path
 $List: (		;! 1 points in list
-	( 0.000000, 0.000000, 6000.000000 )
+	( -232.323395, -0.000011, -212.466354 )
+)
+
+$Name: Thassos Path
+$List: (		;! 1 points in list
+	( 226.877853, 0.005949, 208.257233 )
 )
 
 #Messages		;! 0 total
