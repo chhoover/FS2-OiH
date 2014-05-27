@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 05/25/14 at 22:29:42
-$Modified: 05/26/14 at 00:59:29
+$Modified: 05/26/14 at 18:48:11
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1251.516357, 1762.068359, -3519.311279
++Viewer pos: 6990.592285, 4348.920898, -4992.340820
 +Viewer orient:
-	-0.088165, -0.000000, -0.996106,
-	0.455638, 0.889251, -0.040328,
-	0.885788, -0.457419, -0.078401
+	0.568826, -0.000002, 0.822458,
+	-0.484763, 0.807835, 0.335273,
+	-0.664411, -0.589409, 0.459517
 
 $Starting wing names: ( "Thiazi" "Beta" "Gamma" )
 $Squadron wing names: ( "Thiai" "Beta" "Gamma" "Delta" "Epsilon" )
@@ -36,6 +36,15 @@ $Team-versus-team wing names: ( "Thiazi" "Zeta" )
 $Skybox Model: starfield.pof
 
 $AI Profile: BP2 R2
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"AttackingEscort"		"None"		"string"
+		1		"Detected"		"0"		"number"
+		2		"EscortAlmostVisual"		"Escort"		"string"
+)
 
 #Command Briefing
 
@@ -133,7 +142,7 @@ $Ship Choices: (
 	"Silent Eye"	500
 )
 
-#Objects		;! 7 total
+#Objects		;! 14 total
 
 $Name: Thiazi 1		;! Object #0
 $Class: GTF Pegasus#dock
@@ -152,7 +161,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "player-start" "stealth" )
++Flags: ( "cargo-known" "protect-ship" "player-start" "stealth" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -161,11 +170,11 @@ $Determination: 10
 $Name: Heisenberg		;! Object #1
 $Class: GTSC Faustus
 $Team: Hostile
-$Location: 3226.676514, 1346.687012, -3561.198486
+$Location: 3226.699951, 0.000000, -3561.199951
 $Orientation:
-	0.629412, 0.000000, 0.777072,
-	-0.640995, 0.565300, 0.519193,
-	-0.439278, -0.824885, 0.355806
+	0.695560, 0.000000, 0.718468,
+	-0.000000, 1.000000, 0.000000,
+	-0.718468, -0.000000, 0.695560
 $AI Behavior: None
 +AI Class: BP2-Captain
 $AI Goals: ( goals ( ai-waypoints-once "Heisenberg Path" 50 ) )
@@ -206,11 +215,11 @@ $Determination: 10
 $Name: Thassos		;! Object #2
 $Class: GTC Fenris
 $Team: Hostile
-$Location: 3540.244385, 1345.076660, -3172.314697
+$Location: 3540.199951, 0.000000, -3172.300049
 $Orientation:
-	0.629412, -0.000000, 0.777072,
-	-0.640995, 0.565300, 0.519193,
-	-0.439279, -0.824886, 0.355806
+	0.714173, 0.000000, 0.699969,
+	0.000001, 1.000000, -0.000001,
+	-0.699969, 0.000001, 0.714173
 $AI Behavior: None
 +AI Class: BP2-Captain
 $AI Goals: ( goals ( ai-waypoints-once "Thassos Path" 50 ) )
@@ -233,8 +242,8 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Sbank Ammo: ( 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( is-event-true-delay 
-   "Heisenberg arrival" 
-   4 
+   "Thassos arrival" 
+   0 
 )
 $Departure Location: Hyperspace
 $Departure Cue: ( < 
@@ -254,11 +263,11 @@ $Determination: 10
 $Name: Aquarius 1		;! Object #3
 $Class: GTF Ulysses
 $Team: Hostile
-$Location: 2556.039551, 1088.415405, -3634.774414
+$Location: 2997.012695, 160.541870, -3308.134033
 $Orientation:
-	0.231736, -0.968672, -0.089297,
-	0.872071, 0.247543, -0.422157,
-	0.431036, 0.019956, 0.902115
+	0.736713, 0.000000, 0.676206,
+	-0.000000, 1.000000, 0.000000,
+	-0.676206, -0.000000, 0.736713
 $AI Behavior: None
 +AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -272,7 +281,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags2: ( "secondaries-locked" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
@@ -281,11 +290,11 @@ $Determination: 10
 $Name: Aquarius 2		;! Object #4
 $Class: GTF Ulysses
 $Team: Hostile
-$Location: 3495.125732, 1186.203003, -3759.452393
+$Location: 2832.320068, 4.343939, -3476.226807
 $Orientation:
-	0.231736, -0.968672, -0.089297,
-	0.872070, 0.247543, -0.422157,
-	0.431036, 0.019956, 0.902114
+	0.746934, 0.000000, 0.664899,
+	-0.000000, 1.000000, 0.000000,
+	-0.664899, -0.000000, 0.746934
 $AI Behavior: None
 +AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -299,20 +308,231 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags2: ( "secondaries-locked" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
 +Score: 8
 
-$Name: Aquarius 3		;! Object #5
+$Name: Virgo 1		;! Object #5
+$Class: GTF Loki
+$Team: Hostile
+$Location: 3486.271973, 0.001677, -2898.800049
+$Orientation:
+	0.724299, 0.000000, 0.689486,
+	-0.000000, 1.000000, 0.000000,
+	-0.689486, -0.000000, 0.724299
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Virgo 2		;! Object #6
+$Class: GTF Loki
+$Team: Hostile
+$Location: 3555.210938, 0.001657, -2900.505127
+$Orientation:
+	0.734538, 0.000000, 0.678567,
+	-0.000000, 1.000000, 0.000000,
+	-0.678567, -0.000000, 0.734538
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Pax		;! Object #7
+$Class: GTCv Deimos
+$Team: Hostile
+$Location: -774.714111, 945.576965, -1198.713501
+$Orientation:
+	0.571453, 0.648535, -0.502837,
+	0.127949, 0.534835, 0.835214,
+	0.810599, -0.541623, 0.222654
+$AI Behavior: None
++AI Class: BP2-Captain
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 800
+
+$Name: Gemini 1		;! Object #8
+$Class: GTF Hercules
+$Team: Hostile
+$Location: -500.115417, 0.003257, -1902.877808
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Gemini 2		;! Object #9
+$Class: GTF Hercules
+$Team: Hostile
+$Location: -602.735352, 0.003366, -2006.870972
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Gemini 3		;! Object #10
+$Class: GTF Hercules
+$Team: Hostile
+$Location: -396.612274, 0.003353, -2004.417358
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Gemini 4		;! Object #11
+$Class: GTF Hercules
+$Team: Hostile
+$Location: -500.478668, 0.003379, -2109.386719
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Aquarius 3		;! Object #12
 $Class: GTF Ulysses
 $Team: Hostile
-$Location: 2961.331543, 984.663086, -3103.009277
+$Location: 3143.640869, 0.003727, -3166.326660
 $Orientation:
-	0.231736, -0.968672, -0.089297,
-	0.872070, 0.247543, -0.422157,
-	0.431036, 0.019956, 0.902114
+	0.659984, 0.000000, 0.751281,
+	0.000000, 1.000000, 0.000000,
+	-0.751281, 0.000000, 0.659984
 $AI Behavior: None
 +AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -326,20 +546,20 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags2: ( "secondaries-locked" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
 +Score: 8
 
-$Name: Aquarius 4		;! Object #6
+$Name: Aquarius 4		;! Object #13
 $Class: GTF Ulysses
 $Team: Hostile
-$Location: 2904.063232, 1394.367310, -3439.335205
+$Location: 3015.872803, -193.264359, -3330.295166
 $Orientation:
-	0.231736, -0.968672, -0.089297,
-	0.872070, 0.247543, -0.422157,
-	0.431036, 0.019956, 0.902114
+	0.659984, 0.000000, 0.751281,
+	0.000000, 1.000000, 0.000000,
+	-0.751281, 0.000000, 0.659984
 $AI Behavior: None
 +AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
@@ -353,13 +573,13 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags2: ( "secondaries-locked" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
 +Score: 8
 
-#Wings		;! 2 total
+#Wings		;! 4 total
 
 $Name: Thiazi
 $Waves: 1
@@ -386,7 +606,10 @@ $Arrival Cue: ( is-event-true-delay
    3 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( false ) 
+$Departure Cue: ( is-event-true-delay 
+   "Escorts relieved" 
+   11 
+)
 $Ships: (		;! 4 total
 	"Aquarius 1"
 	"Aquarius 2"
@@ -394,14 +617,62 @@ $Ships: (		;! 4 total
 	"Aquarius 4"
 )
 $AI Goals: ( goals ( ai-guard "Heisenberg" 50 ) )
++Hotkey: 1
 +Flags: ( )
 
-#Events		;! 5 total
+$Name: Virgo
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Virgo 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Thassos arrival" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Escorts relieved" 
+   11 
+)
+$Ships: (		;! 2 total
+	"Virgo 1"
+	"Virgo 2"
+)
+$AI Goals: ( goals ( ai-guard "Thassos" 50 ) )
++Hotkey: 1
++Flags: ( )
+
+$Name: Gemini
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gemini 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 500
+$Arrival Anchor: Pax
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Gemini 1"
+	"Gemini 2"
+	"Gemini 3"
+	"Gemini 4"
+)
+$AI Goals: ( goals ( ai-guard "Pax" 50 ) )
++Flags: ( )
+
+#Events		;! 15 total
 
 $Formula: ( when 
    ( true ) 
-   ( ship-stealthy "Thiazi 1" ) 
+   ( change-ship-class 
+      "GTF Pegasus" 
+      "Thiazi 1" 
+   )
    ( protect-ship "Thiazi 1" ) 
+   ( ship-stealthy "Thiazi 1" ) 
 )
 +Name: Mission setup
 +Repeat Count: 1
@@ -409,17 +680,17 @@ $Formula: ( when
 
 $Formula: ( when 
    ( key-pressed "Alt-A" ) 
-   ( player-use-ai ) 
-   ( change-ai-class 
-      "Little Devil" 
+   ( change-ship-class 
+      "GTF Pegasus#dock" 
       "Thiazi 1" 
    )
+   ( player-use-ai ) 
    ( add-goal 
       "Thiazi 1" 
       ( ai-dock 
          "Heisenberg" 
          "Fighter Dock" 
-         "port docking" 
+         "starboard docking" 
          89 
       )
    )
@@ -463,6 +734,252 @@ $Formula: ( when-argument
 +Trigger Count: 2
 +Interval: 1
 
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Heisenberg arrival" 
+      4 
+   )
+   ( do-nothing ) 
+)
++Name: Thassos arrival
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Thiazi 1" 
+      "Heisenberg" 
+      1 
+      0 
+   )
+   ( add-goal 
+      "Aquarius" 
+      ( ai-ignore-new "Thiazi 1" 89 ) 
+   )
+   ( add-goal 
+      "Virgo" 
+      ( ai-ignore-new "Thiazi 1" 89 ) 
+   )
+)
++Name: Docked with Heisenberg
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance 
+         "Heisenberg" 
+         "Heisenberg Path:1" 
+      )
+      1700 
+   )
+   ( do-nothing ) 
+)
++Name: Escorts relieved
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Aquarius 1" 
+      "Aquarius 2" 
+      "Virgo 1" 
+      "Virgo 2" 
+      "Gemini 1" 
+      "Gemini 2" 
+      "Gemini 3" 
+      "Gemini 4" 
+   )
+   ( or 
+      ( is-facing 
+         "<argument>" 
+         "Thiazi 1" 
+         30 
+         1000 
+      )
+      ( and 
+         ( or 
+            ( primary-fired-since "Thiazi 1" 0 10 ) 
+            ( secondary-fired-since 
+               "Thiazi 1" 
+               0 
+               10 
+            )
+            ( secondary-fired-since 
+               "Thiazi 1" 
+               1 
+               10 
+            )
+         )
+         ( is-facing 
+            "<argument>" 
+            "Thiazi 1" 
+            30 
+            3000 
+         )
+         ( > 
+            ( distance "Thiazi 1" "<argument>" ) 
+            2000 
+         )
+      )
+      ( and 
+         ( is-facing 
+            "<argument>" 
+            "Thiazi 1" 
+            30 
+            3000 
+         )
+         ( key-pressed "Tab" ) 
+      )
+   )
+   ( modify-variable 
+      "@AttackingEscort[None]" 
+      "<argument>" 
+   )
+   ( add-goal 
+      "<argument>" 
+      ( ai-chase "Thiazi 1" 89 ) 
+   )
+)
++Name: Spotted
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay "Spotted" 1 ) 
+      ( = @Detected[0] 0 ) 
+   )
+   ( send-random-message 
+      "@AttackingEscort[None]" 
+      "Normal" 
+      "NTF acquired visual 1" 
+      "NTF acquired visual 2" 
+      "NTF acquired visual 3" 
+      "NTF acquired visual 4" 
+   )
+   ( modify-variable @Detected[0] 1 ) 
+)
++Name: Escort got visual
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( primary-fired-since "Thiazi 1" 0 10 ) 
+         ( secondary-fired-since 
+            "Thiazi 1" 
+            0 
+            10 
+         )
+         ( secondary-fired-since 
+            "Thiazi 1" 
+            1 
+            10 
+         )
+      )
+      ( < 
+         ( distance "Thiazi 1" "<any hostile>" ) 
+         2000 
+      )
+   )
+   ( modify-variable @Detected[0] 1 ) 
+)
++Name: Fired weapons too close
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Thiazi 1" "<any hostile>" ) 
+         2000 
+      )
+      ( key-pressed "Tab" ) 
+   )
+   ( modify-variable @Detected[0] 1 ) 
+)
++Name: Afterburners too close
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "NTF alerted" 2 ) 
+   ( ship-unstealthy "Thiazi 1" ) 
+   ( unprotect-ship "Thiazi 1" ) 
+   ( add-goal 
+      "Aquarius" 
+      ( ai-chase "Thiazi 1" 89 ) 
+   )
+   ( add-goal 
+      "Virgo" 
+      ( ai-chase "Thiazi 1" 89 ) 
+   )
+   ( add-goal 
+      "Gemini" 
+      ( ai-chase "Thiazi 1" 89 ) 
+   )
+)
++Name: Turn off stealth
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Aquarius 1" 
+      "Aquarius 2" 
+      "Virgo 1" 
+      "Virgo 2" 
+      "Gemini 1" 
+      "Gemini 2" 
+      "Gemini 3" 
+      "Gemini 4" 
+   )
+   ( and 
+      ( >= 
+         ( distance "Thiazi 1" "<any hostile>" ) 
+         2000 
+      )
+      ( not 
+         ( is-facing 
+            "<argument>" 
+            "Thiazi 1" 
+            30 
+            3000 
+         )
+      )
+      ( key-pressed "Tab" ) 
+   )
+   ( key-reset-multiple "Tab" ) 
+)
++Name: Afterburners out of range
++Repeat Count: -1
++Trigger Count: 999999999
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay "Spotted" 6 ) 
+      ( is-event-true-delay 
+         "Fired weapons too close" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Afterburners too close" 
+         2 
+      )
+   )
+   ( send-message 
+      "Pax" 
+      "High" 
+      "Pax: Engage unknown" 
+   )
+)
++Name: NTF alerted
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 0 total
 
 
@@ -481,8 +998,48 @@ $List: (		;! 1 points in list
 	( 226.877853, 0.005949, 208.257233 )
 )
 
-#Messages		;! 0 total
+#Messages		;! 7 total
 
+
+$Name: TEST: visual warning
+$Team: -1
+$MessageNew:  XSTR("WARNING -  Visual ID risk for: $EscortAlmostVisual", -1)
+$end_multi_text
+
+$Name: TEST: Spotted
+$Team: -1
+$MessageNew:  XSTR("SPOTTED", -1)
+$end_multi_text
+
+$Name: NTF acquired visual 1
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Visual on unknown contact! No sensor lock... Engaging with guns!", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: NTF acquired visual 2
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Tally, one bogey. Visual only. Moving to intercept!", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: NTF acquired visual 3
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> We've got a bogey in the area! Visual contact only. Moving in now!", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: NTF acquired visual 4
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Contact, contact! I have visual on a bogey!", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: Pax: Engage unknown
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> All units, an unknown contact has breached the secure zone. You are authorized to open fire.", -1)
+$end_multi_text
++Wave Name: emptymsg_long.ogg
 
 #Reinforcements		;! 0 total
 
