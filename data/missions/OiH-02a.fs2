@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 05/25/14 at 22:29:42
-$Modified: 05/26/14 at 18:48:11
+$Modified: 05/27/14 at 21:43:35
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 6990.592285, 4348.920898, -4992.340820
++Viewer pos: 1616.674683, 7901.567383, -8244.970703
 +Viewer orient:
-	0.568826, -0.000002, 0.822458,
-	-0.484763, 0.807835, 0.335273,
-	-0.664411, -0.589409, 0.459517
+	0.999976, 0.000000, 0.006887,
+	-0.005813, 0.536382, 0.843956,
+	-0.003694, -0.843976, 0.536369
 
 $Starting wing names: ( "Thiazi" "Beta" "Gamma" )
 $Squadron wing names: ( "Thiai" "Beta" "Gamma" "Delta" "Epsilon" )
@@ -142,7 +142,7 @@ $Ship Choices: (
 	"Silent Eye"	500
 )
 
-#Objects		;! 14 total
+#Objects		;! 21 total
 
 $Name: Thiazi 1		;! Object #0
 $Class: GTF Pegasus#dock
@@ -579,7 +579,214 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-#Wings		;! 4 total
+$Name: Cunaxa		;! Object #14
+$Class: GTC Aeolus
+$Team: Hostile
+$Location: 1570.800049, -2100.000000, 636.700012
+$Orientation:
+	0.910722, -0.216879, -0.351496,
+	-0.308649, 0.208130, -0.928126,
+	0.274447, 0.953754, 0.122609
+$AI Behavior: None
++AI Class: BP2-Captain
+$AI Goals: ( goals ( ai-waypoints-once "Cunaxa Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
+$Arrival Location: Hyperspace
+$Arrival Cue: ( < 
+   ( distance 
+      "Heisenberg" 
+      "Heisenberg Path:1" 
+   )
+   3000 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 500
+
+$Name: Taurus 1		;! Object #15
+$Class: GTF Hercules
+$Team: Hostile
+$Location: 399.899994, 2200.000000, -2997.100098
+$Orientation:
+	0.812774, 0.547144, -0.200083,
+	0.299936, -0.687426, -0.661426,
+	-0.499437, 0.477578, -0.722830
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Taurus 2		;! Object #16
+$Class: GTF Hercules
+$Team: Hostile
+$Location: 368.456177, 2094.936523, -2902.164307
+$Orientation:
+	0.812774, 0.547144, -0.200083,
+	0.299937, -0.687425, -0.661426,
+	-0.499437, 0.477578, -0.722830
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Taurus 3		;! Object #17
+$Class: GTF Hercules
+$Team: Hostile
+$Location: 537.382813, 2207.735352, -2942.797119
+$Orientation:
+	0.812774, 0.547144, -0.200083,
+	0.299937, -0.687425, -0.661426,
+	-0.499437, 0.477578, -0.722830
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "Subach HL-7" "Subach HL-7" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Sagittarius 1		;! Object #18
+$Class: GTF Loki
+$Team: Hostile
+$Location: -1865.184082, 0.001987, -1979.987305
+$Orientation:
+	0.149144, 0.122311, -0.981222,
+	0.617274, 0.763705, 0.189021,
+	0.772483, -0.633874, 0.038403
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Sagittarius 2		;! Object #19
+$Class: GTF Loki
+$Team: Hostile
+$Location: -2118.367432, 164.462082, -1817.650024
+$Orientation:
+	0.149143, 0.122311, -0.981222,
+	0.617273, 0.763705, 0.189021,
+	0.772483, -0.633873, 0.038402
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Sagittarius 3		;! Object #20
+$Class: GTF Loki
+$Team: Hostile
+$Location: -1997.271484, 133.539413, -2088.161621
+$Orientation:
+	0.149143, 0.122311, -0.981222,
+	0.617273, 0.763705, 0.189021,
+	0.772483, -0.633873, 0.038402
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 7
+
+#Wings		;! 6 total
 
 $Name: Thiazi
 $Waves: 1
@@ -661,9 +868,46 @@ $Ships: (		;! 4 total
 	"Gemini 4"
 )
 $AI Goals: ( goals ( ai-guard "Pax" 50 ) )
++Hotkey: 2
 +Flags: ( )
 
-#Events		;! 15 total
+$Name: Taurus
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Taurus 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 12 "Cunaxa" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Taurus 1"
+	"Taurus 2"
+	"Taurus 3"
+)
+$AI Goals: ( goals ( ai-guard "Cunaxa" 50 ) )
++Hotkey: 2
++Flags: ( )
+
+$Name: Sagittarius
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Sagittarius 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Sagittarius 1"
+	"Sagittarius 2"
+	"Sagittarius 3"
+)
+$AI Goals: ( goals ( ai-waypoints "Sagittarius Path" 50 ) )
++Hotkey: 2
++Flags: ( )
+
+#Events		;! 22 total
 
 $Formula: ( when 
    ( true ) 
@@ -779,6 +1023,41 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "DIR: Dock Heisenberg" 
+         0 
+         ( true ) 
+      )
+      ( not 
+         ( or 
+            ( is-event-true-delay 
+               "Spotted" 
+               0 
+               ( true ) 
+            )
+            ( is-event-true-delay 
+               "Fired weapons too close" 
+               0 
+               ( true ) 
+            )
+            ( is-event-true-delay 
+               "Afterburners too close" 
+               0 
+               ( true ) 
+            )
+         )
+      )
+   )
+   ( do-nothing ) 
+)
++Name: DIR: Avoid Detection
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Avoid Detection", -1)
++Objective key:  XSTR("Escorts (F6), Patrols (F7)", -1)
+
 $Formula: ( when-argument 
    ( any-of 
       "Aquarius 1" 
@@ -789,6 +1068,12 @@ $Formula: ( when-argument
       "Gemini 2" 
       "Gemini 3" 
       "Gemini 4" 
+      "Taurus 1" 
+      "Taurus 2" 
+      "Taurus 3" 
+      "Sagittarius 1" 
+      "Sagittarius 2" 
+      "Sagittarius 3" 
    )
    ( or 
       ( is-facing 
@@ -975,15 +1260,93 @@ $Formula: ( when
       "High" 
       "Pax: Engage unknown" 
    )
+   ( close-sound-from-file ( true ) ) 
+   ( change-soundtrack "7: Revelation" ) 
 )
 +Name: NTF alerted
 +Repeat Count: 1
 +Interval: 1
 
+$Formula: ( when 
+   ( has-time-elapsed 1 ) 
+   ( change-soundtrack "<No Music>" ) 
+   ( play-sound-from-file 
+      "echoes_of_time_v2.ogg" 
+      1 
+   )
+)
++Name: Stealth music
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 2 "Heisenberg" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Wait for Heisenberg
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Wait for Heisenberg", -1)
++Objective key:  XSTR("Keep Safe Distance", -1)
+
+$Formula: ( when 
+   ( is-cargo-known-delay 0 "Heisenberg" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Scan Heisenberg
++Repeat Count: 1
++Interval: 1
++Chained: 7
++Objective:  XSTR("Scan Heisenberg", -1)
+
+$Formula: ( when 
+   ( > 
+      ( distance "Thiazi 1" "<any hostile>" ) 
+      3000 
+   )
+   ( do-nothing ) 
+)
++Name: DIR: Withdraw to Safe Distance
++Repeat Count: 1
++Interval: 1
++Chained: 3
++Objective:  XSTR("Withdraw to Safe Distance", -1)
++Objective key:  XSTR("3000m from any hostile", -1)
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "DIR: Withdraw to Safe Distance" 
+      0 
+   )
+   ( do-nothing ) 
+)
++Name: Report Findings, New Orders
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Thiazi 1" 
+         "Heisenberg" 
+         1 
+         0 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( do-nothing ) 
+)
++Name: DIR: Dock Heisenberg
++Repeat Count: 1
++Interval: 1
++Chained: 10
++Objective:  XSTR("Dock with Heisenberg", -1)
++Objective key:  XSTR("Alt+A", -1)
+
 #Goals		;! 0 total
 
 
-#Waypoints		;! 2 lists total
+#Waypoints		;! 4 lists total
 
 
 $Jump Node: 0.000000, 0.000000, 0.016490
@@ -996,6 +1359,23 @@ $List: (		;! 1 points in list
 $Name: Thassos Path
 $List: (		;! 1 points in list
 	( 226.877853, 0.005949, 208.257233 )
+)
+
+$Name: Cunaxa Path
+$List: (		;! 1 points in list
+	( 1090.827637, -349.999237, 494.088837 )
+)
+
+$Name: Sagittarius Path
+$List: (		;! 8 points in list
+	( -1039.344604, -847.760620, -1905.733643 )
+	( 1025.717529, -854.623779, -1919.585938 )
+	( 2059.039795, -396.704041, -995.333069 )
+	( 2057.034912, 532.095947, 879.330811 )
+	( 1008.047607, 997.920654, 1819.536865 )
+	( -1068.378174, 989.651123, 1802.845947 )
+	( -2068.383301, 531.230103, 877.583008 )
+	( -2081.898682, -388.034393, -977.836670 )
 )
 
 #Messages		;! 7 total
