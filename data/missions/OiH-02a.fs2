@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 05/25/14 at 22:29:42
-$Modified: 05/27/14 at 21:43:35
+$Modified: 05/31/14 at 23:24:49
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -14,7 +14,7 @@ $Mission Desc:
 ", -1)
 $end_multi_text
 +Game Type Flags: 1
-+Flags: 131208
++Flags: 133256
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
@@ -23,11 +23,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1616.674683, 7901.567383, -8244.970703
++Viewer pos: -273.710724, 13459.353516, -9613.027344
 +Viewer orient:
 	0.999976, 0.000000, 0.006887,
-	-0.005813, 0.536382, 0.843956,
-	-0.003694, -0.843976, 0.536369
+	-0.005827, 0.533095, 0.846036,
+	-0.003671, -0.846056, 0.533082
 
 $Starting wing names: ( "Thiazi" "Beta" "Gamma" )
 $Squadron wing names: ( "Thiai" "Beta" "Gamma" "Delta" "Epsilon" )
@@ -42,8 +42,12 @@ $AI Profile: BP2 R2
 $Variables:
 (
 		0		"AttackingEscort"		"None"		"string"
-		1		"Detected"		"0"		"number"
-		2		"EscortAlmostVisual"		"Escort"		"string"
+		1		"ClosestEscort"		"Unknown"		"string"
+		2		"DecoyedWing2"		"None"		"string"
+		3		"DecoyedWingLead"		"None"		"string"
+		4		"Detected"		"0"		"number"
+		5		"EscortAlmostVisual"		"Escort"		"string"
+		6		"MinEscortDistance"		"0"		"number"
 )
 
 #Command Briefing
@@ -602,8 +606,10 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: turret05
 +Subsystem: turret06
 +Subsystem: turret07
++Primary Banks: ( "AAAh" )
 +Subsystem: turret08
 +Subsystem: turret09
++Primary Banks: ( "AAAh" )
 +Subsystem: turret10
 +Subsystem: turret11
 +Subsystem: turret12
@@ -907,7 +913,7 @@ $AI Goals: ( goals ( ai-waypoints "Sagittarius Path" 50 ) )
 +Hotkey: 2
 +Flags: ( )
 
-#Events		;! 22 total
+#Events		;! 34 total
 
 $Formula: ( when 
    ( true ) 
@@ -938,6 +944,9 @@ $Formula: ( when
          89 
       )
    )
+   ( lock-primary-weapon "Thiazi 1" ) 
+   ( lock-secondary-weapon "Thiazi 1" ) 
+   ( lock-afterburner "Thiazi 1" ) 
 )
 +Name: Engage AI Dock
 +Repeat Count: 1
@@ -1010,12 +1019,15 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( < 
-      ( distance 
-         "Heisenberg" 
-         "Heisenberg Path:1" 
+   ( and 
+      ( < 
+         ( distance 
+            "Heisenberg" 
+            "Heisenberg Path:1" 
+         )
+         1700 
       )
-      1700 
+      ( false ) 
    )
    ( do-nothing ) 
 )
@@ -1074,47 +1086,57 @@ $Formula: ( when-argument
       "Sagittarius 1" 
       "Sagittarius 2" 
       "Sagittarius 3" 
+      "Aquarius 3" 
+      "Aquarius 4" 
    )
-   ( or 
-      ( is-facing 
-         "<argument>" 
-         "Thiazi 1" 
-         30 
-         1000 
-      )
-      ( and 
-         ( or 
-            ( primary-fired-since "Thiazi 1" 0 10 ) 
-            ( secondary-fired-since 
-               "Thiazi 1" 
-               0 
-               10 
-            )
-            ( secondary-fired-since 
-               "Thiazi 1" 
-               1 
-               10 
-            )
-         )
+   ( and 
+      ( or 
          ( is-facing 
             "<argument>" 
             "Thiazi 1" 
             30 
-            3000 
+            1000 
          )
-         ( > 
-            ( distance "Thiazi 1" "<argument>" ) 
-            2000 
+         ( and 
+            ( or 
+               ( primary-fired-since "Thiazi 1" 0 10 ) 
+               ( secondary-fired-since 
+                  "Thiazi 1" 
+                  0 
+                  10 
+               )
+               ( secondary-fired-since 
+                  "Thiazi 1" 
+                  1 
+                  10 
+               )
+            )
+            ( is-facing 
+               "<argument>" 
+               "Thiazi 1" 
+               30 
+               3000 
+            )
+            ( > 
+               ( distance "Thiazi 1" "<argument>" ) 
+               2000 
+            )
+         )
+         ( and 
+            ( is-facing 
+               "<argument>" 
+               "Thiazi 1" 
+               30 
+               3000 
+            )
+            ( key-pressed "Tab" ) 
          )
       )
-      ( and 
-         ( is-facing 
-            "<argument>" 
-            "Thiazi 1" 
-            30 
-            3000 
+      ( not 
+         ( is-event-true-delay 
+            "DIR: Dock Heisenberg" 
+            0 
          )
-         ( key-pressed "Tab" ) 
       )
    )
    ( modify-variable 
@@ -1205,6 +1227,14 @@ $Formula: ( when
       "Gemini" 
       ( ai-chase "Thiazi 1" 89 ) 
    )
+   ( add-goal 
+      "Taurus" 
+      ( ai-chase "Thiazi 1" 89 ) 
+   )
+   ( add-goal 
+      "Sagittarius" 
+      ( ai-chase "Thiazi 1" 89 ) 
+   )
 )
 +Name: Turn off stealth
 +Repeat Count: 1
@@ -1220,6 +1250,14 @@ $Formula: ( when-argument
       "Gemini 2" 
       "Gemini 3" 
       "Gemini 4" 
+      "Taurus 1" 
+      "Taurus 2" 
+      "Taurus 3" 
+      "Sagittarius 1" 
+      "Sagittarius 2" 
+      "Sagittarius 3" 
+      "Aquarius 3" 
+      "Aquarius 4" 
    )
    ( and 
       ( >= 
@@ -1343,10 +1381,412 @@ $Formula: ( when
 +Objective:  XSTR("Dock with Heisenberg", -1)
 +Objective key:  XSTR("Alt+A", -1)
 
+$Formula: ( when-argument 
+   ( any-of 
+      "Aquarius 1" 
+      "Aquarius 2" 
+      "Aquarius 3" 
+      "Aquarius 4" 
+   )
+   ( and 
+      ( key-pressed "1" ) 
+      ( < 
+         ( distance "Thiazi 1" "<argument>" ) 
+         ( min 
+            ( distance "Thiazi 1" "Virgo" ) 
+            ( distance "Thiazi 1" "Gemini" ) 
+            ( distance "Thiazi 1" "Sagittarius" ) 
+         )
+      )
+   )
+   ( key-reset-multiple "1" ) 
+   ( modify-variable 
+      "@ClosestEscort[Unknown]" 
+      "Aquarius" 
+   )
+   ( training-msg "TEST: Who's closest?" ) 
+)
++Name: Aquarius decoy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of "Virgo 1" "Virgo 2" ) 
+   ( and 
+      ( key-pressed "1" ) 
+      ( < 
+         ( distance "Thiazi 1" "<argument>" ) 
+         ( min 
+            ( distance "Thiazi 1" "Aquarius" ) 
+            ( distance "Thiazi 1" "Gemini" ) 
+            ( distance "Thiazi 1" "Sagittarius" ) 
+         )
+      )
+   )
+   ( key-reset-multiple "1" ) 
+   ( modify-variable 
+      "@ClosestEscort[Unknown]" 
+      "Virgo" 
+   )
+   ( training-msg "TEST: Who's closest?" ) 
+)
++Name: Virgo decoy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Gemini 1" 
+      "Gemini 2" 
+      "Gemini 3" 
+      "Gemini 4" 
+   )
+   ( and 
+      ( key-pressed "1" ) 
+      ( < 
+         ( distance "Thiazi 1" "<argument>" ) 
+         ( min 
+            ( distance "Thiazi 1" "Aquarius" ) 
+            ( distance "Thiazi 1" "Virgo" ) 
+            ( distance "Thiazi 1" "Sagittarius" ) 
+         )
+      )
+   )
+   ( key-reset-multiple "1" ) 
+   ( modify-variable 
+      "@ClosestEscort[Unknown]" 
+      "Gemini" 
+   )
+   ( training-msg "TEST: Who's closest?" ) 
+)
++Name: Gemini decoy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Sagittarius 1" 
+      "Sagittarius 2" 
+      "Sagittarius 3" 
+   )
+   ( and 
+      ( key-pressed "1" ) 
+      ( < 
+         ( distance "Thiazi 1" "<argument>" ) 
+         ( min 
+            ( distance "Thiazi 1" "Aquarius" ) 
+            ( distance "Thiazi 1" "Virgo" ) 
+            ( distance "Thiazi 1" "Gemini" ) 
+         )
+      )
+   )
+   ( key-reset-multiple "1" ) 
+   ( modify-variable 
+      "@ClosestEscort[Unknown]" 
+      "Sagittarius" 
+   )
+   ( training-msg "TEST: Who's closest?" ) 
+)
++Name: Sagittarius decoy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Aquarius decoy" 
+         0 
+      )
+      ( is-event-true-delay "Virgo decoy" 0 ) 
+      ( is-event-true-delay 
+         "Gemini decoy" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Sagittarius decoy" 
+         0 
+      )
+   )
+   ( when-argument 
+      ( random-of 
+         "Aquarius 2" 
+         "Aquarius 3" 
+         "Aquarius 4" 
+      )
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Aquarius" 
+      )
+      ( modify-variable 
+         "@DecoyedWingLead[None]" 
+         "Aquarius 1" 
+      )
+      ( modify-variable 
+         "@DecoyedWing2[None]" 
+         "<argument>" 
+      )
+   )
+   ( when 
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Virgo" 
+      )
+      ( modify-variable 
+         "@DecoyedWingLead[None]" 
+         "Virgo 1" 
+      )
+      ( modify-variable 
+         "@DecoyedWing2[None]" 
+         "Virgo 2" 
+      )
+   )
+   ( when-argument 
+      ( random-of 
+         "Gemini 2" 
+         "Gemini 3" 
+         "Gemini 4" 
+      )
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Gemini" 
+      )
+      ( modify-variable 
+         "@DecoyedWingLead[None]" 
+         "Gemini 1" 
+      )
+      ( modify-variable 
+         "@DecoyedWing2[None]" 
+         "<argument>" 
+      )
+   )
+   ( when-argument 
+      ( random-of 
+         "Sagittarius 2" 
+         "Sagittarius 3" 
+      )
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Sagittarius" 
+      )
+      ( modify-variable 
+         "@DecoyedWingLead[None]" 
+         "Sagittarius 1" 
+      )
+      ( modify-variable 
+         "@DecoyedWing2[None]" 
+         "<argument>" 
+      )
+   )
+   ( set-object-position 
+      "Thiazi 1 Decoy Point:1" 
+      ( get-object-x "Thiazi 1" ) 
+      ( get-object-y "Thiazi 1" ) 
+      ( get-object-z "Thiazi 1" ) 
+   )
+)
++Name: Resolve decoy dialogue talkers
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Resolve decoy dialogue talkers" 
+         2 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( send-message 
+      "@DecoyedWingLead[None]" 
+      "Normal" 
+      "NTF Did you see that" 
+   )
+)
++Name: MSG: Did you see that
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "MSG: Did you see that" 
+         7 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( send-message 
+      "@DecoyedWing2[None]" 
+      "Normal" 
+      "NTF Radar clear" 
+   )
+)
++Name: MSG: Radar clear
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "MSG: Radar clear" 
+         5 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( send-message 
+      "@DecoyedWingLead[None]" 
+      "Normal" 
+      "NTF Permission to investigate?" 
+   )
+)
++Name: MSG: Permission to investigate
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "MSG: Permission to investigate" 
+         6 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( send-message 
+      "Pax" 
+      "Normal" 
+      "Pax: Granted" 
+   )
+)
++Name: MSG: Permission granted
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "MSG: Permission granted" 
+         4 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( when 
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Aquarius" 
+      )
+      ( add-goal 
+         "Aquarius" 
+         ( ai-guard "Aquarius 1" 150 ) 
+      )
+      ( add-goal 
+         "Aquarius 1" 
+         ( ai-waypoints-once 
+            "Thiazi 1 Decoy Point" 
+            200 
+         )
+      )
+   )
+   ( when 
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Virgo" 
+      )
+      ( add-goal 
+         "Virgo" 
+         ( ai-guard "Virgo 1" 150 ) 
+      )
+      ( add-goal 
+         "Virgo 1" 
+         ( ai-waypoints-once 
+            "Thiazi 1 Decoy Point" 
+            200 
+         )
+      )
+   )
+   ( when 
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Gemini" 
+      )
+      ( add-goal 
+         "Gemini" 
+         ( ai-guard "Gemini 1" 150 ) 
+      )
+      ( add-goal 
+         "Gemini 1" 
+         ( ai-waypoints-once 
+            "Thiazi 1 Decoy Point" 
+            200 
+         )
+      )
+   )
+   ( when 
+      ( string-equals 
+         "@ClosestEscort[Unknown]" 
+         "Sagittarius" 
+      )
+      ( add-goal 
+         "Sagittarius" 
+         ( ai-guard "Sagittarius 1" 150 ) 
+      )
+      ( add-goal 
+         "Sagittarius 1" 
+         ( ai-waypoints-once 
+            "Thiazi 1 Decoy Point" 
+            200 
+         )
+      )
+   )
+)
++Name: Escorts go to decoy point
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay "Spotted" 0 ) 
+      ( is-event-true-delay "NTF alerted" 0 ) 
+   )
+   ( change-ship-class 
+      "GTF Pegasus" 
+      "Thiazi 1" 
+   )
+   ( set-thrusters-status 
+      ( true ) 
+      "Thiazi 1" 
+   )
+   ( unlock-primary-weapon "Thiazi 1" ) 
+   ( unlock-secondary-weapon "Thiazi 1" ) 
+   ( unlock-afterburner "Thiazi 1" ) 
+   ( clear-goals "Thiazi 1" ) 
+   ( player-not-use-ai ) 
+)
++Name: Detected - undo AI dock hax
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( are-waypoints-done-delay 
+         "@DecoyedWingLead[None]" 
+         "Thiazi 1 Decoy Point" 
+         0 
+      )
+      ( = @Detected[0] 0 ) 
+   )
+   ( send-message 
+      "@DecoyedWingLead[None]" 
+      "Normal" 
+      "NTF Nothing out here" 
+   )
+)
++Name: Escorts return
++Repeat Count: 1
++Interval: 1
+
 #Goals		;! 0 total
 
 
-#Waypoints		;! 4 lists total
+#Waypoints		;! 5 lists total
 
 
 $Jump Node: 0.000000, 0.000000, 0.016490
@@ -1378,7 +1818,12 @@ $List: (		;! 8 points in list
 	( -2081.898682, -388.034393, -977.836670 )
 )
 
-#Messages		;! 7 total
+$Name: Thiazi 1 Decoy Point
+$List: (		;! 1 points in list
+	( 5697.105957, -0.002322, 2298.755127 )
+)
+
+#Messages		;! 12 total
 
 
 $Name: TEST: visual warning
@@ -1386,9 +1831,9 @@ $Team: -1
 $MessageNew:  XSTR("WARNING -  Visual ID risk for: $EscortAlmostVisual", -1)
 $end_multi_text
 
-$Name: TEST: Spotted
+$Name: TEST: Who's closest?
 $Team: -1
-$MessageNew:  XSTR("SPOTTED", -1)
+$MessageNew:  XSTR("Closest escort: $ClosestEscort", -1)
 $end_multi_text
 
 $Name: NTF acquired visual 1
@@ -1420,6 +1865,36 @@ $Team: -1
 $MessageNew:  XSTR("<Intercepted> All units, an unknown contact has breached the secure zone. You are authorized to open fire.", -1)
 $end_multi_text
 +Wave Name: emptymsg_long.ogg
+
+$Name: NTF Did you see that
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Hey, did anyone else see that? I had a faint radar contact a second ago... now it's gone.", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: NTF Radar clear
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Negative, I've got nothing. My radar's clear.", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: NTF Permission to investigate?
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Pax, requesting permission to break formation and investigate.", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: Pax: Granted
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> Permission granted, but don't stray too far.", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
+
+$Name: NTF Nothing out here
+$Team: -1
+$MessageNew:  XSTR("<Intercepted> There's nothing out here. Looks like it was just a sensor glitch. Resuming escort formation.", -1)
+$end_multi_text
++Wave Name: emptymsg.wav
 
 #Reinforcements		;! 0 total
 
