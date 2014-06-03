@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 05/25/14 at 22:29:42
-$Modified: 06/01/14 at 18:07:23
+$Modified: 06/02/14 at 20:50:46
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -14,7 +14,7 @@ $Mission Desc:
 ", -1)
 $end_multi_text
 +Game Type Flags: 1
-+Flags: 133256
++Flags: 131208
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
@@ -200,12 +200,9 @@ $Arrival Cue: ( is-event-true-delay
    0 
 )
 $Departure Location: Hyperspace
-$Departure Cue: ( < 
-   ( distance 
-      "Heisenberg" 
-      "Heisenberg Path:1" 
-   )
-   800 
+$Departure Cue: ( is-event-true-delay 
+   "Heisenberg departure cue" 
+   0 
 )
 $Determination: 10
 +Flags: ( "no-shields" "escort" "scannable" )
@@ -914,7 +911,7 @@ $AI Goals: ( goals ( ai-waypoints "Sagittarius Path" 50 ) )
 +Hotkey: 2
 +Flags: ( )
 
-#Events		;! 38 total
+#Events		;! 45 total
 
 $Formula: ( when 
    ( true ) 
@@ -930,24 +927,48 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( key-pressed "Alt-A" ) 
+   ( and 
+      ( or 
+         ( key-pressed "Alt-A" ) 
+         ( key-pressed "Alt-X" ) 
+      )
+      ( is-event-true-delay 
+         "Show Dock Heisenberg" 
+         0 
+      )
+   )
    ( change-ship-class 
       "GTF Pegasus#dock" 
       "Thiazi 1" 
    )
    ( player-use-ai ) 
-   ( add-goal 
-      "Thiazi 1" 
-      ( ai-dock 
-         "Heisenberg" 
-         "Fighter Dock" 
-         "starboard docking" 
-         89 
-      )
-   )
    ( lock-primary-weapon "Thiazi 1" ) 
    ( lock-secondary-weapon "Thiazi 1" ) 
    ( lock-afterburner "Thiazi 1" ) 
+   ( when 
+      ( key-pressed "Alt-A" ) 
+      ( add-goal 
+         "Thiazi 1" 
+         ( ai-dock 
+            "Heisenberg" 
+            "Fighter Dock" 
+            "starboard docking" 
+            89 
+         )
+      )
+   )
+   ( when 
+      ( key-pressed "Alt-X" ) 
+      ( add-goal 
+         "Thiazi 1" 
+         ( ai-dock 
+            "Heisenberg" 
+            "Fighter Dock" 
+            "port docking" 
+            89 
+         )
+      )
+   )
 )
 +Name: Engage AI Dock
 +Repeat Count: 1
@@ -964,6 +985,7 @@ $Formula: ( when
       ( false ) 
       "Thiazi 1" 
    )
+   ( deactivate-glow-maps "Thiazi 1" ) 
 )
 +Name: Shut off thrusters
 +Repeat Count: 1
@@ -1367,7 +1389,7 @@ $Formula: ( when
       "Report Findings, New Orders" 
       10 
    )
-   ( do-nothing ) 
+   ( validate-goal "Dock Heisenberg" ) 
 )
 +Name: Show Dock Heisenberg
 +Repeat Count: 1
@@ -1390,7 +1412,7 @@ $Formula: ( when
 +Interval: 1
 +Chained: 0
 +Objective:  XSTR("Dock with Heisenberg", -1)
-+Objective key:  XSTR("Alt+A", -1)
++Objective key:  XSTR("Alt+X (port), Alt+A (starboard)", -1)
 
 $Formula: ( when-argument 
    ( any-of 
@@ -1418,13 +1440,16 @@ $Formula: ( when-argument
             ( distance "Thiazi 1" "Taurus" ) 
          )
       )
+      ( is-event-true-delay 
+         "Show Lure Aquarius Away" 
+         0 
+      )
    )
    ( key-reset-multiple "1" ) 
    ( modify-variable 
       "@ClosestEscort[Unknown]" 
       "Aquarius" 
    )
-   ( training-msg "TEST: Who's closest?" ) 
 )
 +Name: Aquarius decoy
 +Repeat Count: 1
@@ -1451,13 +1476,16 @@ $Formula: ( when-argument
             ( distance "Thiazi 1" "Taurus" ) 
          )
       )
+      ( is-event-true-delay 
+         "Show Lure Aquarius Away" 
+         0 
+      )
    )
    ( key-reset-multiple "1" ) 
    ( modify-variable 
       "@ClosestEscort[Unknown]" 
       "Virgo" 
    )
-   ( training-msg "TEST: Who's closest?" ) 
 )
 +Name: Virgo decoy
 +Repeat Count: 1
@@ -1489,13 +1517,16 @@ $Formula: ( when-argument
             ( distance "Thiazi 1" "Taurus" ) 
          )
       )
+      ( is-event-true-delay 
+         "Show Lure Aquarius Away" 
+         0 
+      )
    )
    ( key-reset-multiple "1" ) 
    ( modify-variable 
       "@ClosestEscort[Unknown]" 
       "Gemini" 
    )
-   ( training-msg "TEST: Who's closest?" ) 
 )
 +Name: Gemini decoy
 +Repeat Count: 1
@@ -1526,13 +1557,16 @@ $Formula: ( when-argument
             ( distance "Thiazi 1" "Taurus" ) 
          )
       )
+      ( is-event-true-delay 
+         "Show Lure Aquarius Away" 
+         0 
+      )
    )
    ( key-reset-multiple "1" ) 
    ( modify-variable 
       "@ClosestEscort[Unknown]" 
       "Sagittarius" 
    )
-   ( training-msg "TEST: Who's closest?" ) 
 )
 +Name: Sagittarius decoy
 +Repeat Count: 1
@@ -1976,13 +2010,16 @@ $Formula: ( when-argument
             ( distance "Thiazi 1" "Sagittarius" ) 
          )
       )
+      ( is-event-true-delay 
+         "Show Lure Aquarius Away" 
+         0 
+      )
    )
    ( key-reset-multiple "1" ) 
    ( modify-variable 
       "@ClosestEscort[Unknown]" 
       "Taurus" 
    )
-   ( training-msg "TEST: Who's closest?" ) 
 )
 +Name: Taurus decoy
 +Repeat Count: 1
@@ -2044,8 +2081,207 @@ $Formula: ( when
 +Objective:  XSTR("Lure Aquarius Away", -1)
 +Objective key:  XSTR("Press 1 at desired location", -1)
 
-#Goals		;! 0 total
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Show Lure Aquarius Away" 
+            0 
+         )
+      )
+      ( key-pressed "1" ) 
+   )
+   ( key-reset-multiple "1" ) 
+)
++Name: Reset sensor decoy key
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
 
+$Formula: ( when 
+   ( < 
+      ( distance 
+         "Heisenberg" 
+         "Heisenberg Path:1" 
+      )
+      800 
+   )
+   ( do-nothing ) 
+)
++Name: Heisenberg departure cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Success red alert" 
+      1 
+   )
+   ( fade-out 1500 1 ) 
+)
++Name: Success fade out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay "Spotted" 0 ) 
+      ( is-event-true-delay 
+         "Fired weapons too close" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Afterburners too close" 
+         0 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Detected
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Heisenberg departure cue" 
+         4 
+      )
+      ( is-event-true-delay 
+         "DIR: Dock Heisenberg" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Detected" 0 ) 
+      )
+   )
+   ( change-ship-class 
+      "GTF Pegasus" 
+      "Thiazi 1" 
+   )
+   ( red-alert ) 
+)
++Name: Success red alert
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "Alt-A" ) 
+      ( not 
+         ( is-event-true-delay 
+            "Show Dock Heisenberg" 
+            0 
+         )
+      )
+   )
+   ( key-reset-multiple "Alt-A" ) 
+)
++Name: Reset starboard AI dock keys
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "Alt-X" ) 
+      ( not 
+         ( is-event-true-delay 
+            "Show Dock Heisenberg" 
+            0 
+         )
+      )
+   )
+   ( key-reset-multiple "Alt-X" ) 
+)
++Name: Reset port AI dock keys
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+#Goals		;! 3 total
+
+$Type: Primary
++Name: Scan Heisenberg
+$MessageNew:  XSTR("Scan NTSC Heisenberg", -1)
+$end_multi_text
+$Formula: ( and 
+   ( not 
+      ( is-event-true-delay "Spotted" 0 ) 
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Fired weapons too close" 
+         0 
+      )
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Afterburners too close" 
+         0 
+      )
+   )
+   ( is-event-true-delay 
+      "DIR: Scan Heisenberg" 
+      0 
+   )
+)
++No music
+
+$Type: Primary
++Name: Dock Heisenberg
+$MessageNew:  XSTR("Dock with the Heisenberg", -1)
+$end_multi_text
+$Formula: ( and 
+   ( not 
+      ( is-event-true-delay "Spotted" 0 ) 
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Fired weapons too close" 
+         0 
+      )
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Afterburners too close" 
+         0 
+      )
+   )
+   ( is-event-true-delay 
+      "DIR: Dock Heisenberg" 
+      0 
+   )
+)
++Invalid
++No music
+
+$Type: Primary
++Name: Avoid Detection
+$MessageNew:  XSTR("Avoid Detection", -1)
+$end_multi_text
+$Formula: ( and 
+   ( not 
+      ( is-event-true-delay "Spotted" 0 ) 
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Fired weapons too close" 
+         0 
+      )
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Afterburners too close" 
+         0 
+      )
+   )
+   ( is-event-true-delay 
+      "DIR: Dock Heisenberg" 
+      0 
+   )
+)
++No music
 
 #Waypoints		;! 5 lists total
 
