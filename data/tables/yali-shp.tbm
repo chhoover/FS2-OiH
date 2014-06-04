@@ -26,7 +26,7 @@ $Expl Propagates: NO
 $Shockwave Speed: 0.0
 $Default PBanks: ("Shivan Light Laser" "Shivan Mega Laser")
 $Default SBanks: ("Hornet#Shivan" "Shivan Bomb" "Shivan Bomb")
-$SBank Capacity: (120, 240)
+$SBank Capacity: (120, 240, 240)
 $Shields: 1300
 $Shield Color: 255 92 92
 $Power Output: 4.0

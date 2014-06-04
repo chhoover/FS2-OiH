@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 05/25/14 at 22:29:42
-$Modified: 06/02/14 at 20:50:46
+$Modified: 06/03/14 at 23:37:10
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -928,10 +928,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( and 
-      ( or 
-         ( key-pressed "Alt-A" ) 
-         ( key-pressed "Alt-X" ) 
-      )
+      ( key-pressed "Alt-A" ) 
       ( is-event-true-delay 
          "Show Dock Heisenberg" 
          0 
@@ -945,28 +942,13 @@ $Formula: ( when
    ( lock-primary-weapon "Thiazi 1" ) 
    ( lock-secondary-weapon "Thiazi 1" ) 
    ( lock-afterburner "Thiazi 1" ) 
-   ( when 
-      ( key-pressed "Alt-A" ) 
-      ( add-goal 
-         "Thiazi 1" 
-         ( ai-dock 
-            "Heisenberg" 
-            "Fighter Dock" 
-            "starboard docking" 
-            89 
-         )
-      )
-   )
-   ( when 
-      ( key-pressed "Alt-X" ) 
-      ( add-goal 
-         "Thiazi 1" 
-         ( ai-dock 
-            "Heisenberg" 
-            "Fighter Dock" 
-            "port docking" 
-            89 
-         )
+   ( add-goal 
+      "Thiazi 1" 
+      ( ai-dock 
+         "Heisenberg" 
+         "bottom dock" 
+         "hull dock" 
+         89 
       )
    )
 )
@@ -1412,7 +1394,7 @@ $Formula: ( when
 +Interval: 1
 +Chained: 0
 +Objective:  XSTR("Dock with Heisenberg", -1)
-+Objective key:  XSTR("Alt+X (port), Alt+A (starboard)", -1)
++Objective key:  XSTR("Alt+A", -1)
 
 $Formula: ( when-argument 
    ( any-of 
@@ -2154,10 +2136,6 @@ $Formula: ( when
       ( not 
          ( is-event-true-delay "Detected" 0 ) 
       )
-   )
-   ( change-ship-class 
-      "GTF Pegasus" 
-      "Thiazi 1" 
    )
    ( red-alert ) 
 )

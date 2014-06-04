@@ -20,7 +20,7 @@ $end_multi_text
 +Gun Mounts:				2
 +Missile Banks:				1
 
-$POF file:                  fighter2t-01.pof
+$POF file:                  fighter2t-01-2.pof
 $Detail distance:			(0, 180, 300, 1100)
 $ND: 							74 73 246
 $ND: 							46 46 242
@@ -56,7 +56,7 @@ $Max Oclk Speed:			110.0
 $Max Weapon Eng:			150.0
 $Hitpoints:                 	220
 $Armor Type:				LightArmor
-$Flags:                     ( "player_ship" "transport" )
+$Flags:                     ( "player_ship" "transport" "stealth" )
 $AI Class:                  Captain
 $Afterburner:				YES
 	+Aburn Max Vel:			0.0, 0.0, 160.0

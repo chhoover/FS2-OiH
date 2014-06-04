@@ -740,7 +740,7 @@ $BeamInfo:
 
 $Name:		STerPulse
 $Model File:						none
-@Laser Bitmap:						Subach_Green
+@Laser Bitmap:						Prometheus_AniBitmap
 @Laser Glow:						Prometheus_Glow
 @Laser Color:						20, 220, 20
 @Laser Color2:						20, 150, 20
