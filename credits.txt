@@ -28,6 +28,7 @@ MOD:					Author(s):
  SB Kasdeya				 petrev, freespaceking
  SCv Armaros				 Moonred, Esarai
  GTCv Diomedes				 Aesaar
+ GTI Asteria				 Axem, Oddgrim, 0rph3u5
 
 -----------------------------------
 --- WEAPONS AND EFFECTS ---

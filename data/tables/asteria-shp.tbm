@@ -1,0 +1,97 @@
+#Ship Classes
+
+$Name: GTI Asteria 
+$Short name: TInst 
+$Species: Terran 
++Tech Description: 
+XSTR("The GTI Asteria was originally designed for commerce and trade. With 9 docking points and a fighterbay capable of supporting several fighter wings, this station is well equipped to support civilian trade traffic. The Asteria is also inexpensive and quick to construct, which soon led the GTA to begin using it as a supply outpost in contested regions. Its 24 turrets give the Asteria impressive self-defense firepower for an installation of its size. However, its defenses must be complemented by a fighter screen, as the Asteria's hull armor is easily defeated by a determined attack.", -1) 
+$end_multi_text 
+$POF file: GTI_Asteria.pof 
+$Detail distance: (0, 2000, 5000, 10000) 
+$Show damage: NO 
+$Density: 1 
+$Damp: 0.2 
+$Rotdamp: 0.2 
+$Max Velocity: 0.0, 0.0, 0.0 
+$Rotation time: 200.0, 200.0, 200.0 
+$Rear Velocity: 0.0 
+$Forward accel: 0.0 
+$Forward decel: 0.0 
+$Slide accel: 0.0 
+$Slide decel: 0.0 
+$Expl inner rad: 100.0 
+$Expl outer rad: 2400.0 
+$Expl damage: 400.0 
+$Expl blast: 6500.0 
+$Expl Propagates: YES ;; If set to Yes, then when the ship dies, the explosion propagates through it. 
+$Shockwave Speed: 600.0 ;; speed shockwave expands at, 0 means no shockwave 
+$Shockwave Count: 3 
+$Default PBanks: () 
+$Default SBanks: () 
+$SBank Capacity: () 
+$Shields: 0 
+$Power Output: 1.0 
+$Max Oclk Speed: 0.0 
+$Max Weapon Eng: 100.0 
+$Hitpoints: 85000 
+$Flags: ( "capital" "big damage" "in tech database") 
+$AI Class: Captain 
+$Afterburner: NO 
+$Countermeasures: 0 
+$Scan time: 2000 
+$EngineSnd: 191 ;; Engine sound of ship 
+$Closeup_pos: 0.0, 0.0, -1900 
+$Closeup_zoom: 0.5 
+$Score: 800 
+$Subsystem: Turret01, 1,2.0 
+$Default PBanks: ( "Terran Huge Turret" ) 
+$Subsystem: Turret02, 1,2.0 
+$Default PBanks: ( "Terran Huge Turret" ) 
+$Subsystem: Turret03, 1,2.0 
+$Default PBanks: ( "Terran Huge Turret" ) 
+$Subsystem: Turret04, 1,2.0 
+$Default PBanks: ( "Terran Huge Turret" ) 
+$Subsystem: Turret05, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret07, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret08, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret09, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret10, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret11, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret12, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret13, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret14, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret15, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret16, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret17, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret18, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret19, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret20, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret21, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret22, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: Turret23, 1,2.0 
+$Default PBanks: ( "Standard Flak" ) 
+$Subsystem: Turret24, 1,2.0 
+$Default PBanks: ( "Terran Turret" ) 
+$Subsystem: sensors, 5, 0 
+$Subsystem: weapons, 5, 0 
+$Subsystem: communication, 5, 0 
+$Subsystem: fighterbay, 0,0.0 
+
+#End
