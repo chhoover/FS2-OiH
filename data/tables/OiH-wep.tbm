@@ -13,7 +13,7 @@ $end_multi_text
 +Tech Anim:					   Tech_GTW-5a_Prometheus_R
 +Tech Description:
 XSTR(
-"The Alouqua seems to be a modified version of the Citra. It fires a focused EM burst, which efficiently penetrates shields. Because of its limited effectiveness against hull plating, it is best paired with a weapon that inflicts more damage against armor. No other data is available."", -1)
+"The Alouqua seems to be a modified version of the Citra. It fires a focused EM burst, which efficiently penetrates shields. Because of its limited effectiveness against hull plating, it is best paired with a weapon that inflicts more damage against armor. No other data is available.", -1)
 $end_multi_text
 $Model File:							none
 @Laser Bitmap:							Alouqua_AniBitmap
