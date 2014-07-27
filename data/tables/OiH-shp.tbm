@@ -4,6 +4,72 @@ $Name:				GTF Pegasus
 	+nocreate
 $Allowed PBanks: ( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Maxim" )
 
+$Name:				GTSC Faustus#inSystemJump
+$Short name:					TSci1
+$Species:                       Terran
++Tech Description:
+XSTR("The GTSC Faustus is primarily a class of civilian research vessels. During times of peace, they serve as mobile laboratories for scientists in many disciplines. During wartime, however, Faustus vessels are commandeered by the military, mostly for weapons research. It was on a Faustus ship, during the Great War, that Shivan shield technology was first reverse-engineered from a captured Shivan fighter. Faustus vessels have poor armor and only a few weak turrets for defense. Only desperate circumstances find a Faustus anywhere near the front lines.", 3048)
+$end_multi_text
+$POF file:                      science01.pof
+$Detail distance:       (0, 700, 1000, 3000)
+$Show damage:           YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       1.0
+$Max Velocity:          0.0, 0.0, 80.0
+$Rotation time:         120.0, 120.0, 100.0
+$Rear Velocity:         0.0
+$Forward accel:         1.0
+$Forward decel:         5.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        200.0
+$Expl outer rad:        500.0
+$Expl damage:           150.0
+$Expl blast:            3000.0
+$Expl Propagates:       YES                                             ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:			225.0
+$Shockwave Count:	2
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          20.0
+$Max Oclk Speed:        35.0
+$Max Weapon Eng:        100.0
+$Hitpoints:                     3000
+$Flags:                         ( "cruiser" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       191                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -245
+$Closeup_zoom:          0.5
+$Score:             50
+$Thruster Bitmap 2: 		thruster02-01LessHaze
+$Subsystem:                     science01a-solar1, 8, 0.0
+$Subsystem:                     turret01, 2, 1.0
+	$Default PBanks:        ( "Terran Turret Weak" )
+$Subsystem:                     turret02, 2, 1.0
+	$Default PBanks:        ( "Terran Turret Weak" )
+$Subsystem:                     turret03, 2, 1.0
+	$Default PBanks:        ( "Terran Turret Weak" "Akheton SDG" )
+	$Default SBanks:        ( "Tempest" "Rockeye" )
+	$SBank Capacity:        ( 50,50 )
+$Subsystem:                     turret04, 2, 1.0
+	$Default PBanks:        ( "Subach HL-7" )
+$Subsystem:                     turret05, 2, 1.0
+	$Default PBanks:        ( "Subach HL-7" )
+$Subsystem:                     turret06, 2, 1.0
+	$Default PBanks:        ( "Subach HL-7" )
+$Subsystem:                     navigation,             10, 0.0
+$Subsystem:                     communication,  10, 0.0
+$Subsystem:                     weapons,                        10, 0.0
+$Subsystem:                     engine,                 25, 0.0
+$Subsystem:                     sensors,                        10, 0.0
+
+
 $Name:				GTF Pegasus#dock
 $Short name:                    TFight21
 $Species:                       Terran
