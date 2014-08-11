@@ -1,0 +1,58 @@
+$Load Retail Configuration:	YES
+$Max directives:	8			
+$Max escort ships:	9
+
+#Gauge Config				
+	$Base:	(1440,900)		
+	$Min:	(1280,720)				
+	$Gauges:
+		+Custom:		
+			Position: 	(645,350)
+			Name:	BPVisibilityA
+			Text:	
+			X Offset:	5
+			Y Offset:	3
+			Gauge Type: 	RADAR
+			Slew: 	NO
+			Active by default: 	NO
+			Filename: 	objective1
+		+Custom:		
+			Position: 	(645,361)
+			Name:	BPVisibilityB
+			Text:	
+			X Offset:	5
+			Y Offset:	0
+			Gauge Type: 	RADAR
+			Slew: 	NO
+			Active by default: 	NO
+			Filename: 	blank
+	$End Gauges			
+#End
+
+#Gauge Config
+	$Base: 													(1024, 768)
+	$Required Aspect: 										Full Screen
+	$Min: 													(1024, 768)
+	$Gauges:
+		+Custom:
+			Position: 										(437, 299)
+			Name:											BPVisibilityA
+			Text:
+			X Offset:										5
+			Y Offset:										3
+			Gauge Type: 									RADAR
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										objective1
+		+Custom:
+			Position: 										(437, 310)
+			Name:											BPVisibilityB
+			Text:
+			X Offset:										5
+			Y Offset:										0
+			Gauge Type: 									RADAR
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										blank
+	$End Gauges
+#End
