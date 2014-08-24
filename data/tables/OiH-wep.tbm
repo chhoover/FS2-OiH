@@ -1,19 +1,16 @@
 #Primary Weapons
 
 $Name:                                 Alouqua
-+Title:                                XSTR("'Alouqua' Shivan EM Laser", -1)
++Title:                                XSTR("Alouqua", -1)
 +Description:
 XSTR(
-"Low Energy Usage
-Poor Hull Damage
-Good Shield Damage
-ROF 6.67/s", -1)
+"Write me", -1)
 $end_multi_text
 +Tech Title:				   XSTR("Alouqua", -1)
 +Tech Anim:					   Tech_GTW-5a_Prometheus_R
 +Tech Description:
 XSTR(
-"The Alouqua seems to be a modified version of the Citra. It fires a focused EM burst, which efficiently penetrates shields. Because of its limited effectiveness against hull plating, it is best paired with a weapon that inflicts more damage against armor. No other data is available.", -1)
+"Write me", -1)
 $end_multi_text
 $Model File:							none
 @Laser Bitmap:							Alouqua_AniBitmap
@@ -24,12 +21,12 @@ $Model File:							none
 @Laser Head Radius:						2.7
 @Laser Tail Radius:						2.7
 $Mass:                                 0.02
-$Velocity:                             910.0                           ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                            0.15                            ;; in seconds
-$Damage:                               12
-$Armor Factor:							0.3
-$Shield Factor:							2.0
-$Subsystem Factor:						0.2
+$Velocity:                             600.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.25                            ;; in seconds
+$Damage:                               18
+$Armor Factor:							1.0
+$Shield Factor:							1.0
+$Subsystem Factor:						0.4
 $Lifetime:                             1.5
 $Energy Consumed:						0.05                            ;; Energy used when fired
 $Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
@@ -50,19 +47,16 @@ $Impact Explosion:						Shivan_Impact01
 $Impact Explosion Radius:				2.5
 
 $Name:                                 Citra
-+Title:                                XSTR("'Citra' Shivan Laser", -1)
++Title:                                XSTR("Citra", -1)
 +Description:
 XSTR(
-"Low Energy Usage
-Moderate Shield Damage
-Moderate Hull Damage
-ROF 5.88/s", -1)
+"Write me", -1)
 $end_multi_text
 +Tech Title:				   XSTR("Citra", -1)
 +Tech Anim:					   Tech_Akheton_SDG
 +Tech Description:
 XSTR(
-"By far the most common Shivan primary weapon, the Citra is a well-rounded weapon that is effective against both shields and hull plating. Like its more specialized cousin, the Alouqua, the Citra boasts a high rate of fire and low energy requirements. No further data is available.", -1)
+"Write me", -1)
 $end_multi_text
 $Model File:							none
 @Laser Bitmap:							Citra_Bitmap
@@ -73,12 +67,12 @@ $Model File:							none
 @Laser Head Radius:						2.7
 @Laser Tail Radius:						2.7
 $Mass:                                 -0.02
-$Velocity:                             800.0                           ;; speed of the weapon (initially) -- may or may not change
-$Fire Wait:                            0.17                            ;; in seconds
-$Damage:                               14
-$Armor Factor:							0.9
-$Shield Factor:							0.9
-$Subsystem Factor:						0.3
+$Velocity:                             700.0                           ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                            0.35                            ;; in seconds
+$Damage:                               40
+$Armor Factor:							1.0
+$Shield Factor:							1.0
+$Subsystem Factor:						0.5
 $Lifetime:                             1.3
 $Energy Consumed:						0.1                            ;; Energy used when fired
 $Cargo Size:							0.0                             ;; Amount of space taken up in weapon cargo
@@ -132,8 +126,8 @@ $Model File:							none
 $Mass:                                 -0.09
 $Velocity:                             610.0                           ;; speed of the weapon (initially) -- may or may not change
 $Fire Wait:                            0.2                            ;; in seconds
-$Damage:                               23
-$Armor Factor:							0.9
+$Damage:                               50
+$Armor Factor:							1.0
 $Shield Factor:							0.3
 $Subsystem Factor:						0.4
 $Lifetime:                             1.6
@@ -425,6 +419,107 @@ $Pspew:
 +Life: 0.2 
 +Scale: 0.65 
 +Bitmap: Vepar_Particle
+
+
+$Name:                          MGreen
+$Model File:                    none ; laser1-1.pof
+@Laser Bitmap:                  laserglow01
+@Laser Color:					0, 255, 54
+@Laser Length:					0.0
+@Laser Head Radius:				0.30
+@Laser Tail Radius:				0.30
+$Mass:                          100.0
+$Velocity:                      1000.0          ;; speed of the weapon (initially) -- may or may not change
+$Fire Wait:                     16.0            ;; in seconds
+$Damage:                        350				;; NOTE: for beam weapons this is kind of a "continuous" damage applied every few fractions of a second that the beam is on.
+$Armor Factor:                  1.0
+$Shield Factor:                 1.0
+$Subsystem Factor:              1.0
+$Lifetime:                      30.0            ;; How long this thing lives
+$Energy Consumed:               0.30            ;; Energy used when fired
+$Cargo Size:                    0.0             ;; Amount of space taken up in weapon cargo
+$Homing:                        NO
+$LaunchSnd:						124
+$ImpactSnd:                     88             ;; The sound it makes when it hits something
++Weapon Range:					4000			;; Limit to range at which weapon will actively target object
+$Flags:                         ( "Big Ship" "huge" "beam" )
+$Icon:                          icongun05
+$Anim:                          LoadGun07
+$Impact Explosion:					exp04
+$Impact Explosion Radius:			34
+$BeamInfo:
+	+Type:						0				;; 0 - 4 are valid #'s
+	+Life:			  			2.0				;; how long it lasts once the beam is actually firing
+	+Warmup:		  			3000			;; warmup time in ms
+	+Warmdown:					1500			;; warmdown time in ms
+	+Radius:					50.0
+	+PCount:								24
+	+PRadius:								2.8
+	+PAngle:					65.0			;; angle of the random "cone" where the particles are generated
+	+PAni:									particle_green
+	+Miss Factor:				1.0 1.3 1.3 1.3 1.4					;; magic # - higher == miss more (only really applicable to type 0 and type 3 beams)
+	+BeamSound:					146					;; the looping beam-firing sound
+	+WarmupSound:				151					;; associated warmup sound
+	+WarmdownSound:				158					;; associated warmdown sound
+	+Muzzleglow:							GreenBeamGlow
+	+Shots:						0			;; only used for TYPE 3 beams
+	+ShrinkFactor:				0.0			;; what percentage of lifetime where beam starts shrinking (0.1 == 10% life left)
+	+ShrinkPct:					0.0			;; what percentage of max width we subtract per second
+	+Range:									6000
+	+Beam Flash Effect:						capflash
+	+Beam Flash Radius:						17.0
+	+Beam Piercing Effect:					exp06
+	+Beam Piercing Radius:					17.0
+	+Beam Piercing Effect Velocity:			100
+	+Beam Piercing Splash Effect Velocity:	-5
+	+Beam Piercing Effect Variance:			0.01
+	$Section:
+		+Index:			0
+		+Width:			17
+		+Texture:		TerBeam3Core
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.0
+		+Zadd:			8
+		+Tile Factor:	12, 1
+		+Translation:	-18
+	$Section:
+		+Index:			1
+		+Width:			28
+		+Texture:		TerBeam4Core
+		+RGBA Inner:	160 160 0 255
+		+RGBA Outer:	60 60 0 10
+		+Flicker:		0.05
+		+Zadd:			6
+		+Tile Factor:	12, 1
+		+Translation:	-13
+	$Section:
+		+Index:			2
+		+Width:			35.0
+		+Texture:		TerBeam2Glow
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.2
+		+Zadd:			4
+		+Tile Factor:	12, 1
+		+Translation:	-7
+	$Section:
+		+Width:			60.0
+		+Texture:		TerBeam2GlowHaze
+		+RGBA Inner:	255 0 0 255
+		+RGBA Outer:	60 0 0 10
+		+Flicker:		0.1
+		+Zadd:			2
+		+Tile Factor:	12, 1
+		+Translation:	-3
+	$Section:
+		+Width:			100.0
+		+Texture:		GreenFade
+		+RGBA Inner:	255 255 255 255
+		+RGBA Outer:	150 150 150 10
+		+Flicker:		0.35
+		+Zadd:			1
+
 
 ;-----Lamia Beam by Axem
 $Name:                          MRed
