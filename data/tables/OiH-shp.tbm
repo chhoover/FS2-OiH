@@ -3,6 +3,8 @@
 $Name:				GTF Pegasus
 	+nocreate
 $Allowed PBanks: ( "Subach HL-7" "Akheton SDG" "Morning Star" "Prometheus R" "Prometheus S" "Maxim" )
+$Allowed SBanks: ( "Rockeye" "Tempest" "TAG-A" "TAG-B" "Harpoon" "Trebuchet" "Hornet" "Tornado" "Hornet#Weak" "EMP Adv." "Stiletto II" )
+$Flags:			 ( "player_ship" "default_player_ship" "fighter" "stealth" )
 
 $Name:				GTSC Faustus#inSystemJump
 $Short name:					TSci1
