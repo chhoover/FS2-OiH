@@ -1,0 +1,277 @@
+#Ship Classes
+
+
+$Name:                          Asteroid#Violet
+$Short name:            Asteroid
+$Species:                       Terran
+$POF file:                      asteroidviolet.pof
+$Detail distance:       (0, 800, 1800, 2500)
+$Damage Lightning Type: none
+$Debris:
++Min Hitpoints: 5000
++Max Hitpoints: 7000
++Lightning Arc Percent: 0
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         20.0, 20.0, 20.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:      0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     15000
+$Flags:                         ( "navbuoy" "stealth" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       -1                    ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -1400
+$Closeup_zoom:          0.5	
+$Radar Image 2D:    radar-asteroid
+
+
+$Name:                          Asteroid#ice-particle
+$Short name:            Asteroid
+$Species:                       Terran
+$POF file:                      asteroid-ice-particle.pof
+$Detail distance:       (0, 400, 800, 1500)
+$Damage Lightning Type: none
+$Debris:
++Min Hitpoints: 200
++Max Hitpoints: 300
++Lightning Arc Percent: 0
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         20.0, 20.0, 20.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:      0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     600
+$Flags:                         ( "navbuoy" "stealth" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       -1                    ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -100
+$Closeup_zoom:          0.5	
+$Radar Image 2D:    radar-asteroid
+
+
+$Name:                          Asteroid#Deep-freeze
+$Short name:            Asteroid
+$Species:                       Terran
+$POF file:                      asteroid-deep-freeze.pof
+$Detail distance:       (0, 800, 1800, 2500)
+$Damage Lightning Type: none
+$Debris:
++Min Hitpoints: 5000
++Max Hitpoints: 7000
++Lightning Arc Percent: 0
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         20.0, 20.0, 20.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:      0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     15000
+$Flags:                         ( "navbuoy" "stealth" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       -1                    ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -1400
+$Closeup_zoom:          0.5	
+$Radar Image 2D:    radar-asteroid
+
+
+
+$Name:                          Asteroid#ice-big
+$Short name:            Asteroid
+$Species:                       Terran
+$POF file:                      asteroid-ice-big.pof
+$Detail distance:       (0, 2300, 4200)
+$Damage Lightning Type: none
+$Debris:
++Min Hitpoints: 600
++Max Hitpoints: 1000
++Lightning Arc Percent: 0
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         20.0, 20.0, 20.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:      0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     5000
+$Flags:                         ( "navbuoy" "stealth" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       -1                    ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -1800
+$Closeup_zoom:          0.5	
+$Radar Image 2D:    radar-asteroid		
+
+
+
+$Name:                          Asteroid#ice-cylinder
+$Short name:            Asteroid
+$Species:                       Terran
+$POF file:                      asteroid-ice-cylinder.pof
+$Detail distance:       (0, 3700, 5800)
+$Damage Lightning Type: none
+$Debris:
++Min Hitpoints: 600
++Max Hitpoints: 3000
++Lightning Arc Percent: 0
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         20.0, 20.0, 20.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:      0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     95000
+$Flags:                         ( "navbuoy" "stealth" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       -1                    ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -2400
+$Closeup_zoom:          0.5	
+$Radar Image 2D:    radar-asteroid		
+
+
+$Name:                          Asteroid#brown
+$Short name:            Asteroid
+$Species:                       Terran
+$POF file:                      asteroid-brown.pof
+$Detail distance:       (0, 3500, 5500)
+$Damage Lightning Type: none
+$Debris:
++Min Hitpoints: 10000
++Max Hitpoints: 17000
++Lightning Arc Percent: 0
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Max Velocity:          0.0, 0.0, 0.0
+$Rotation time:         20.0, 20.0, 20.0
+$Rear Velocity:         0.0
+$Forward accel:         0.0
+$Forward decel:         0.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:      0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+$Shields:                       0
+$Power Output:          0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     80000
+$Flags:                         ( "navbuoy" "stealth" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       -1                    ;; Engine sound of ship
+$Closeup_pos:           0.0, 1.0, -2200
+$Closeup_zoom:          0.5	
+$Radar Image 2D:    radar-asteroid		
+
+		
+	
+#End
