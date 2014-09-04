@@ -1,0 +1,2131 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Untitled", -1)
+$Author: Furby
+$Created: 09/03/14 at 12:37:53
+$Modified: 09/03/14 at 17:12:00
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 138
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 933.023071, 16633.169922, -14004.227539
++Viewer orient:
+	0.999800, -0.000000, -0.020016,
+	0.013320, 0.746448, 0.665311,
+	0.014941, -0.665444, 0.746298
+
+$Starting wing names: ( "Thiazi" "Beta" "Gamma" )
+$Squadron wing names: ( "Thiazi" "Beta" "Gamma" "Delta" "Epsilon" )
+$Team-versus-team wing names: ( "Thiazi" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: BP2 R2
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"Thiazi2Disengage"		"0"		"number"
+		1		"Thiazi3Disengage"		"0"		"number"
+		2		"Thiazi4Disengage"		"0"		"number"
+)
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 1
+
+$Formula: ( is-destroyed-delay 0 "Phantom" ) 
+$Multi text
+    XSTR("The Phantom died!", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+#Players		;! 1 total
+
+$Starting Shipname: Thiazi 1
+$Ship Choices: (
+)
+
++Weaponry Pool: (
+	"Subach HL-7"	10
+	"Akheton SDG"	7
+	"Morning Star"	5
+	"Prometheus R"	10
+	"Prometheus S"	10
+	"Maxim"	4
+	"UD-8 Kayser"	8
+	"Circe"	5
+	"Lamprey"	5
+	"Rockeye"	100
+	"Tempest"	2000
+	"Hornet"	200
+	"Tornado"	278
+	"Harpoon"	130
+	"Trebuchet"	25
+	"Stiletto II"	25
+	"Infyrno"	20
+	"EMP Adv."	20
+)
+
+#Objects		;! 29 total
+
+$Name: Thiazi 1		;! Object #0
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -1032.577637, 0.000051, -5.265767
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 75
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" "red-alert-carry" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Score: 8
+
+$Name: Thiazi 2		;! Object #1
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -1136.593628, 0.000055, -109.050728
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Little Devil
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "red-alert-carry" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Thiazi 3		;! Object #2
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -927.714661, 0.000052, -110.461937
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Little Devil
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "red-alert-carry" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Thiazi 4		;! Object #3
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -1031.996948, 0.000047, -219.944778
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Little Devil
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "red-alert-carry" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Phantom		;! Object #4
+$Class: SOC Oculus
+$Team: Friendly
+$Location: 1.333812, -0.000169, -0.877917
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
++Subsystem: Turret19
++Subsystem: Turret20
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" "red-alert-carry" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+
+$Name: Azrael		;! Object #5
+$Class: ST Azrael
+$Team: Hostile
+$Location: 0.000000, 0.000000, 10000.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 87
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
++Subsystem: engine
+$Damage: 100
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( "lock-all-turrets" )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: SF Mara 6		;! Object #6
+$Class: SF Mara
+$Team: Hostile
+$Location: -113.088387, -0.001227, 9883.058594
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
++Arrival Delay: 1
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Destroy At: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: SF Mara 7		;! Object #7
+$Class: SF Mara
+$Team: Hostile
+$Location: -157.332809, -0.001214, 10272.530273
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
++Arrival Delay: 1
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Destroy At: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: SF Mara 8		;! Object #8
+$Class: SF Mara
+$Team: Hostile
+$Location: 191.875900, -0.001228, 10200.642578
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
++Arrival Delay: 1
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Destroy At: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: SF Mara 9		;! Object #9
+$Class: SF Mara
+$Team: Hostile
+$Location: 139.715561, -0.001217, 9875.597656
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
++Arrival Delay: 1
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Destroy At: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Savitr		;! Object #10
+$Class: ST Azrael
+$Team: Hostile
+$Location: -209.699997, 120.000000, 10020.700195
+$Orientation:
+	-0.098236, 0.000000, -0.995163,
+	0.492467, 0.868972, -0.048613,
+	0.864769, -0.494861, -0.085364
+$AI Behavior: None
++AI Class: BP2-Major
+$AI Goals: ( goals ( ai-dock "Azrael" "dockpoint 1" "dockpoint 1" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 92
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01a
++Subsystem: turret02a
++Subsystem: turret03a
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 15
+
+$Name: Capricorn 1		;! Object #11
+$Class: SF Mara
+$Team: Hostile
+$Location: -344.632019, -0.001197, 9899.143555
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 58
++Initial Shields: 71
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Capricorn 2		;! Object #12
+$Class: SF Mara
+$Team: Hostile
+$Location: -433.330292, -0.001200, 9835.776367
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 98
++Initial Shields: 23
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Capricorn 3		;! Object #13
+$Class: SF Mara
+$Team: Hostile
+$Location: -284.123047, -0.001173, 9805.474609
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 56
++Initial Shields: 70
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Capricorn 4		;! Object #14
+$Class: SF Mara
+$Team: Hostile
+$Location: -336.760498, -0.001178, 9747.454102
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 79
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Yama		;! Object #15
+$Class: SD Ravana
+$Team: Hostile
+$Location: 3641.699951, 2901.300049, 4785.200195
+$Orientation:
+	0.312081, 0.856040, -0.412072,
+	0.876617, -0.426674, -0.222473,
+	-0.366265, -0.291799, -0.883574
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Yama arrival cue" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 670
+
+$Name: Narada		;! Object #16
+$Class: SCv Moloch
+$Team: Hostile
+$Location: 1462.015137, 853.008667, 5392.604492
+$Orientation:
+	0.393252, 0.489496, 0.778298,
+	0.711692, -0.697992, 0.079391,
+	0.582106, 0.522687, -0.622856
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Narada arrival cue" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 440
+
+$Name: Virgo 1		;! Object #17
+$Class: SF Mara
+$Team: Hostile
+$Location: 2600.027588, -0.002181, 1998.705322
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Virgo 2		;! Object #18
+$Class: SF Mara
+$Team: Hostile
+$Location: 2497.482422, -0.002218, 1894.526855
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Virgo 3		;! Object #19
+$Class: SF Mara
+$Team: Hostile
+$Location: 2702.329346, -0.002217, 1894.730225
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Virgo 4		;! Object #20
+$Class: SF Mara
+$Team: Hostile
+$Location: 2600.733887, -0.002213, 1793.776489
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Sagittarius 1		;! Object #21
+$Class: SF Astaroth
+$Team: Hostile
+$Location: 3012.972412, -0.002180, 1999.810303
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Alouqua" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Sagittarius 2		;! Object #22
+$Class: SF Astaroth
+$Team: Hostile
+$Location: 2907.552246, -0.002188, 1894.271729
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Alouqua" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Sagittarius 3		;! Object #23
+$Class: SF Astaroth
+$Team: Hostile
+$Location: 3115.264648, -0.002208, 1895.846436
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Alouqua" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Sagittarius 4		;! Object #24
+$Class: SF Astaroth
+$Team: Hostile
+$Location: 3011.539063, -0.002188, 1794.526855
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
++Primary Banks: ( "Alouqua" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 13
+
+$Name: Leo 1		;! Object #25
+$Class: SB Nephilim
+$Team: Hostile
+$Location: 2809.443848, -0.002211, 2315.351807
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 11
+
+$Name: Leo 2		;! Object #26
+$Class: SB Nephilim
+$Team: Hostile
+$Location: 2703.572754, -0.002170, 2205.329346
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 11
+
+$Name: Leo 3		;! Object #27
+$Class: SB Nephilim
+$Team: Hostile
+$Location: 2911.023193, -0.002166, 2205.811035
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 11
+
+$Name: Leo 4		;! Object #28
+$Class: SB Nephilim
+$Team: Hostile
+$Location: 2807.015869, -0.002191, 2099.577393
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 11
+
+#Wings		;! 5 total
+
+$Name: Capricorn
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Capricorn 1
+
+$Arrival Location: Near Ship
++Arrival Distance: 300
+$Arrival Anchor: Savitr
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Capricorn 1"
+	"Capricorn 2"
+	"Capricorn 3"
+	"Capricorn 4"
+)
+$AI Goals: ( goals ( ai-guard "Savitr" 50 ) )
++Flags: ( )
+
+$Name: Thiazi
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Thiazi 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Phantom
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Thiazi 1"
+	"Thiazi 2"
+	"Thiazi 3"
+	"Thiazi 4"
+)
++Flags: ( )
+
+$Name: Virgo
+$Waves: 3
+$Wave Threshold: 0
+$Special Ship: 0		;! Virgo 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Yama
+$Arrival Cue: ( is-event-true-delay 
+   "Yama launches fighters" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Virgo 1"
+	"Virgo 2"
+	"Virgo 3"
+	"Virgo 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Thiazi" 50 ) )
++Flags: ( )
++Wave Delay Min: 20
++Wave Delay Max: 30
+
+$Name: Sagittarius
+$Waves: 3
+$Wave Threshold: 0
+$Special Ship: 0		;! Sagittarius 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Yama
+$Arrival Cue: ( is-event-true-delay 
+   "Yama launches fighters" 
+   39 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Sagittarius 1"
+	"Sagittarius 2"
+	"Sagittarius 3"
+	"Sagittarius 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Thiazi" 50 ) )
++Flags: ( )
++Wave Delay Min: 20
++Wave Delay Max: 30
+
+$Name: Leo
+$Waves: 3
+$Wave Threshold: 0
+$Special Ship: 0		;! Leo 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Yama
+$Arrival Cue: ( is-event-true-delay 
+   "Yama launches fighters" 
+   20 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Leo 1"
+	"Leo 2"
+	"Leo 3"
+	"Leo 4"
+)
+$AI Goals: ( goals ( ai-chase "Phantom" 50 ) )
++Flags: ( )
++Wave Delay Min: 20
++Wave Delay Max: 30
+
+#Events		;! 27 total
+
+$Formula: ( when 
+   ( true ) 
+   ( set-support-ship 
+      "Docking Bay" 
+      "Phantom" 
+      "Docking Bay" 
+      "Phantom" 
+      "GTS Hygeia" 
+      -1 
+   )
+   ( ship-guardian-threshold 
+      15 
+      "Thiazi 2" 
+      "Thiazi 3" 
+      "Thiazi 4" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 15 43 ) 
+      "Thiazi 2" 
+      "engine" 
+      "communications" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 15 43 ) 
+      "Thiazi 3" 
+      "engine" 
+      "communications" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 15 43 ) 
+      "Thiazi 4" 
+      "engine" 
+      "communications" 
+   )
+   ( ship-invulnerable "Azrael" "Savitr" ) 
+   ( never-warp "Thiazi 1" ) 
+)
++Name: Setup
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Savitr" 
+      "Azrael" 
+      1 
+      3 
+   )
+   ( add-goal 
+      "Savitr" 
+      ( ai-warp-out 89 ) 
+   )
+   ( add-goal 
+      "Capricorn" 
+      ( ai-warp-out 89 ) 
+   )
+   ( validate-goal "Protect Phantom" ) 
+)
++Name: Savitr departure cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 8 ) 
+   ( add-goal 
+      "Phantom" 
+      ( ai-waypoints-once 
+         "Phantom Initial Path" 
+         89 
+      )
+   )
+)
++Name: Phantom initial WP
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 8 "Savitr" ) 
+   ( clear-goals "Phantom" ) 
+)
++Name: Cancel Phantom WP
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Savitr departure cue" 
+      27 
+   )
+   ( do-nothing ) 
+)
++Name: Yama arrival cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 21 "Yama" ) 
+   ( ship-rot-maneuver 
+      "Yama" 
+      140000 
+      -65 
+      0 
+      0 
+      ( true ) 
+   )
+   ( beam-free 
+      "Yama" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+   )
+)
++Name: Yama turns toward Phantom
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Yama" ) 
+   ( beam-lock 
+      "Yama" 
+      "turret01" 
+      "turret02" 
+      "turret03" 
+      "turret04" 
+   )
+)
++Name: Yama initial turret lock
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 19 "Yama" ) 
+   ( add-goal 
+      "Phantom" 
+      ( ai-waypoints-once 
+         "Phantom Evade Path" 
+         89 
+      )
+   )
+)
++Name: Phantom evades Yama
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Phantom evades Yama" 
+      37 
+   )
+   ( do-nothing ) 
+)
++Name: Narada arrival cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 11 "Narada" ) 
+   ( add-goal 
+      "Narada" 
+      ( ai-waypoints-once "Narada Path" 89 ) 
+   )
+   ( cap-waypoint-speed "Narada" 15 ) 
+)
++Name: Narada waypoint
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance 
+            "Phantom" 
+            "Phantom Evade Path:1" 
+         )
+         400 
+      )
+      ( is-event-true-delay 
+         "Phantom evades Yama" 
+         0 
+      )
+      ( not 
+         ( is-destroyed-delay 0 "Phantom" ) 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Phantom prepares for crash jump
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance-ship-subsystem 
+            "Thiazi 1" 
+            "Phantom" 
+            "fighterbay" 
+         )
+         100 
+      )
+      ( not 
+         ( is-destroyed-delay 0 "Phantom" ) 
+      )
+   )
+   ( red-alert ) 
+   ( ship-invulnerable 
+      "Thiazi 1" 
+      "Phantom" 
+   )
+)
++Name: DIR: Enter Fighterbay
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Phantom's Fighterbay", -1)
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Thiazi 2" ) 25 ) 
+      ( = @Thiazi2Disengage[0] 0 ) 
+   )
+   ( lock-primary-weapon "Thiazi 2" ) 
+   ( lock-secondary-weapon "Thiazi 2" ) 
+   ( clear-goals "Thiazi 2" ) 
+   ( add-goal 
+      "Thiazi 2" 
+      ( ai-stay-near-ship "Phantom" 150 ) 
+   )
+   ( protect-ship "Thiazi 2" ) 
+   ( training-msg 
+      "TEST: Thiazi 2 disengage" 
+   )
+   ( modify-variable 
+      @Thiazi2Disengage[0] 
+      1 
+   )
+)
++Name: Thiazi 2 hurt
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Thiazi 3" ) 25 ) 
+      ( = @Thiazi3Disengage[0] 0 ) 
+   )
+   ( lock-primary-weapon "Thiazi 3" ) 
+   ( lock-secondary-weapon "Thiazi 3" ) 
+   ( clear-goals "Thiazi 3" ) 
+   ( add-goal 
+      "Thiazi 3" 
+      ( ai-stay-near-ship "Phantom" 150 ) 
+   )
+   ( protect-ship "Thiazi 3" ) 
+   ( training-msg 
+      "TEST: Thiazi 3 disengage" 
+   )
+   ( modify-variable 
+      @Thiazi3Disengage[0] 
+      1 
+   )
+)
++Name: Thiazi 3 hurt
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Thiazi 4" ) 25 ) 
+      ( = @Thiazi4Disengage[0] 0 ) 
+   )
+   ( lock-primary-weapon "Thiazi 4" ) 
+   ( lock-secondary-weapon "Thiazi 4" ) 
+   ( clear-goals "Thiazi 4" ) 
+   ( add-goal 
+      "Thiazi 4" 
+      ( ai-stay-near-ship "Phantom" 150 ) 
+   )
+   ( protect-ship "Thiazi 4" ) 
+   ( training-msg 
+      "TEST: Thiazi 4 disengage" 
+   )
+   ( modify-variable 
+      @Thiazi4Disengage[0] 
+      1 
+   )
+)
++Name: Thiazi 4 hurt
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( > ( hits-left "Thiazi 2" ) 25 ) 
+      ( = @Thiazi2Disengage[0] 1 ) 
+   )
+   ( unlock-primary-weapon "Thiazi 2" ) 
+   ( unlock-secondary-weapon "Thiazi 2" ) 
+   ( clear-goals "Thiazi 2" ) 
+   ( add-goal 
+      "Thiazi 2" 
+      ( ai-chase-any 89 ) 
+   )
+   ( training-msg 
+      "TEST: Thiazi 2 reengage" 
+   )
+   ( modify-variable 
+      @Thiazi2Disengage[0] 
+      0 
+   )
+   ( unprotect-ship "Thiazi 2" ) 
+   ( repair-subsystem 
+      "Thiazi 2" 
+      "weapons" 
+      100 
+   )
+)
++Name: Thiazi 2 recovered
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( > ( hits-left "Thiazi 3" ) 25 ) 
+      ( = @Thiazi3Disengage[0] 1 ) 
+   )
+   ( unlock-primary-weapon "Thiazi 3" ) 
+   ( unlock-secondary-weapon "Thiazi 3" ) 
+   ( clear-goals "Thiazi 3" ) 
+   ( add-goal 
+      "Thiazi 3" 
+      ( ai-chase-any 89 ) 
+   )
+   ( training-msg 
+      "TEST: Thiazi 3 reengage" 
+   )
+   ( modify-variable 
+      @Thiazi3Disengage[0] 
+      0 
+   )
+   ( unprotect-ship "Thiazi 3" ) 
+   ( repair-subsystem 
+      "Thiazi 3" 
+      "weapons" 
+      100 
+   )
+)
++Name: Thiazi 3 recovered
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( > ( hits-left "Thiazi 4" ) 25 ) 
+      ( = @Thiazi4Disengage[0] 1 ) 
+   )
+   ( unlock-primary-weapon "Thiazi 4" ) 
+   ( unlock-secondary-weapon "Thiazi 4" ) 
+   ( clear-goals "Thiazi 4" ) 
+   ( add-goal 
+      "Thiazi 4" 
+      ( ai-chase-any 89 ) 
+   )
+   ( training-msg 
+      "TEST: Thiazi 4 reengage" 
+   )
+   ( modify-variable 
+      @Thiazi4Disengage[0] 
+      0 
+   )
+   ( unprotect-ship "Thiazi 4" ) 
+   ( repair-subsystem 
+      "Thiazi 4" 
+      "weapons" 
+      100 
+   )
+)
++Name: Thiazi 4 recovered
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Thiazi 2" 
+      "Thiazi 3" 
+      "Thiazi 4" 
+   )
+   ( < ( hits-left "<argument>" ) 49 ) 
+   ( repair-subsystem 
+      "<argument>" 
+      "Hull" 
+      1 
+   )
+)
++Name: Thiazi HAX LOL
++Repeat Count: -1
++Trigger Count: 99999999
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Yama turns toward Phantom" 
+      7 
+   )
+   ( do-nothing ) 
+)
++Name: Yama launches fighters
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Virgo" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Destroy Virgo
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Virgo", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Sagittarius" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Destroy Sagittarius
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Sagittarius", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Leo" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Destroy Leo
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Leo", -1)
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Phantom" ) 
+   ( do-nothing ) 
+)
++Name: Phantom destroyed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Thiazi 1" ) 
+   ( do-nothing ) 
+)
++Name: DIR: Jump at the node
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Jump at the node", -1)
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Phantom" ) 
+      ( < 
+         ( distance "Thiazi 1" "Node Center:1" ) 
+         900 
+      )
+   )
+   ( allow-warp "Thiazi 1" ) 
+)
++Name: Allow warp inside node
++Repeat Count: -1
++Trigger Count: 9999999
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Phantom" ) 
+      ( >= 
+         ( distance "Thiazi 1" "Node Center:1" ) 
+         900 
+      )
+   )
+   ( never-warp "Thiazi 1" ) 
+)
++Name: Prevent warp outside node
++Repeat Count: -1
++Trigger Count: 9999999
++Interval: 1
+
+#Goals		;! 2 total
+
+$Type: Primary
++Name: Intercept Azrael
+$MessageNew:  XSTR("Intercept the Azrael carrying Admiral Bosch", -1)
+$end_multi_text
+$Formula: ( is-destroyed-delay 0 "Azrael" ) 
+
+$Type: Primary
++Name: Protect Phantom
+$MessageNew:  XSTR("Protect the Phantom", -1)
+$end_multi_text
+$Formula: ( and 
+   ( is-event-true-delay 
+      "DIR: Enter Fighterbay" 
+      0 
+   )
+   ( not 
+      ( is-destroyed-delay 0 "Phantom" ) 
+   )
+)
++Invalid
+
+#Waypoints		;! 4 lists total
+
+
+$Jump Node: 0.000000, 0.000000, -4000.000000
+$Jump Node Name: Nebula System
+$Name: Phantom Initial Path
+$List: (		;! 1 points in list
+	( 2.262179, -0.006074, 9483.257813 )
+)
+
+$Name: Phantom Evade Path
+$List: (		;! 1 points in list
+	( 3192.100098, 2500.000000, 2003.500000 )
+)
+
+$Name: Narada Path
+$List: (		;! 1 points in list
+	( 3684.416504, -0.000887, 387.167542 )
+)
+
+$Name: Node Center
+$List: (		;! 1 points in list
+	( 0.000000, 0.000000, -4000.000000 )
+)
+
+#Messages		;! 6 total
+
+
+$Name: TEST: Thiazi 2 disengage
+$Team: -1
+$MessageNew:  XSTR("Thiazi 2 disengaging!", -1)
+$end_multi_text
+
+$Name: TEST: Thiazi 3 disengage
+$Team: -1
+$MessageNew:  XSTR("Thiazi 3 disengaging!", -1)
+$end_multi_text
+
+$Name: TEST: Thiazi 4 disengage
+$Team: -1
+$MessageNew:  XSTR("Thiazi 4 disengaging!", -1)
+$end_multi_text
+
+$Name: TEST: Thiazi 2 reengage
+$Team: -1
+$MessageNew:  XSTR("Thiazi 2 re-engaging!", -1)
+$end_multi_text
+
+$Name: TEST: Thiazi 3 reengage
+$Team: -1
+$MessageNew:  XSTR("Thiazi 3 re-engaging!", -1)
+$end_multi_text
+
+$Name: TEST: Thiazi 4 reengage
+$Team: -1
+$MessageNew:  XSTR("Thiazi 4 re-engaging!", -1)
+$end_multi_text
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 71 total
+
+$Num stars: 0
+$Ambient light level: 65793
+
+$Bitmap List:
+$Sun: SunBlue
++Angles: 6.038839 0.000000 3.159046
++Scale: 1.000000
+$Sun: SunBlue
++Angles: 6.213367 0.000000 3.124137
++Scale: 3.000000
+$Starbitmap: NebulC1-Main
++Angles: 6.178466 0.000000 0.000000
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC2-Main
++Angles: 0.191986 0.000000 0.000000
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC3-Whisp
++Angles: 0.000000 3.141590 0.261799
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC8-Whisp
++Angles: 6.021381 0.000000 0.383972
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC14-Whisp
++Angles: 0.000000 0.000000 0.610865
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC13-Whisp
++Angles: 6.195914 0.000000 0.698131
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC11-Whisp
++Angles: 0.506145 0.000000 0.872664
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC13-Whisp
++Angles: 0.436332 0.000000 0.506145
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC2-Main
++Angles: 0.610865 0.000000 0.174533
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC4-Whisp
++Angles: 0.436332 0.000000 0.034907
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC2-Main
++Angles: 0.349066 0.000000 5.934115
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC13-Whisp
++Angles: 6.108648 0.000000 5.934115
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC6-Whisp
++Angles: 5.934115 0.000000 6.195914
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC3-Whisp
++Angles: 0.000000 0.000000 5.759582
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC10-Whisp
++Angles: 5.759582 3.141590 5.846848
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC10-Whisp
++Angles: 5.846848 0.523598 0.698131
++ScaleX: 3.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC8-Whisp
++Angles: 0.000000 0.000000 1.221730
++ScaleX: 6.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC2-Main
++Angles: 1.047197 0.000000 0.523598
++ScaleX: 4.000000
++ScaleY: 8.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC2-Main
++Angles: 1.047197 0.000000 0.000000
++ScaleX: 4.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC5-Whisp
++Angles: 0.558505 1.570795 5.497783
++ScaleX: 4.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulC6-Whisp
++Angles: 5.585049 0.000000 0.000000
++ScaleX: 5.000000
++ScaleY: 7.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF9-Whisp
++Angles: 0.000000 0.000000 1.570795
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF12-Whisp
++Angles: 0.000000 0.000000 1.832594
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF14-Whisp
++Angles: 0.698131 0.523598 1.745328
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF4-Whisp
++Angles: 5.235984 0.000000 2.094393
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF6-Whisp
++Angles: 4.886918 0.000000 1.745328
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF1-Main
++Angles: 4.886918 0.000000 2.268926
++ScaleX: 6.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF9-Whisp
++Angles: 4.450586 3.141590 2.530725
++ScaleX: 4.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF3-Whisp
++Angles: 1.570795 0.000000 0.436332
++ScaleX: 3.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF14-Whisp
++Angles: 1.431169 0.000000 0.087266
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF9-Whisp
++Angles: 1.308996 1.570795 0.000000
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF3-Whisp
++Angles: 1.396262 0.000000 5.934115
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 1
+$Starbitmap: NebulF5-Whisp
++Angles: 1.396262 0.000000 5.672316
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF6-Whisp
++Angles: 1.221730 0.000000 5.410516
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF9-Whisp
++Angles: 0.698131 3.141590 5.061451
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF3-Whisp
++Angles: 0.698131 0.000000 5.235984
++ScaleX: 2.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulF4-Whisp
++Angles: 5.934115 0.349066 5.061451
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF13-Whisp
++Angles: 1.047197 0.000000 5.061451
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF1-Main
++Angles: 5.235984 0.000000 5.061451
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF12-Whisp
++Angles: 5.061451 0.000000 5.410516
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF9-Whisp
++Angles: 5.410516 4.712385 5.585049
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulF6-Whisp
++Angles: 4.886918 0.000000 5.759582
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF6-Whisp
++Angles: 5.148717 3.141590 6.021381
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulB2-Main
++Angles: 5.009091 1.745328 5.916662
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 2
++DivY: 2
+$Starbitmap: NebulE13-Whisp
++Angles: 5.009091 0.000000 5.934115
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulF8-Whisp
++Angles: 5.235984 0.000000 6.195914
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF5-Whisp
++Angles: 4.886918 0.000000 0.087266
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF3-Whisp
++Angles: 5.235984 0.000000 0.261799
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF1-Main
++Angles: 5.235984 0.000000 0.523598
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF5-Whisp
++Angles: 5.061451 0.000000 1.047197
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF9-Whisp
++Angles: 4.886918 0.000000 1.221730
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 2
++DivY: 2
+$Starbitmap: NebulF1-Main
++Angles: 4.450586 0.000000 0.034907
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF13-Whisp
++Angles: 4.363320 0.000000 6.021381
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF11-Whisp
++Angles: 4.537852 0.000000 5.846848
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF5-Whisp
++Angles: 4.014254 0.000000 0.000000
++ScaleX: 5.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF1-Main
++Angles: 3.490656 0.000000 0.000000
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulD5-Whisp
++Angles: 2.967057 0.000000 0.034907
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulD5-Whisp
++Angles: 3.141590 3.141590 6.248274
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: NebulF12-Whisp
++Angles: 6.195914 0.872664 3.141590
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF1-Main
++Angles: 5.846848 0.000000 3.141590
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF6-Whisp
++Angles: 5.497783 0.000000 3.141590
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF5-Whisp
++Angles: 5.235984 0.000000 3.141590
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF12-Whisp
++Angles: 4.886918 0.000000 3.141590
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF13-Whisp
++Angles: 0.000000 0.000000 4.572759
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF1-Main
++Angles: 0.000000 0.000000 4.450586
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF5-Whisp
++Angles: 0.000000 0.000000 4.188787
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 5
+$Starbitmap: NebulF12-Whisp
++Angles: 0.000000 0.000000 3.665189
++ScaleX: 5.000000
++ScaleY: 5.000000
++DivX: 5
++DivY: 1
+$Starbitmap: NebulF6-Whisp
++Angles: 0.000000 0.000000 3.490656
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 5
++DivY: 5
+$Starbitmap: PlanetG
++Angles: 0.994837 1.972221 3.333576
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: PlanetC
++Angles: 0.785398 1.570795 3.490656
++ScaleX: 3.000000
++ScaleY: 3.000000
++DivX: 1
++DivY: 1
+$Starbitmap: PlanetE
++Angles: 0.872664 1.570795 3.769908
++ScaleX: 0.300000
++ScaleY: 0.300000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: 2: Exodus
+$Briefing Music: None
+
+#End
+
