@@ -1,0 +1,676 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Untitled", -1)
+$Author: Furby
+$Created: 09/04/14 at 13:35:36
+$Modified: 09/04/14 at 17:09:40
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("Put mission description here
+", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 66718
++NebAwacs: 3000.000000
+
++Storm: none
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 10.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: -1029.667969, -160.262268, -435.738617
++Viewer orient:
+	0.556072, -0.000000, -0.831134,
+	0.009246, 0.999938, 0.006186,
+	0.831083, -0.011124, 0.556038
+
+$Starting wing names: ( "Thiazi" "Beta" "Gamma" )
+$Squadron wing names: ( "Thiazi" "Beta" "Gamma" "Delta" "Epsilon" )
+$Team-versus-team wing names: ( "Thiazi" "Zeta" )
+
+$Skybox Model: gasgiantbox.pof
++Skybox Flags: 538706176
+
+$AI Profile: BP2 R2
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 0
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 1
+
+$Formula: ( true ) 
+$Multi text
+    XSTR("Debriefing goes here.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+#Players		;! 1 total
+
+$Starting Shipname: Thiazi 1
+$Ship Choices: (
+)
+
++Weaponry Pool: (
+	"Akheton SDG"	4
+	"UD-8 Kayser"	4
+	"Tornado"	128
+	"Harpoon"	80
+)
+
+#Objects		;! 9 total
+
+$Name: Thiazi 1		;! Object #0
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -444.686066, 1157.814697, -961.293762
+$Orientation:
+	0.961056, 0.238330, -0.139897,
+	0.000000, 0.506221, 0.862404,
+	0.276356, -0.828818, 0.486506
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Score: 8
+
+$Name: Phantom		;! Object #1
+$Class: SOC Oculus
+$Team: Friendly
+$Location: 0.000000, 0.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
++Subsystem: Turret19
++Subsystem: Turret20
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 300
+
+$Name: Thiazi 2		;! Object #2
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -589.957214, 1211.973145, -993.085022
+$Orientation:
+	0.961055, 0.238330, -0.139897,
+	0.000000, 0.506221, 0.862404,
+	0.276356, -0.828818, 0.486506
+$AI Behavior: None
++AI Class: Little Devil
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Thiazi 3		;! Object #3
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -389.283936, 1261.368286, -1022.079651
+$Orientation:
+	0.961055, 0.238330, -0.139897,
+	0.000000, 0.506221, 0.862404,
+	0.276356, -0.828818, 0.486506
+$AI Behavior: None
++AI Class: Little Devil
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Thiazi 4		;! Object #4
+$Class: GTF Erinyes
+$Team: Friendly
+$Location: -518.258789, 1323.508301, -1058.555420
+$Orientation:
+	0.961055, 0.238330, -0.139897,
+	0.000000, 0.506221, 0.862404,
+	0.276356, -0.828818, 0.486506
+$AI Behavior: None
++AI Class: Little Devil
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "UD-8 Kayser" "Akheton SDG" )
++Secondary Banks: ( "Tornado" "Harpoon" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 33023		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 12
+
+$Name: Unknown#		;! Object #5
+$Class: SF Chimera
+$Team: Unknown
+$Location: -2922.746582, -0.005971, 1279.700928
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Near Ship
++Arrival Distance: 4000
+$Arrival Anchor: Phantom
+$Arrival Cue: ( is-event-true-delay 
+   "Chimera arrival cue" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-music" "hidden-from-sensors" "guardian" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Unknown 2		;! Object #6
+$Class: SF Chimera
+$Team: Unknown
+$Location: -906.501587, 0.000997, 301.525116
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$AI Goals: ( goals ( ai-chase "Phantom" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Near Ship
++Arrival Distance: 2500
+$Arrival Anchor: Phantom
+$Arrival Cue: ( is-event-true-delay 
+   "Chimera group arrival cue" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-music" "hidden-from-sensors" "guardian" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Unknown 3		;! Object #7
+$Class: SF Chimera
+$Team: Unknown
+$Location: -799.654236, 0.000974, 300.480865
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$AI Goals: ( goals ( ai-chase "Phantom" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Near Ship
++Arrival Distance: 2700
+$Arrival Anchor: Phantom
+$Arrival Cue: ( is-event-true-delay 
+   "Chimera group arrival cue" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-music" "hidden-from-sensors" "guardian" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Unknown 4		;! Object #8
+$Class: SF Chimera
+$Team: Unknown
+$Location: -699.950073, 0.000973, 297.138916
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Colonel
+$AI Goals: ( goals ( ai-chase "Phantom" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Near Ship
++Arrival Distance: 2600
+$Arrival Anchor: Phantom
+$Arrival Cue: ( is-event-true-delay 
+   "Chimera group arrival cue" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-music" "hidden-from-sensors" "guardian" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+#Wings		;! 1 total
+
+$Name: Thiazi
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Thiazi 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Thiazi 1"
+	"Thiazi 2"
+	"Thiazi 3"
+	"Thiazi 4"
+)
+$AI Goals: ( goals ( ai-guard "Phantom" 50 ) )
++Hotkey: 0
++Flags: ( )
+
+#Events		;! 12 total
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-guardian-threshold 
+      25 
+      "Phantom" 
+      "Thiazi 2" 
+      "Thiazi 3" 
+      "Thiazi 4" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 15 45 ) 
+      "Thiazi 2" 
+      "engine" 
+      "communications" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 15 45 ) 
+      "Thiazi 3" 
+      "engine" 
+      "communications" 
+   )
+   ( ship-subsys-guardian-threshold 
+      ( rand 15 45 ) 
+      "Thiazi 4" 
+      "engine" 
+      "communications" 
+   )
+   ( awacs-set-radius 
+      "Phantom" 
+      "Disc1a" 
+      30000 
+   )
+   ( awacs-set-radius 
+      "Phantom" 
+      "Disc2a" 
+      30000 
+   )
+   ( awacs-set-radius 
+      "Phantom" 
+      "Disc3a" 
+      30000 
+   )
+   ( never-warp "Thiazi 1" ) 
+)
++Name: Setup
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 25 ) 
+   ( do-nothing ) 
+)
++Name: Chimera arrival cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance "Thiazi 1" "Unknown#" ) 
+      1000 
+   )
+   ( do-nothing ) 
+)
++Name: DIR: Investigate Contact
++Repeat Count: 1
++Interval: 1
++Chained: 15
++Objective:  XSTR("Investigate Unknown Contact", -1)
++Objective key:  XSTR("Hold Fire", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Unknown#" ) 
+   ( protect-ship "Unknown#" ) 
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Unknown#" 
+      "<all engines>" 
+   )
+)
++Name: AI-protect Chimera
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( < 
+         ( distance 
+            "Unknown#" 
+            "<any friendly>" 
+         )
+         750 
+      )
+      ( is-event-true-delay 
+         "DIR: Investigate Contact" 
+         10 
+      )
+      ( > 
+         ( get-damage-caused 
+            "Unknown#" 
+            "Thiazi 1" 
+         )
+         0 
+      )
+   )
+   ( add-goal 
+      "Unknown#" 
+      ( ai-warp-out 89 ) 
+   )
+)
++Name: Chimera departure cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Chimera departure cue" 
+      35 
+   )
+   ( do-nothing ) 
+)
++Name: Chimera group arrival cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Unknown 2" 
+      "Unknown 3" 
+      "Unknown 4" 
+   )
+   ( is-event-true-delay 
+      "Chimera group arrival cue" 
+      0 
+   )
+   ( lock-primary-weapon "<argument>" ) 
+   ( lock-secondary-weapon "<argument>" ) 
+   ( protect-ship "<argument>" ) 
+)
++Name: Lock Chimera weapons
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Unknown 2" 
+      "Unknown 3" 
+      "Unknown 4" 
+   )
+   ( is-event-true-delay 
+      "Chimera group arrival cue" 
+      30 
+   )
+   ( add-goal 
+      "<argument>" 
+      ( ai-warp-out 150 ) 
+   )
+)
++Name: Chimera group departure cue
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Chimera group departure cue" 
+         15 
+      )
+      ( destroyed-or-departed-delay 
+         15 
+         "Unknown 2" 
+         "Unknown 3" 
+         "Unknown 4" 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: All clear
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance-ship-subsystem 
+            "Thiazi 1" 
+            "Phantom" 
+            "fighterbay" 
+         )
+         50 
+      )
+      ( is-event-true-delay "All clear" 0 ) 
+   )
+   ( end-mission ) 
+)
++Name: DIR: Enter Fighterbay
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Phantom's Fighterbay", -1)
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Unknown 2" 
+      "Unknown 3" 
+      "Unknown 4" 
+   )
+   ( or 
+      ( < ( shields-left "<argument>" ) 100 ) 
+      ( > 
+         ( get-damage-caused 
+            "<argument>" 
+            "Thiazi 1" 
+         )
+         0 
+      )
+   )
+   ( add-goal 
+      "<argument>" 
+      ( ai-evade-ship "Thiazi 1" 89 ) 
+   )
+)
++Name: Chimeras evade if damaged
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 2 ) 
+   ( play-sound-from-file 
+      "gathering_darkness.ogg" 
+      1 
+   )
+)
++Name: Music
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 1 total
+
+$Type: Primary
++Name: Protect Phantom
+$MessageNew:  XSTR("Protect the Phantom", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay "All clear" 0 ) 
++No music
+
+#Waypoints		;! 0 lists total
+
+
+#Messages		;! 0 total
+
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 0 total
+
+$Num stars: 0
+$Ambient light level: 65793
++Neb2: nbackred
+
++Neb2Flags: 60
+
+
+$Bitmap List:
+$Sun: SunBlue
++Angles: 1.570796 0.000000 0.174533
++Scale: 1.000000
+$Sun: SunBlue
++Angles: 1.588250 0.000000 6.265732
++Scale: 1.000000
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: None
+
+#End
+
