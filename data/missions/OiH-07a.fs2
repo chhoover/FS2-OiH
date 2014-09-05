@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 09/03/14 at 19:07:38
-$Modified: 09/04/14 at 13:35:21
+$Modified: 09/04/14 at 20:01:51
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -1125,8 +1125,17 @@ $Formula: ( when
 +Repeat Count: 1
 +Interval: 1
 
-#Goals		;! 0 total
+#Goals		;! 1 total
 
+$Type: Primary
++Name: Protect Phantom
+$MessageNew:  XSTR("Protect the Phantom", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Phantom departure cue" 
+   0 
+)
++No music
 
 #Waypoints		;! 3 lists total
 
@@ -1618,7 +1627,7 @@ $Starbitmap: planetc
 
 #Music
 
-$Event Music: None
+$Event Music: 2: Exodus
 $Briefing Music: None
 
 #End
