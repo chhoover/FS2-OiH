@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Untitled", -1)
 $Author: Furby
 $Created: 09/04/14 at 13:35:36
-$Modified: 09/04/14 at 17:09:40
+$Modified: 09/07/14 at 22:32:52
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -622,7 +622,7 @@ $Formula: ( when-argument
 $Formula: ( when 
    ( has-time-elapsed 2 ) 
    ( play-sound-from-file 
-      "gathering_darkness.ogg" 
+      "redletter.ogg" 
       1 
    )
 )
