@@ -37,7 +37,7 @@ $Flags: ( "big damage" "corvette" "in tech database" )
 $AI Class: Captain
 $Afterburner: NO
 $Countermeasures: 0
-$Scan time: 2000
+$Scan time: 20000
 $EngineSnd: 134
 $Closeup_pos: 0.0, 0.0, -800
 $Closeup_zoom: 0.6

@@ -47,7 +47,7 @@ $Afterburner:           NO
 	;+Aburn Burn Rate:       60.0
 	;+Aburn Rec Rate:        25.0
 $Countermeasures:				20
-$Scan time: 2000
+$Scan time: 10000
 $EngineSnd:						128						
 $Closeup_pos:					0.0, 0.0, -800
 $Closeup_zoom:					0.1

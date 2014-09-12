@@ -40,7 +40,7 @@ $Flags: ( "capital" "big damage" )
 $AI Class: Captain
 $Afterburner: NO
 $Countermeasures: 0
-$Scan time: 8000
+$Scan time: 30000
 $EngineSnd: 176
 $Closeup_pos: 0.0, 0.0, -3000
 $Closeup_zoom: 0.30
