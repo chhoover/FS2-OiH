@@ -1,3 +1,19 @@
+#SoundTrack Start	     					; SoundTrack 1
+$Soundtrack Name: 8: Exodus (Interloper)
+$Name:	interloper_tension_cut.ogg	32	176400	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_B01.wav				4.8	81415	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_B01.wav				39.8	132300	; * Battle 1
+$Name:	FS2_Btl_B02.wav				23.8	75600	; * Battle 2
+$Name:	FS2_Btl_B03.wav				31.8	75600	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_B04.wav				4.8	75600	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_B02.wav			40.8	88200	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End Soundtrack 1
+
 #Menu Music Start
 
 $Name: 		Aquitaine
