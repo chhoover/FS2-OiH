@@ -17,9 +17,12 @@ $Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
 #Menu Music Start
 
 $Name: 		Aquitaine
-$Filename:	phantom.ogg
+$Filename:	intel.ogg
 
 $Name:		A Better Place
 $Filename:	a_better_place.ogg
+
+$Name:		Elite
+$Filename:	elite.ogg
 
 #Menu Music End
